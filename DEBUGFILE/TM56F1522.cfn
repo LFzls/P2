@@ -1,0 +1,229 @@
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\key.c
+ReadPort (null) 9 @160:FPLANE
+oilPerCent BYTE 1 @47:FPLANE
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\Func.h
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tyw_uiEvent.h
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\key.h
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\main.c
+GetADC (null) 22 35 0 {
+	}
+LedsInfoFlag (null) 1 2B 0 {
+	}
+SysInfoFlag (null) 1 2D 0 {
+	}
+TimeCnt (null) 11 159 0 {
+	}
+VoutInfoFlag (null) 1 2E 0 {
+	}
+FlagSmoke UINT 2 @356:FPLANE
+szTemp const UINT 2 FFE
+testBit BYTE 1 @49:FPLANE
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\modular.c
+D_BatVol_Table const UINT[101] 202 711
+RunPWM (null) 5 @32:FPLANE
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tenx_TM56F1522.h
+ADCDH BYTE 1 @23:FPLANE
+ADCTL BYTE 1 @24:FPLANE
+ADCTL2 BYTE 1 @25:FPLANE
+ADST bit 1 @24.3:FPLANE
+CLKCTL BYTE 1 @15:FPLANE
+CMPIF bit 1 @14.4:FPLANE
+INT0IF bit 1 @12.0:FPLANE
+INT1IF bit 1 @12.1:FPLANE
+INT2IF bit 1 @12.2:FPLANE
+INTIE BYTE 1 @11:FPLANE
+INTIE1 BYTE 1 @13:FPLANE
+LVCTL BYTE 1 @22:FPLANE
+LVDIE bit 1 @13.0:FPLANE
+LVDIF bit 1 @14.0:FPLANE
+OPTION BYTE 1 @129:FPLANE
+PAD BYTE 1 @5:FPLANE
+PAD2 bit 1 @5.2:FPLANE
+PAD3 bit 1 @5.3:FPLANE
+PAD4 bit 1 @5.4:FPLANE
+PAD5 bit 1 @5.5:FPLANE
+PAD6 bit 1 @5.6:FPLANE
+PAD7 bit 1 @5.7:FPLANE
+PAMOD10 BYTE 1 @133:FPLANE
+PAMOD32 BYTE 1 @134:FPLANE
+PAMOD54 BYTE 1 @135:FPLANE
+PAMOD76 BYTE 1 @136:FPLANE
+PBD BYTE 1 @6:FPLANE
+PBD0 bit 1 @6.0:FPLANE
+PBD1 bit 1 @6.1:FPLANE
+PBD2 bit 1 @6.2:FPLANE
+PBD3 bit 1 @6.3:FPLANE
+PBD4 bit 1 @6.4:FPLANE
+PBD5 bit 1 @6.5:FPLANE
+PBD6 bit 1 @6.6:FPLANE
+PBD7 bit 1 @6.7:FPLANE
+PBMOD10 BYTE 1 @140:FPLANE
+PBMOD32 BYTE 1 @141:FPLANE
+PBMOD54 BYTE 1 @142:FPLANE
+PBMOD76 BYTE 1 @143:FPLANE
+PDD BYTE 1 @7:FPLANE
+PDD0 bit 1 @7.0:FPLANE
+PDD1 bit 1 @7.1:FPLANE
+PDMOD10 BYTE 1 @144:FPLANE
+PINMOD BYTE 1 @261:FPLANE
+T2CTL BYTE 1 @21:FPLANE
+T2IE bit 1 @11.6:FPLANE
+T2IF bit 1 @12.6:FPLANE
+TM0 BYTE 1 @1:FPLANE
+TM0CTL BYTE 1 @17:FPLANE
+TM0IE bit 1 @11.4:FPLANE
+TM0IF bit 1 @12.4:FPLANE
+TM0RLD BYTE 1 @16:FPLANE
+TM1 BYTE 1 @18:FPLANE
+TM1CTL BYTE 1 @20:FPLANE
+TM1IE bit 1 @11.5:FPLANE
+TM1IF bit 1 @12.5:FPLANE
+TM1RLD BYTE 1 @19:FPLANE
+WKTIE bit 1 @11.3:FPLANE
+WKTIF bit 1 @12.3:FPLANE
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tyw_led.h
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tyw_led.c
+font const BYTE[10] 10 87F
+ledShowIndex const BYTE[18][3] 108 7DB
+led_duty_cycles BYTE[8][8] 64 @169:FPLANE
+numberIndex const BYTE[4][7] 56 847
+powerOilLevelBuf const BYTE[7] 7 889
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tyw_page.c
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\tyw_uiEvent.c
+DispayCount BYTE 1 @41:FPLANE
+DisplaySwitchNum BYTE 1 @42:FPLANE
+oldDisplayPage BYTE 1 @48:FPLANE
+uieventTime BYTE 1 @50:FPLANE
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\init.c
+*GLOBAL_FILE:D:\资料\P2\P2code_0429\code\task.c
+Over_Current_Cnt BYTE 1 @44:FPLANE
+heatVol UINT 2 @37:FPLANE
+heatVolSet UINT 2 @39:FPLANE
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\key.c
+@KeyUpStopSmoke 221 2FB {
+}
+@PortScan 667 6E7 {
+}
+@ReadChargerState AEB B18 {
+}
+@gearSwitch 6E7 6FF {
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\Func.h
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tyw_uiEvent.h
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\key.h
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\main.c
+@Interrupt_ISR E53 E9C {
+}
+@main BD8 C87 {
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\modular.c
+@HAL_ADC_Sample 1B7 221 {
+ADC_CHx BYTE 1 4F
+Filter BYTE 1 4B
+Value UINT 2 57
+Value_Max UINT 2 55
+Value_Min UINT 2 53
+Value_Sum UINT 2 50
+i_max BYTE 1 52
+}
+@UpdateElectricityGrade D40 E46 {
+temp_Percent BYTE 1 50
+temp_TimeUp UINT 2 4E
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tenx_TM56F1522.h
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tyw_led.h
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tyw_led.c
+@led_matrix_run E9C F1A {
+row BYTE 1 33
+rowCount BYTE 1 79
+x BYTE 1 77
+y BYTE 1 78
+}
+@led_set_io_od F28 F7F {
+io_num BYTE 1 70
+}
+@led_set_io_pp F7F FFE {
+io_num BYTE 1 71
+type BYTE 1 70
+}
+@led_show_clear 652 657 {
+}
+@led_show_num 4CF 534 {
+ch BYTE 1 5A
+i BYTE 1 5C
+id BYTE 1 5B
+num BYTE 1 4E
+}
+@led_show_oil 461 4CF {
+TobaccoOilPercent BYTE 1 5F
+i BYTE 1 62
+level BYTE 1 61
+ones BYTE 1 5E
+tens BYTE 1 60
+}
+@led_show_power 401 461 {
+level BYTE 1 60
+ones BYTE 1 5D
+powerPercent BYTE 1 5E
+tens BYTE 1 5F
+}
+@showOilBar 542 57E {
+i BYTE 1 4D
+lv BYTE 1 4C
+}
+@showPowerBar 57E 5BA {
+i BYTE 1 4D
+lv BYTE 1 4C
+}
+@showSmokeMode 5BA 600 {
+mode BYTE 1 4B
+oldMode BYTE 1 34
+}
+@tyw_memset 657 667 {
+i BYTE 1 50
+num BYTE 1 4C
+p BYTE* 1 4F
+ptr * 1 4E
+value BYTE 1 4B
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tyw_page.c
+@gearPage 3EE 3F8 {
+firstUse BYTE 1 63
+}
+@showBase 3F8 401 {
+}
+@smokePage 64A 652 {
+firstUse BYTE 1 63
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\tyw_uiEvent.c
+@UIEvent 600 63C {
+needUpdaeShow BYTE 1 64
+}
+@UIOneSecondEvent 63C 64A {
+}
+@openNewPage 2FB 307 {
+newPage BYTE 1 4B
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\init.c
+@ClearAllRAM AC7 AEB {
+}
+@Delay_16nop CD0 CE1 {
+}
+@InitGpio CE1 D08 {
+}
+@Init_BOD_WDT D08 D23 {
+}
+@MCU_INIT_TIMER D23 D40 {
+}
+@SystemClockInit CA8 CB7 {
+}
+*AUTO_FILE:D:\资料\P2\P2code_0429\code\task.c
+@EnterSleep CB7 CD0 {
+}
+@IdleProgress C87 CA8 {
+}
+@PlugProgress B18 B63 {
+}
+@PowerProgress 13 184 {
+AD_Temp UINT 2 6C
+}

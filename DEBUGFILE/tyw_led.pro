@@ -1,0 +1,12 @@
+extern ??? * tyw_memset(??? *, unsigned char, unsigned char);
+extern ??? led_matrix_run(void);
+extern ??? led_set_io_od(unsigned char);
+extern ??? led_set_io_pp(unsigned char, unsigned char);
+extern ??? led_show_clear(void);
+extern ??? led_show_set(void);
+extern ??? led_show_num(unsigned char, unsigned char);
+extern ??? showPowerBar(unsigned char);
+extern ??? led_show_power(unsigned char);
+extern ??? showOilBar(unsigned char);
+extern ??? led_show_oil(unsigned char);
+extern ??? showSmokeMode(void);

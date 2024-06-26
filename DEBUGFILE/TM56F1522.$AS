@@ -1,0 +1,4101 @@
+
+;.CHIP  TM56F1522
+
+	org 0h
+
+	BCF     $a,$3   		; 0000, 318a
+	GOTO    $11     		; 0001, 2811
+	NOP             		; 0002, 0000
+	NOP             		; 0003, 0000
+	MOVWF   $7e     		; 0004, 00fe
+	SWAPF   $3,$0   		; 0005, 0e03
+	MOVWF   $7a     		; 0006, 00fa
+	MOVFW   $4      		; 0007, 0804
+	MOVWF   $7b     		; 0008, 00fb
+	MOVFW   $a      		; 0009, 080a
+	MOVWF   $7c     		; 000A, 00fc
+	BCF     $3,$5   		; 000B, 3283
+	BCF     $3,$6   		; 000C, 3303
+	MOVFW   $7f     		; 000D, 087f
+	MOVWF   $7d     		; 000E, 00fd
+	BSF     $a,$3   		; 000F, 358a
+	GOTO    $653    		; 0010, 2e53
+	BSF     $a,$3   		; 0011, 358a
+	GOTO    $2B8    		; 0012, 2ab8
+	BTFSS   $2e,$0  		; 0013, 3c2e
+	GOTO    $87     		; 0014, 2887
+	BCF     $2e,$0  		; 0015, 302e
+	BTFSS   $2d,$7  		; 0016, 3fad
+	BTFSC   $2e,$7  		; 0017, 3bae
+	RET             		; 0018, 0040
+	MOVFW   $44     		; 0019, 0844
+	BTFSS   $3,$2   		; 001A, 3d03
+	BTFSC   $2e,$3  		; 001B, 39ae
+	GOTO    $1E     		; 001C, 281e
+	GOTO    $22     		; 001D, 2822
+	MOVLW   $b      		; 001E, 190b
+	CALL    $2FB    		; 001F, 22fb
+	CLRF    $44     		; 0020, 01c4
+	RET             		; 0021, 0040
+	BTFSS   $5,$3   		; 0022, 3d85
+	GOTO    $26     		; 0023, 2826
+	MOVLW   $a      		; 0024, 190a
+	GOTO    $2FB    		; 0025, 2afb
+	MOVLW   $5a     		; 0026, 195a
+	BSF     $3,$6   		; 0027, 3703
+	MOVWF   $64     		; 0028, 00e4
+	MOVLW   $a5     		; 0029, 19a5
+	MOVWF   $65     		; 002A, 00e5
+	BCF     $3,$6   		; 002B, 3303
+	BCF     $e,$0   		; 002C, 300e
+	BSF     $d,$0   		; 002D, 340d
+	BSF     $3,$5   		; 002E, 3683
+	MOVFW   $7      		; 002F, 0807
+	ANDLW   $f      		; 0030, 1b0f
+	IORLW   $30     		; 0031, 1a30
+	MOVWF   $7      		; 0032, 0087
+	MOVFW   $6      		; 0033, 0806
+	ANDLW   $f      		; 0034, 1b0f
+	IORLW   $30     		; 0035, 1a30
+	MOVWF   $6      		; 0036, 0086
+	CLRF    $20     		; 0037, 01a0
+	BCF     $3,$5   		; 0038, 3283
+	BSF     $3,$6   		; 0039, 3703
+	CLRF    $5a     		; 003A, 01da
+	CLRF    $5b     		; 003B, 01db
+	BCF     $3,$6   		; 003C, 3303
+	MOVFW   $3b     		; 003D, 083b
+	MOVWF   $3f     		; 003E, 00bf
+	MOVFW   $3a     		; 003F, 083a
+	MOVWF   $3e     		; 0040, 00be
+	BTFSS   $2d,$1  		; 0041, 3cad
+	GOTO    $48     		; 0042, 2848
+	MOVFW   $3b     		; 0043, 083b
+	MOVWF   $4a     		; 0044, 00ca
+	MOVFW   $3a     		; 0045, 083a
+	MOVWF   $49     		; 0046, 00c9
+	BCF     $2d,$1  		; 0047, 30ad
+	MOVFW   $39     		; 0048, 0839
+	XORLW   $80     		; 0049, 1d80
+	BTFSS   $3,$2   		; 004A, 3d03
+	GOTO    $56     		; 004B, 2856
+	MOVLW   $80     		; 004C, 1980
+	MOVWF   $27     		; 004D, 00a7
+	MOVLW   $c      		; 004E, 190c
+	MOVWF   $28     		; 004F, 00a8
+	MOVLW   $c8     		; 0050, 19c8
+	BCF     $5,$4   		; 0051, 3205
+	BCF     $5,$2   		; 0052, 3105
+	MOVWF   $22     		; 0053, 00a2
+	MOVWF   $21     		; 0054, 00a1
+	GOTO    $75     		; 0055, 2875
+	MOVFW   $39     		; 0056, 0839
+	XORLW   $40     		; 0057, 1d40
+	BTFSS   $3,$2   		; 0058, 3d03
+	GOTO    $5E     		; 0059, 285e
+	MOVLW   $8c     		; 005A, 198c
+	MOVWF   $27     		; 005B, 00a7
+	MOVLW   $a      		; 005C, 190a
+	GOTO    $4F     		; 005D, 284f
+	DECFSZ  $39,$0  		; 005E, 0b39
+	GOTO    $6C     		; 005F, 286c
+	MOVLW   $80     		; 0060, 1980
+	MOVWF   $27     		; 0061, 00a7
+	MOVLW   $c      		; 0062, 190c
+	MOVWF   $28     		; 0063, 00a8
+	MOVLW   $c8     		; 0064, 19c8
+	BSF     $5,$2   		; 0065, 3505
+	BCF     $5,$4   		; 0066, 3205
+	MOVWF   $22     		; 0067, 00a2
+	MOVWF   $21     		; 0068, 00a1
+	CLRF    $24     		; 0069, 01a4
+	CLRF    $23     		; 006A, 01a3
+	GOTO    $77     		; 006B, 2877
+	MOVLW   $80     		; 006C, 1980
+	MOVWF   $27     		; 006D, 00a7
+	MOVLW   $c      		; 006E, 190c
+	MOVWF   $28     		; 006F, 00a8
+	MOVLW   $c8     		; 0070, 19c8
+	BCF     $5,$2   		; 0071, 3105
+	BSF     $5,$4   		; 0072, 3605
+	CLRF    $22     		; 0073, 01a2
+	CLRF    $21     		; 0074, 01a1
+	MOVWF   $24     		; 0075, 00a4
+	MOVWF   $23     		; 0076, 00a3
+	MOVLW   $32     		; 0077, 1932
+	CLRF    $20     		; 0078, 01a0
+	CLRF    $35     		; 0079, 01b5
+	CLRF    $3c     		; 007A, 01bc
+	CLRF    $3d     		; 007B, 01bd
+	BCF     $2e,$5  		; 007C, 32ae
+	BCF     $2e,$1  		; 007D, 30ae
+	BCF     $b,$4   		; 007E, 320b
+	BSF     $3,$6   		; 007F, 3703
+	CLRF    $5e     		; 0080, 01de
+	CLRF    $5f     		; 0081, 01df
+	MOVWF   $59     		; 0082, 00d9
+	BSF     $b,$4   		; 0083, 360b
+	BCF     $3,$6   		; 0084, 3303
+	BSF     $2e,$7  		; 0085, 37ae
+	RET             		; 0086, 0040
+	BTFSS   $2e,$7  		; 0087, 3fae
+	RET             		; 0088, 0040
+	BTFSS   $2e,$6  		; 0089, 3f2e
+	GOTO    $8F     		; 008A, 288f
+	CALL    $221    		; 008B, 2221
+	BCF     $a,$3   		; 008C, 318a
+	MOVLW   $a      		; 008D, 190a
+	GOTO    $2FB    		; 008E, 2afb
+	MOVLW   $a      		; 008F, 190a
+	SUBWF   $35,$0  		; 0090, 0235
+	BTFSS   $3,$0   		; 0091, 3c03
+	GOTO    $96     		; 0092, 2896
+	CALL    $221    		; 0093, 2221
+	BCF     $a,$3   		; 0094, 318a
+	GOTO    $1E     		; 0095, 281e
+	MOVLW   $3      		; 0096, 1903
+	BSF     $3,$6   		; 0097, 3703
+	SUBWF   $5f,$0  		; 0098, 025f
+	MOVLW   $e8     		; 0099, 19e8
+	BTFSC   $3,$2   		; 009A, 3903
+	SUBWF   $5e,$0  		; 009B, 025e
+	BTFSS   $3,$0   		; 009C, 3c03
+	GOTO    $A6     		; 009D, 28a6
+	BSF     $3,$5   		; 009E, 3683
+	BCF     $3,$6   		; 009F, 3303
+	BTFSC   $24,$7  		; 00A0, 3ba4
+	GOTO    $A6     		; 00A1, 28a6
+	CALL    $221    		; 00A2, 2221
+	BCF     $a,$3   		; 00A3, 318a
+	MOVLW   $9      		; 00A4, 1909
+	GOTO    $2FB    		; 00A5, 2afb
+	BCF     $3,$5   		; 00A6, 3283
+	BCF     $3,$6   		; 00A7, 3303
+	BTFSC   $5,$4   		; 00A8, 3a05
+	GOTO    $B9     		; 00A9, 28b9
+	MOVFW   $20     		; 00AA, 0820
+	BTFSC   $3,$2   		; 00AB, 3903
+	GOTO    $B9     		; 00AC, 28b9
+	MOVLW   $3      		; 00AD, 1903
+	CLRF    $4b     		; 00AE, 01cb
+	CALL    $1B7    		; 00AF, 21b7
+	BCF     $a,$3   		; 00B0, 318a
+	MOVFW   $4c     		; 00B1, 084c
+	MOVWF   $41     		; 00B2, 00c1
+	MOVFW   $4b     		; 00B3, 084b
+	MOVWF   $40     		; 00B4, 00c0
+	BTFSC   $5,$4   		; 00B5, 3a05
+	GOTO    $B9     		; 00B6, 28b9
+	BSF     $2e,$1  		; 00B7, 34ae
+	GOTO    $BA     		; 00B8, 28ba
+	BCF     $2e,$1  		; 00B9, 30ae
+	BTFSC   $5,$2   		; 00BA, 3905
+	GOTO    $CB     		; 00BB, 28cb
+	MOVFW   $20     		; 00BC, 0820
+	BTFSC   $3,$2   		; 00BD, 3903
+	GOTO    $CB     		; 00BE, 28cb
+	MOVLW   $5      		; 00BF, 1905
+	CLRF    $4b     		; 00C0, 01cb
+	CALL    $1B7    		; 00C1, 21b7
+	BCF     $a,$3   		; 00C2, 318a
+	MOVFW   $4c     		; 00C3, 084c
+	MOVWF   $43     		; 00C4, 00c3
+	MOVFW   $4b     		; 00C5, 084b
+	MOVWF   $42     		; 00C6, 00c2
+	BTFSC   $5,$2   		; 00C7, 3905
+	GOTO    $CB     		; 00C8, 28cb
+	BSF     $2e,$2  		; 00C9, 352e
+	GOTO    $CC     		; 00CA, 28cc
+	BCF     $2e,$2  		; 00CB, 312e
+	BTFSS   $2e,$1  		; 00CC, 3cae
+	GOTO    $D5     		; 00CD, 28d5
+	MOVLW   $8      		; 00CE, 1908
+	SUBWF   $41,$0  		; 00CF, 0241
+	MOVLW   $2      		; 00D0, 1902
+	BTFSC   $3,$2   		; 00D1, 3903
+	SUBWF   $40,$0  		; 00D2, 0240
+	BTFSS   $3,$0   		; 00D3, 3c03
+	GOTO    $DE     		; 00D4, 28de
+	BTFSS   $2e,$2  		; 00D5, 3d2e
+	GOTO    $E7     		; 00D6, 28e7
+	MOVLW   $8      		; 00D7, 1908
+	SUBWF   $43,$0  		; 00D8, 0243
+	MOVLW   $2      		; 00D9, 1902
+	BTFSC   $3,$2   		; 00DA, 3903
+	SUBWF   $42,$0  		; 00DB, 0242
+	BTFSC   $3,$0   		; 00DC, 3803
+	GOTO    $E7     		; 00DD, 28e7
+	INCF    $2c,$1  		; 00DE, 0aac
+	MOVLW   $a      		; 00DF, 190a
+	SUBWF   $2c,$0  		; 00E0, 022c
+	BTFSS   $3,$0   		; 00E1, 3c03
+	RET             		; 00E2, 0040
+	BSF     $2e,$6  		; 00E3, 372e
+	BSF     $5,$4   		; 00E4, 3605
+	BSF     $5,$2   		; 00E5, 3505
+	RET             		; 00E6, 0040
+	CLRF    $2c     		; 00E7, 01ac
+	BTFSS   $2e,$5  		; 00E8, 3eae
+	GOTO    $170    		; 00E9, 2970
+	BTFSS   $2e,$4  		; 00EA, 3e2e
+	RET             		; 00EB, 0040
+	MOVLW   $e      		; 00EC, 190e
+	CLRF    $4b     		; 00ED, 01cb
+	CALL    $1B7    		; 00EE, 21b7
+	MOVFW   $4c     		; 00EF, 084c
+	MOVWF   $3d     		; 00F0, 00bd
+	MOVFW   $4b     		; 00F1, 084b
+	MOVWF   $3c     		; 00F2, 00bc
+	MOVWF   $4b     		; 00F3, 00cb
+	MOVFW   $3d     		; 00F4, 083d
+	MOVWF   $4c     		; 00F5, 00cc
+	MOVLW   $4c     		; 00F6, 194c
+	CLRF    $4d     		; 00F7, 01cd
+	CLRF    $4e     		; 00F8, 01ce
+	CLRF    $52     		; 00F9, 01d2
+	MOVWF   $51     		; 00FA, 00d1
+	MOVLW   $40     		; 00FB, 1940
+	MOVWF   $50     		; 00FC, 00d0
+	CLRF    $4f     		; 00FD, 01cf
+	BSF     $a,$3   		; 00FE, 358a
+	CALL    $363    		; 00FF, 2363
+	BCF     $a,$3   		; 0100, 318a
+	MOVFW   $4c     		; 0101, 084c
+	MOVWF   $3d     		; 0102, 00bd
+	MOVFW   $4b     		; 0103, 084b
+	MOVWF   $3c     		; 0104, 00bc
+	ADDLW   $f      		; 0105, 1c0f
+	MOVWF   $3c     		; 0106, 00bc
+	MOVFW   $3d     		; 0107, 083d
+	BTFSC   $3,$0   		; 0108, 3803
+	ADDLW   $1      		; 0109, 1c01
+	ADDLW   $0      		; 010A, 1c00
+	MOVWF   $3d     		; 010B, 00bd
+	BCF     $2e,$4  		; 010C, 322e
+	BTFSS   $2e,$1  		; 010D, 3cae
+	GOTO    $13D    		; 010E, 293d
+	MOVFW   $3c     		; 010F, 083c
+	CALL    $3B8    		; 0110, 23b8
+	BCF     $a,$3   		; 0111, 318a
+	MOVFW   $40     		; 0112, 0840
+	MOVWF   $4f     		; 0113, 00cf
+	MOVFW   $41     		; 0114, 0841
+	MOVWF   $50     		; 0115, 00d0
+	CLRF    $51     		; 0116, 01d1
+	CLRF    $52     		; 0117, 01d2
+	CALL    $184    		; 0118, 2184
+	BCF     $a,$3   		; 0119, 318a
+	CALL    $368    		; 011A, 2368
+	BCF     $a,$3   		; 011B, 318a
+	CALL    $184    		; 011C, 2184
+	BCF     $a,$3   		; 011D, 318a
+	CALL    $389    		; 011E, 2389
+	BCF     $a,$3   		; 011F, 318a
+	CALL    $184    		; 0120, 2184
+	BCF     $a,$3   		; 0121, 318a
+	CALL    $3BE    		; 0122, 23be
+	BCF     $a,$3   		; 0123, 318a
+	CALL    $184    		; 0124, 2184
+	BCF     $a,$3   		; 0125, 318a
+	CALL    $39E    		; 0126, 239e
+	BCF     $a,$3   		; 0127, 318a
+	CALL    $307    		; 0128, 2307
+	BCF     $a,$3   		; 0129, 318a
+	CALL    $3B1    		; 012A, 23b1
+	BCF     $a,$3   		; 012B, 318a
+	BTFSC   $3,$2   		; 012C, 3903
+	SUBWF   $6c,$0  		; 012D, 026c
+	BTFSS   $3,$0   		; 012E, 3c03
+	GOTO    $132    		; 012F, 2932
+	MOVLW   $c8     		; 0130, 19c8
+	GOTO    $13C    		; 0131, 293c
+	MOVLW   $0      		; 0132, 1900
+	SUBWF   $6d,$0  		; 0133, 026d
+	MOVLW   $1e     		; 0134, 191e
+	BTFSC   $3,$2   		; 0135, 3903
+	SUBWF   $6c,$0  		; 0136, 026c
+	BTFSC   $3,$0   		; 0137, 3803
+	GOTO    $13B    		; 0138, 293b
+	MOVLW   $1e     		; 0139, 191e
+	GOTO    $13C    		; 013A, 293c
+	MOVFW   $6c     		; 013B, 086c
+	MOVWF   $22     		; 013C, 00a2
+	BTFSS   $2e,$2  		; 013D, 3d2e
+	RET             		; 013E, 0040
+	MOVFW   $3c     		; 013F, 083c
+	CALL    $3B8    		; 0140, 23b8
+	BCF     $a,$3   		; 0141, 318a
+	MOVFW   $42     		; 0142, 0842
+	MOVWF   $4f     		; 0143, 00cf
+	MOVFW   $43     		; 0144, 0843
+	MOVWF   $50     		; 0145, 00d0
+	CLRF    $51     		; 0146, 01d1
+	CLRF    $52     		; 0147, 01d2
+	CALL    $184    		; 0148, 2184
+	BCF     $a,$3   		; 0149, 318a
+	CALL    $368    		; 014A, 2368
+	BCF     $a,$3   		; 014B, 318a
+	CALL    $184    		; 014C, 2184
+	BCF     $a,$3   		; 014D, 318a
+	CALL    $389    		; 014E, 2389
+	BCF     $a,$3   		; 014F, 318a
+	CALL    $184    		; 0150, 2184
+	BCF     $a,$3   		; 0151, 318a
+	CALL    $3BE    		; 0152, 23be
+	BCF     $a,$3   		; 0153, 318a
+	CALL    $184    		; 0154, 2184
+	BCF     $a,$3   		; 0155, 318a
+	CALL    $39E    		; 0156, 239e
+	BCF     $a,$3   		; 0157, 318a
+	CALL    $307    		; 0158, 2307
+	BCF     $a,$3   		; 0159, 318a
+	CALL    $3B1    		; 015A, 23b1
+	BCF     $a,$3   		; 015B, 318a
+	BTFSC   $3,$2   		; 015C, 3903
+	SUBWF   $6c,$0  		; 015D, 026c
+	BTFSS   $3,$0   		; 015E, 3c03
+	GOTO    $163    		; 015F, 2963
+	MOVLW   $c8     		; 0160, 19c8
+	MOVWF   $24     		; 0161, 00a4
+	RET             		; 0162, 0040
+	MOVLW   $0      		; 0163, 1900
+	SUBWF   $6d,$0  		; 0164, 026d
+	MOVLW   $1e     		; 0165, 191e
+	BTFSC   $3,$2   		; 0166, 3903
+	SUBWF   $6c,$0  		; 0167, 026c
+	BTFSC   $3,$0   		; 0168, 3803
+	GOTO    $16D    		; 0169, 296d
+	MOVLW   $1e     		; 016A, 191e
+	MOVWF   $24     		; 016B, 00a4
+	RET             		; 016C, 0040
+	MOVFW   $6c     		; 016D, 086c
+	MOVWF   $24     		; 016E, 00a4
+	RET             		; 016F, 0040
+	BTFSS   $2e,$1  		; 0170, 3cae
+	GOTO    $175    		; 0171, 2975
+	MOVFW   $39     		; 0172, 0839
+	BTFSC   $3,$2   		; 0173, 3903
+	GOTO    $181    		; 0174, 2981
+	BTFSS   $2e,$2  		; 0175, 3d2e
+	GOTO    $17A    		; 0176, 297a
+	DECF    $39,$0  		; 0177, 0339
+	BTFSC   $3,$2   		; 0178, 3903
+	GOTO    $181    		; 0179, 2981
+	BTFSC   $2e,$1  		; 017A, 38ae
+	BTFSS   $2e,$2  		; 017B, 3d2e
+	RET             		; 017C, 0040
+	MOVFW   $39     		; 017D, 0839
+	XORLW   $80     		; 017E, 1d80
+	BTFSS   $3,$2   		; 017F, 3d03
+	RET             		; 0180, 0040
+	MOVLW   $8      		; 0181, 1908
+	BSF     $2e,$5  		; 0182, 36ae
+	GOTO    $2FB    		; 0183, 2afb
+	CLRF    $53     		; 0184, 01d3
+	CLRF    $54     		; 0185, 01d4
+	CLRF    $55     		; 0186, 01d5
+	CLRF    $56     		; 0187, 01d6
+	BTFSS   $4b,$0  		; 0188, 3c4b
+	GOTO    $19E    		; 0189, 299e
+	MOVFW   $4f     		; 018A, 084f
+	ADDWF   $53,$1  		; 018B, 07d3
+	MOVFW   $50     		; 018C, 0850
+	BCF     $3,$2   		; 018D, 3103
+	BTFSC   $3,$0   		; 018E, 3803
+	ADDLW   $1      		; 018F, 1c01
+	BTFSS   $3,$2   		; 0190, 3d03
+	ADDWF   $54,$1  		; 0191, 07d4
+	MOVFW   $51     		; 0192, 0851
+	BCF     $3,$2   		; 0193, 3103
+	BTFSC   $3,$0   		; 0194, 3803
+	ADDLW   $1      		; 0195, 1c01
+	BTFSS   $3,$2   		; 0196, 3d03
+	ADDWF   $55,$1  		; 0197, 07d5
+	MOVFW   $52     		; 0198, 0852
+	BCF     $3,$2   		; 0199, 3103
+	BTFSC   $3,$0   		; 019A, 3803
+	ADDLW   $1      		; 019B, 1c01
+	BTFSS   $3,$2   		; 019C, 3d03
+	ADDWF   $56,$1  		; 019D, 07d6
+	BCF     $3,$0   		; 019E, 3003
+	RLF     $4f,$1  		; 019F, 0dcf
+	RLF     $50,$1  		; 01A0, 0dd0
+	RLF     $51,$1  		; 01A1, 0dd1
+	RLF     $52,$1  		; 01A2, 0dd2
+	BCF     $3,$0   		; 01A3, 3003
+	RRF     $4e,$1  		; 01A4, 0cce
+	RRF     $4d,$1  		; 01A5, 0ccd
+	RRF     $4c,$1  		; 01A6, 0ccc
+	RRF     $4b,$1  		; 01A7, 0ccb
+	MOVFW   $4e     		; 01A8, 084e
+	IORWF   $4d,$0  		; 01A9, 044d
+	IORWF   $4c,$0  		; 01AA, 044c
+	IORWF   $4b,$0  		; 01AB, 044b
+	BTFSS   $3,$2   		; 01AC, 3d03
+	GOTO    $188    		; 01AD, 2988
+	MOVFW   $56     		; 01AE, 0856
+	MOVWF   $4e     		; 01AF, 00ce
+	MOVFW   $55     		; 01B0, 0855
+	MOVWF   $4d     		; 01B1, 00cd
+	MOVFW   $54     		; 01B2, 0854
+	MOVWF   $4c     		; 01B3, 00cc
+	MOVFW   $53     		; 01B4, 0853
+	MOVWF   $4b     		; 01B5, 00cb
+	RET             		; 01B6, 0040
+	MOVWF   $4f     		; 01B7, 00cf
+	MOVLW   $10     		; 01B8, 1910
+	CLRF    $53     		; 01B9, 01d3
+	MOVWF   $54     		; 01BA, 00d4
+	MOVLW   $e0     		; 01BB, 19e0
+	CLRF    $55     		; 01BC, 01d5
+	CLRF    $56     		; 01BD, 01d6
+	CLRF    $50     		; 01BE, 01d0
+	CLRF    $51     		; 01BF, 01d1
+	CLRF    $52     		; 01C0, 01d2
+	ANDWF   $19,$1  		; 01C1, 0599
+	MOVFW   $4f     		; 01C2, 084f
+	IORWF   $19,$1  		; 01C3, 0499
+	BSF     $18,$3  		; 01C4, 3598
+	BTFSC   $18,$3  		; 01C5, 3998
+	GOTO    $1C5    		; 01C6, 29c5
+	MOVFW   $17     		; 01C7, 0817
+	MOVWF   $57     		; 01C8, 00d7
+	MOVLW   $f0     		; 01C9, 19f0
+	CLRF    $58     		; 01CA, 01d8
+	SWAPF   $57,$1  		; 01CB, 0ed7
+	SWAPF   $58,$1  		; 01CC, 0ed8
+	ANDWF   $58,$1  		; 01CD, 05d8
+	MOVFW   $57     		; 01CE, 0857
+	ANDLW   $f      		; 01CF, 1b0f
+	IORWF   $58,$1  		; 01D0, 04d8
+	MOVLW   $f0     		; 01D1, 19f0
+	ANDWF   $57,$1  		; 01D2, 05d7
+	SWAPF   $18,$0  		; 01D3, 0e18
+	ANDLW   $f      		; 01D4, 1b0f
+	IORWF   $57,$1  		; 01D5, 04d7
+	MOVFW   $54     		; 01D6, 0854
+	SUBWF   $58,$0  		; 01D7, 0258
+	BTFSS   $3,$2   		; 01D8, 3d03
+	GOTO    $1DC    		; 01D9, 29dc
+	MOVFW   $53     		; 01DA, 0853
+	SUBWF   $57,$0  		; 01DB, 0257
+	BTFSC   $3,$0   		; 01DC, 3803
+	GOTO    $1E2    		; 01DD, 29e2
+	MOVFW   $58     		; 01DE, 0858
+	MOVWF   $54     		; 01DF, 00d4
+	MOVFW   $57     		; 01E0, 0857
+	MOVWF   $53     		; 01E1, 00d3
+	MOVFW   $56     		; 01E2, 0856
+	SUBWF   $58,$0  		; 01E3, 0258
+	BTFSS   $3,$2   		; 01E4, 3d03
+	GOTO    $1E8    		; 01E5, 29e8
+	MOVFW   $55     		; 01E6, 0855
+	SUBWF   $57,$0  		; 01E7, 0257
+	BTFSS   $3,$0   		; 01E8, 3c03
+	GOTO    $1EE    		; 01E9, 29ee
+	MOVFW   $58     		; 01EA, 0858
+	MOVWF   $56     		; 01EB, 00d6
+	MOVFW   $57     		; 01EC, 0857
+	MOVWF   $55     		; 01ED, 00d5
+	MOVFW   $57     		; 01EE, 0857
+	ADDWF   $50,$1  		; 01EF, 07d0
+	BTFSC   $3,$0   		; 01F0, 3803
+	INCF    $51,$1  		; 01F1, 0ad1
+	MOVFW   $58     		; 01F2, 0858
+	ADDWF   $51,$1  		; 01F3, 07d1
+	MOVFW   $4b     		; 01F4, 084b
+	BTFSC   $3,$2   		; 01F5, 3903
+	GOTO    $1FC    		; 01F6, 29fc
+	MOVLW   $6      		; 01F7, 1906
+	INCF    $52,$1  		; 01F8, 0ad2
+	SUBWF   $52,$0  		; 01F9, 0252
+	BTFSS   $3,$0   		; 01FA, 3c03
+	GOTO    $1C4    		; 01FB, 29c4
+	MOVFW   $4b     		; 01FC, 084b
+	BTFSC   $3,$2   		; 01FD, 3903
+	GOTO    $21C    		; 01FE, 2a1c
+	MOVFW   $55     		; 01FF, 0855
+	ADDWF   $53,$0  		; 0200, 0753
+	MOVWF   $4d     		; 0201, 00cd
+	MOVFW   $56     		; 0202, 0856
+	BTFSC   $3,$0   		; 0203, 3803
+	INCF    $56,$0  		; 0204, 0a56
+	ADDWF   $54,$0  		; 0205, 0754
+	MOVWF   $4e     		; 0206, 00ce
+	COMF    $4d,$1  		; 0207, 09cd
+	COMF    $4e,$1  		; 0208, 09ce
+	INCF    $4d,$1  		; 0209, 0acd
+	BTFSC   $3,$2   		; 020A, 3903
+	INCF    $4e,$1  		; 020B, 0ace
+	MOVFW   $4d     		; 020C, 084d
+	MOVWF   $57     		; 020D, 00d7
+	MOVFW   $4e     		; 020E, 084e
+	MOVWF   $58     		; 020F, 00d8
+	MOVFW   $50     		; 0210, 0850
+	ADDWF   $57,$1  		; 0211, 07d7
+	BTFSC   $3,$0   		; 0212, 3803
+	INCF    $58,$1  		; 0213, 0ad8
+	MOVFW   $51     		; 0214, 0851
+	ADDWF   $58,$1  		; 0215, 07d8
+	BCF     $3,$0   		; 0216, 3003
+	RRF     $58,$1  		; 0217, 0cd8
+	RRF     $57,$1  		; 0218, 0cd7
+	BCF     $3,$0   		; 0219, 3003
+	RRF     $58,$1  		; 021A, 0cd8
+	RRF     $57,$1  		; 021B, 0cd7
+	MOVFW   $58     		; 021C, 0858
+	MOVWF   $4c     		; 021D, 00cc
+	MOVFW   $57     		; 021E, 0857
+	MOVWF   $4b     		; 021F, 00cb
+	RET             		; 0220, 0040
+	BCF     $3,$5   		; 0221, 3283
+	BTFSS   $2e,$7  		; 0222, 3fae
+	RET             		; 0223, 0040
+	BCF     $2e,$7  		; 0224, 33ae
+	BCF     $d,$0   		; 0225, 300d
+	BCF     $2e,$6  		; 0226, 332e
+	BSF     $5,$4   		; 0227, 3605
+	BSF     $3,$6   		; 0228, 3703
+	CLRF    $64     		; 0229, 01e4
+	CLRF    $65     		; 022A, 01e5
+	MOVLW   $4f     		; 022B, 194f
+	BSF     $3,$5   		; 022C, 3683
+	BCF     $3,$6   		; 022D, 3303
+	ANDWF   $24,$1  		; 022E, 05a4
+	MOVFW   $6      		; 022F, 0806
+	ANDLW   $f      		; 0230, 1b0f
+	IORLW   $90     		; 0231, 1a90
+	MOVWF   $6      		; 0232, 0086
+	BCF     $3,$5   		; 0233, 3283
+	BSF     $5,$3   		; 0234, 3585
+	BSF     $3,$5   		; 0235, 3683
+	MOVFW   $7      		; 0236, 0807
+	ANDLW   $f      		; 0237, 1b0f
+	IORLW   $90     		; 0238, 1a90
+	MOVWF   $7      		; 0239, 0087
+	BCF     $3,$5   		; 023A, 3283
+	BSF     $5,$5   		; 023B, 3685
+	MOVFW   $39     		; 023C, 0839
+	ANDLW   $c0     		; 023D, 1bc0
+	BTFSS   $3,$2   		; 023E, 3d03
+	GOTO    $249    		; 023F, 2a49
+	MOVLW   $6      		; 0240, 1906
+	INCF    $37,$1  		; 0241, 0ab7
+	SUBWF   $37,$0  		; 0242, 0237
+	BTFSS   $3,$0   		; 0243, 3c03
+	GOTO    $283    		; 0244, 2a83
+	MOVLW   $1      		; 0245, 1901
+	CLRF    $37     		; 0246, 01b7
+	XORWF   $39,$1  		; 0247, 06b9
+	GOTO    $283    		; 0248, 2a83
+	CLRF    $37     		; 0249, 01b7
+	GOTO    $283    		; 024A, 2a83
+	MOVLW   $a      		; 024B, 190a
+	MOVWF   $51     		; 024C, 00d1
+	MOVLW   $5      		; 024D, 1905
+	CLRF    $52     		; 024E, 01d2
+	ADDLW   $59     		; 024F, 1c59
+	MOVWF   $4      		; 0250, 0084
+	BSF     $3,$7   		; 0251, 3783
+	MOVFW   $0      		; 0252, 0800
+	MOVWF   $64     		; 0253, 00e4
+	INCF    $4,$1   		; 0254, 0a84
+	MOVFW   $0      		; 0255, 0800
+	MOVWF   $65     		; 0256, 00e5
+	MOVLW   $f0     		; 0257, 19f0
+	SWAPF   $64,$1  		; 0258, 0ee4
+	SWAPF   $65,$1  		; 0259, 0ee5
+	ANDWF   $65,$1  		; 025A, 05e5
+	MOVFW   $64     		; 025B, 0864
+	ANDLW   $f      		; 025C, 1b0f
+	IORWF   $65,$1  		; 025D, 04e5
+	MOVLW   $f0     		; 025E, 19f0
+	ANDWF   $64,$1  		; 025F, 05e4
+	MOVFW   $64     		; 0260, 0864
+	MOVWF   $53     		; 0261, 00d3
+	MOVFW   $65     		; 0262, 0865
+	MOVWF   $54     		; 0263, 00d4
+	GOTO    $279    		; 0264, 2a79
+	MOVLW   $a      		; 0265, 190a
+	MOVWF   $51     		; 0266, 00d1
+	CLRF    $52     		; 0267, 01d2
+	BSF     $3,$6   		; 0268, 3703
+	MOVFW   $5f     		; 0269, 085f
+	BCF     $3,$6   		; 026A, 3303
+	MOVWF   $4c     		; 026B, 00cc
+	BSF     $3,$6   		; 026C, 3703
+	MOVFW   $5e     		; 026D, 085e
+	BCF     $3,$6   		; 026E, 3303
+	MOVWF   $4b     		; 026F, 00cb
+	MOVLW   $f      		; 0270, 190f
+	MOVWF   $4d     		; 0271, 00cd
+	CLRF    $4e     		; 0272, 01ce
+	CALL    $34F    		; 0273, 234f
+	BCF     $a,$3   		; 0274, 318a
+	MOVFW   $4c     		; 0275, 084c
+	MOVWF   $54     		; 0276, 00d4
+	MOVFW   $4b     		; 0277, 084b
+	MOVWF   $53     		; 0278, 00d3
+	CALL    $3C4    		; 0279, 23c4
+	BCF     $a,$3   		; 027A, 318a
+	MOVFW   $52     		; 027B, 0852
+	BSF     $3,$6   		; 027C, 3703
+	MOVWF   $5f     		; 027D, 00df
+	BCF     $3,$6   		; 027E, 3303
+	MOVFW   $51     		; 027F, 0851
+	BSF     $3,$6   		; 0280, 3703
+	MOVWF   $5e     		; 0281, 00de
+	GOTO    $28E    		; 0282, 2a8e
+	MOVFW   $39     		; 0283, 0839
+	XORLW   $0      		; 0284, 1d00
+	BTFSC   $3,$2   		; 0285, 3903
+	GOTO    $28E    		; 0286, 2a8e
+	XORLW   $40     		; 0287, 1d40
+	BTFSC   $3,$2   		; 0288, 3903
+	GOTO    $24B    		; 0289, 2a4b
+	XORLW   $c0     		; 028A, 1dc0
+	BTFSC   $3,$2   		; 028B, 3903
+	GOTO    $265    		; 028C, 2a65
+	GOTO    $28E    		; 028D, 2a8e
+	BSF     $3,$6   		; 028E, 3703
+	CALL    $3A7    		; 028F, 23a7
+	BCF     $a,$3   		; 0290, 318a
+	BSF     $3,$6   		; 0291, 3703
+	MOVFW   $63     		; 0292, 0863
+	BCF     $3,$6   		; 0293, 3303
+	SUBWF   $67,$0  		; 0294, 0267
+	BTFSS   $3,$2   		; 0295, 3d03
+	GOTO    $2A7    		; 0296, 2aa7
+	BSF     $3,$6   		; 0297, 3703
+	MOVFW   $62     		; 0298, 0862
+	BCF     $3,$6   		; 0299, 3303
+	SUBWF   $66,$0  		; 029A, 0266
+	BTFSS   $3,$2   		; 029B, 3d03
+	GOTO    $2A7    		; 029C, 2aa7
+	BSF     $3,$6   		; 029D, 3703
+	MOVFW   $61     		; 029E, 0861
+	BCF     $3,$6   		; 029F, 3303
+	SUBWF   $65,$0  		; 02A0, 0265
+	BTFSS   $3,$2   		; 02A1, 3d03
+	GOTO    $2A7    		; 02A2, 2aa7
+	BSF     $3,$6   		; 02A3, 3703
+	MOVFW   $60     		; 02A4, 0860
+	BCF     $3,$6   		; 02A5, 3303
+	SUBWF   $64,$0  		; 02A6, 0264
+	BTFSC   $3,$0   		; 02A7, 3803
+	GOTO    $2CA    		; 02A8, 2aca
+	BSF     $3,$6   		; 02A9, 3703
+	CALL    $3A7    		; 02AA, 23a7
+	BCF     $a,$3   		; 02AB, 318a
+	MOVFW   $64     		; 02AC, 0864
+	BSF     $3,$6   		; 02AD, 3703
+	SUBWF   $60,$1  		; 02AE, 02e0
+	BCF     $3,$6   		; 02AF, 3303
+	MOVFW   $65     		; 02B0, 0865
+	BTFSS   $3,$0   		; 02B1, 3c03
+	INCFSZ  $65,$0  		; 02B2, 0f65
+	GOTO    $2B5    		; 02B3, 2ab5
+	GOTO    $2B7    		; 02B4, 2ab7
+	BSF     $3,$6   		; 02B5, 3703
+	SUBWF   $61,$1  		; 02B6, 02e1
+	BCF     $3,$6   		; 02B7, 3303
+	MOVFW   $66     		; 02B8, 0866
+	BTFSS   $3,$0   		; 02B9, 3c03
+	INCFSZ  $66,$0  		; 02BA, 0f66
+	GOTO    $2BD    		; 02BB, 2abd
+	GOTO    $2BF    		; 02BC, 2abf
+	BSF     $3,$6   		; 02BD, 3703
+	SUBWF   $62,$1  		; 02BE, 02e2
+	BCF     $3,$6   		; 02BF, 3303
+	MOVFW   $67     		; 02C0, 0867
+	BTFSS   $3,$0   		; 02C1, 3c03
+	INCFSZ  $67,$0  		; 02C2, 0f67
+	GOTO    $2C5    		; 02C3, 2ac5
+	GOTO    $2C7    		; 02C4, 2ac7
+	BSF     $3,$6   		; 02C5, 3703
+	SUBWF   $63,$1  		; 02C6, 02e3
+	BCF     $3,$6   		; 02C7, 3303
+	BSF     $3,$6   		; 02C8, 3703
+	GOTO    $2D4    		; 02C9, 2ad4
+	MOVLW   $60     		; 02CA, 1960
+	MOVWF   $4      		; 02CB, 0084
+	BSF     $3,$7   		; 02CC, 3783
+	CLRF    $0      		; 02CD, 0180
+	INCF    $4,$1   		; 02CE, 0a84
+	CLRF    $0      		; 02CF, 0180
+	INCF    $4,$1   		; 02D0, 0a84
+	CLRF    $0      		; 02D1, 0180
+	INCF    $4,$1   		; 02D2, 0a84
+	CLRF    $0      		; 02D3, 0180
+	MOVLW   $3      		; 02D4, 1903
+	BSF     $3,$6   		; 02D5, 3703
+	CLRF    $5e     		; 02D6, 01de
+	CLRF    $5f     		; 02D7, 01df
+	BCF     $3,$6   		; 02D8, 3303
+	CLRF    $5a     		; 02D9, 01da
+	MOVWF   $59     		; 02DA, 00d9
+	MOVLW   $e4     		; 02DB, 19e4
+	MOVWF   $58     		; 02DC, 00d8
+	MOVLW   $18     		; 02DD, 1918
+	MOVWF   $57     		; 02DE, 00d7
+	MOVLW   $7      		; 02DF, 1907
+	ADDLW   $59     		; 02E0, 1c59
+	MOVWF   $4      		; 02E1, 0084
+	BSF     $3,$7   		; 02E2, 3783
+	MOVFW   $0      		; 02E3, 0800
+	MOVWF   $4b     		; 02E4, 00cb
+	INCF    $4,$1   		; 02E5, 0a84
+	MOVFW   $0      		; 02E6, 0800
+	MOVWF   $4c     		; 02E7, 00cc
+	INCF    $4,$1   		; 02E8, 0a84
+	MOVFW   $0      		; 02E9, 0800
+	MOVWF   $4d     		; 02EA, 00cd
+	INCF    $4,$1   		; 02EB, 0a84
+	MOVFW   $0      		; 02EC, 0800
+	MOVWF   $4e     		; 02ED, 00ce
+	MOVLW   $64     		; 02EE, 1964
+	MOVWF   $4f     		; 02EF, 00cf
+	CLRF    $50     		; 02F0, 01d0
+	CLRF    $51     		; 02F1, 01d1
+	CLRF    $52     		; 02F2, 01d2
+	CALL    $184    		; 02F3, 2184
+	BCF     $a,$3   		; 02F4, 318a
+	CALL    $39E    		; 02F5, 239e
+	BCF     $a,$3   		; 02F6, 318a
+	CALL    $307    		; 02F7, 2307
+	MOVFW   $57     		; 02F8, 0857
+	MOVWF   $2f     		; 02F9, 00af
+	RET             		; 02FA, 0040
+	BCF     $3,$5   		; 02FB, 3283
+	BCF     $3,$6   		; 02FC, 3303
+	MOVWF   $4b     		; 02FD, 00cb
+	XORWF   $2a,$0  		; 02FE, 062a
+	BTFSC   $3,$2   		; 02FF, 3903
+	RET             		; 0300, 0040
+	MOVLW   $5      		; 0301, 1905
+	CLRF    $30     		; 0302, 01b0
+	MOVWF   $29     		; 0303, 00a9
+	MOVFW   $4b     		; 0304, 084b
+	MOVWF   $2a     		; 0305, 00aa
+	RET             		; 0306, 0040
+	CLRF    $5f     		; 0307, 01df
+	CLRF    $60     		; 0308, 01e0
+	CLRF    $61     		; 0309, 01e1
+	CLRF    $62     		; 030A, 01e2
+	MOVFW   $5a     		; 030B, 085a
+	IORWF   $59,$0  		; 030C, 0459
+	IORWF   $58,$0  		; 030D, 0458
+	IORWF   $57,$0  		; 030E, 0457
+	BTFSC   $3,$2   		; 030F, 3903
+	GOTO    $346    		; 0310, 2b46
+	CLRF    $63     		; 0311, 01e3
+	INCF    $63,$1  		; 0312, 0ae3
+	BTFSC   $5a,$7  		; 0313, 3bda
+	GOTO    $31B    		; 0314, 2b1b
+	BCF     $3,$0   		; 0315, 3003
+	RLF     $57,$1  		; 0316, 0dd7
+	RLF     $58,$1  		; 0317, 0dd8
+	RLF     $59,$1  		; 0318, 0dd9
+	RLF     $5a,$1  		; 0319, 0dda
+	GOTO    $312    		; 031A, 2b12
+	BCF     $3,$0   		; 031B, 3003
+	RLF     $5f,$1  		; 031C, 0ddf
+	RLF     $60,$1  		; 031D, 0de0
+	RLF     $61,$1  		; 031E, 0de1
+	RLF     $62,$1  		; 031F, 0de2
+	MOVFW   $5a     		; 0320, 085a
+	SUBWF   $5e,$0  		; 0321, 025e
+	BTFSS   $3,$2   		; 0322, 3d03
+	GOTO    $32E    		; 0323, 2b2e
+	MOVFW   $59     		; 0324, 0859
+	SUBWF   $5d,$0  		; 0325, 025d
+	BTFSS   $3,$2   		; 0326, 3d03
+	GOTO    $32E    		; 0327, 2b2e
+	MOVFW   $58     		; 0328, 0858
+	SUBWF   $5c,$0  		; 0329, 025c
+	BTFSS   $3,$2   		; 032A, 3d03
+	GOTO    $32E    		; 032B, 2b2e
+	MOVFW   $57     		; 032C, 0857
+	SUBWF   $5b,$0  		; 032D, 025b
+	BTFSS   $3,$0   		; 032E, 3c03
+	GOTO    $340    		; 032F, 2b40
+	MOVFW   $57     		; 0330, 0857
+	SUBWF   $5b,$1  		; 0331, 02db
+	MOVFW   $58     		; 0332, 0858
+	BTFSS   $3,$0   		; 0333, 3c03
+	INCFSZ  $58,$0  		; 0334, 0f58
+	SUBWF   $5c,$1  		; 0335, 02dc
+	MOVFW   $59     		; 0336, 0859
+	BTFSS   $3,$0   		; 0337, 3c03
+	INCFSZ  $59,$0  		; 0338, 0f59
+	SUBWF   $5d,$1  		; 0339, 02dd
+	MOVFW   $5a     		; 033A, 085a
+	BTFSS   $3,$0   		; 033B, 3c03
+	INCFSZ  $5a,$0  		; 033C, 0f5a
+	SUBWF   $5e,$1  		; 033D, 02de
+	BSF     $5f,$0  		; 033E, 345f
+	BCF     $3,$0   		; 033F, 3003
+	RRF     $5a,$1  		; 0340, 0cda
+	RRF     $59,$1  		; 0341, 0cd9
+	RRF     $58,$1  		; 0342, 0cd8
+	RRF     $57,$1  		; 0343, 0cd7
+	DECFSZ  $63,$1  		; 0344, 0be3
+	GOTO    $31B    		; 0345, 2b1b
+	MOVFW   $62     		; 0346, 0862
+	MOVWF   $5a     		; 0347, 00da
+	MOVFW   $61     		; 0348, 0861
+	MOVWF   $59     		; 0349, 00d9
+	MOVFW   $60     		; 034A, 0860
+	MOVWF   $58     		; 034B, 00d8
+	MOVFW   $5f     		; 034C, 085f
+	MOVWF   $57     		; 034D, 00d7
+	RET             		; 034E, 0040
+	CLRF    $4f     		; 034F, 01cf
+	CLRF    $50     		; 0350, 01d0
+	BTFSS   $4b,$0  		; 0351, 3c4b
+	GOTO    $359    		; 0352, 2b59
+	MOVFW   $4d     		; 0353, 084d
+	ADDWF   $4f,$1  		; 0354, 07cf
+	BTFSC   $3,$0   		; 0355, 3803
+	INCF    $50,$1  		; 0356, 0ad0
+	MOVFW   $4e     		; 0357, 084e
+	ADDWF   $50,$1  		; 0358, 07d0
+	BCF     $3,$0   		; 0359, 3003
+	RLF     $4d,$1  		; 035A, 0dcd
+	RLF     $4e,$1  		; 035B, 0dce
+	BCF     $3,$0   		; 035C, 3003
+	RRF     $4c,$1  		; 035D, 0ccc
+	RRF     $4b,$1  		; 035E, 0ccb
+	MOVFW   $4c     		; 035F, 084c
+	IORWF   $4b,$0  		; 0360, 044b
+	BTFSS   $3,$2   		; 0361, 3d03
+	GOTO    $351    		; 0362, 2b51
+	MOVFW   $50     		; 0363, 0850
+	MOVWF   $4c     		; 0364, 00cc
+	MOVFW   $4f     		; 0365, 084f
+	MOVWF   $4b     		; 0366, 00cb
+	RET             		; 0367, 0040
+	MOVFW   $4b     		; 0368, 084b
+	MOVWF   $68     		; 0369, 00e8
+	MOVFW   $4c     		; 036A, 084c
+	MOVWF   $69     		; 036B, 00e9
+	MOVFW   $4d     		; 036C, 084d
+	MOVWF   $6a     		; 036D, 00ea
+	MOVFW   $4e     		; 036E, 084e
+	MOVWF   $6b     		; 036F, 00eb
+	MOVLW   $c      		; 0370, 190c
+	BCF     $3,$0   		; 0371, 3003
+	RRF     $6b,$1  		; 0372, 0ceb
+	RRF     $6a,$1  		; 0373, 0cea
+	RRF     $69,$1  		; 0374, 0ce9
+	RRF     $68,$1  		; 0375, 0ce8
+	ADDLW   $ff     		; 0376, 1cff
+	BTFSS   $3,$2   		; 0377, 3d03
+	GOTO    $371    		; 0378, 2b71
+	MOVFW   $69     		; 0379, 0869
+	MOVWF   $26     		; 037A, 00a6
+	MOVFW   $68     		; 037B, 0868
+	MOVWF   $25     		; 037C, 00a5
+	MOVWF   $4b     		; 037D, 00cb
+	MOVFW   $26     		; 037E, 0826
+	MOVWF   $4c     		; 037F, 00cc
+	CLRF    $4d     		; 0380, 01cd
+	CLRF    $4e     		; 0381, 01ce
+	MOVFW   $25     		; 0382, 0825
+	MOVWF   $4f     		; 0383, 00cf
+	MOVFW   $26     		; 0384, 0826
+	MOVWF   $50     		; 0385, 00d0
+	CLRF    $51     		; 0386, 01d1
+	CLRF    $52     		; 0387, 01d2
+	RET             		; 0388, 0040
+	MOVFW   $4e     		; 0389, 084e
+	MOVWF   $5a     		; 038A, 00da
+	MOVFW   $4d     		; 038B, 084d
+	MOVWF   $59     		; 038C, 00d9
+	MOVFW   $4c     		; 038D, 084c
+	MOVWF   $58     		; 038E, 00d8
+	MOVFW   $4b     		; 038F, 084b
+	MOVWF   $57     		; 0390, 00d7
+	MOVFW   $27     		; 0391, 0827
+	MOVWF   $4b     		; 0392, 00cb
+	MOVFW   $28     		; 0393, 0828
+	MOVWF   $4c     		; 0394, 00cc
+	CLRF    $4d     		; 0395, 01cd
+	CLRF    $4e     		; 0396, 01ce
+	MOVFW   $27     		; 0397, 0827
+	MOVWF   $4f     		; 0398, 00cf
+	MOVFW   $28     		; 0399, 0828
+	MOVWF   $50     		; 039A, 00d0
+	CLRF    $51     		; 039B, 01d1
+	CLRF    $52     		; 039C, 01d2
+	RET             		; 039D, 0040
+	MOVFW   $4e     		; 039E, 084e
+	MOVWF   $5e     		; 039F, 00de
+	MOVFW   $4d     		; 03A0, 084d
+	MOVWF   $5d     		; 03A1, 00dd
+	MOVFW   $4c     		; 03A2, 084c
+	MOVWF   $5c     		; 03A3, 00dc
+	MOVFW   $4b     		; 03A4, 084b
+	MOVWF   $5b     		; 03A5, 00db
+	RET             		; 03A6, 0040
+	MOVFW   $5e     		; 03A7, 085e
+	BCF     $3,$6   		; 03A8, 3303
+	MOVWF   $64     		; 03A9, 00e4
+	BSF     $3,$6   		; 03AA, 3703
+	MOVFW   $5f     		; 03AB, 085f
+	BCF     $3,$6   		; 03AC, 3303
+	MOVWF   $65     		; 03AD, 00e5
+	CLRF    $66     		; 03AE, 01e6
+	CLRF    $67     		; 03AF, 01e7
+	RET             		; 03B0, 0040
+	MOVFW   $58     		; 03B1, 0858
+	MOVWF   $6d     		; 03B2, 00ed
+	MOVFW   $57     		; 03B3, 0857
+	MOVWF   $6c     		; 03B4, 00ec
+	MOVLW   $0      		; 03B5, 1900
+	SUBWF   $6d,$0  		; 03B6, 026d
+	RETLW   $c8     		; 03B7, 18c8
+	MOVWF   $4b     		; 03B8, 00cb
+	MOVFW   $3d     		; 03B9, 083d
+	MOVWF   $4c     		; 03BA, 00cc
+	CLRF    $4d     		; 03BB, 01cd
+	CLRF    $4e     		; 03BC, 01ce
+	RET             		; 03BD, 0040
+	MOVLW   $c8     		; 03BE, 19c8
+	MOVWF   $4f     		; 03BF, 00cf
+	CLRF    $50     		; 03C0, 01d0
+	CLRF    $51     		; 03C1, 01d1
+	CLRF    $52     		; 03C2, 01d2
+	RET             		; 03C3, 0040
+	CLRF    $55     		; 03C4, 01d5
+	CLRF    $56     		; 03C5, 01d6
+	MOVFW   $52     		; 03C6, 0852
+	IORWF   $51,$0  		; 03C7, 0451
+	BTFSC   $3,$2   		; 03C8, 3903
+	GOTO    $3E9    		; 03C9, 2be9
+	CLRF    $57     		; 03CA, 01d7
+	INCF    $57,$1  		; 03CB, 0ad7
+	BTFSC   $52,$7  		; 03CC, 3bd2
+	GOTO    $3D2    		; 03CD, 2bd2
+	BCF     $3,$0   		; 03CE, 3003
+	RLF     $51,$1  		; 03CF, 0dd1
+	RLF     $52,$1  		; 03D0, 0dd2
+	GOTO    $3CB    		; 03D1, 2bcb
+	BCF     $3,$0   		; 03D2, 3003
+	RLF     $55,$1  		; 03D3, 0dd5
+	RLF     $56,$1  		; 03D4, 0dd6
+	MOVFW   $52     		; 03D5, 0852
+	SUBWF   $54,$0  		; 03D6, 0254
+	BTFSS   $3,$2   		; 03D7, 3d03
+	GOTO    $3DB    		; 03D8, 2bdb
+	MOVFW   $51     		; 03D9, 0851
+	SUBWF   $53,$0  		; 03DA, 0253
+	BTFSS   $3,$0   		; 03DB, 3c03
+	GOTO    $3E5    		; 03DC, 2be5
+	MOVFW   $51     		; 03DD, 0851
+	SUBWF   $53,$1  		; 03DE, 02d3
+	MOVFW   $52     		; 03DF, 0852
+	BTFSS   $3,$0   		; 03E0, 3c03
+	DECF    $54,$1  		; 03E1, 03d4
+	SUBWF   $54,$1  		; 03E2, 02d4
+	BSF     $55,$0  		; 03E3, 3455
+	BCF     $3,$0   		; 03E4, 3003
+	RRF     $52,$1  		; 03E5, 0cd2
+	RRF     $51,$1  		; 03E6, 0cd1
+	DECFSZ  $57,$1  		; 03E7, 0bd7
+	GOTO    $3D2    		; 03E8, 2bd2
+	MOVFW   $56     		; 03E9, 0856
+	MOVWF   $52     		; 03EA, 00d2
+	MOVFW   $55     		; 03EB, 0855
+	MOVWF   $51     		; 03EC, 00d1
+	RET             		; 03ED, 0040
+	MOVWF   $63     		; 03EE, 00e3
+	DECFSZ  $63,$0  		; 03EF, 0b63
+	GOTO    $3F7    		; 03F0, 2bf7
+	MOVLW   $3      		; 03F1, 1903
+	MOVWF   $29     		; 03F2, 00a9
+	CALL    $652    		; 03F3, 2652
+	BCF     $a,$3   		; 03F4, 318a
+	CALL    $3F8    		; 03F5, 23f8
+	BCF     $a,$3   		; 03F6, 318a
+	GOTO    $5BA    		; 03F7, 2dba
+	MOVLW   $64     		; 03F8, 1964
+	MOVWF   $44     		; 03F9, 00c4
+	CALL    $401    		; 03FA, 2401
+	BCF     $a,$3   		; 03FB, 318a
+	BCF     $3,$5   		; 03FC, 3283
+	MOVFW   $2f     		; 03FD, 082f
+	CALL    $461    		; 03FE, 2461
+	BCF     $a,$3   		; 03FF, 318a
+	GOTO    $5BA    		; 0400, 2dba
+	MOVWF   $5e     		; 0401, 00de
+	MOVLW   $63     		; 0402, 1963
+	CLRF    $5d     		; 0403, 01dd
+	CLRF    $60     		; 0404, 01e0
+	SUBWF   $5e,$0  		; 0405, 025e
+	BTFSS   $3,$0   		; 0406, 3c03
+	GOTO    $41C    		; 0407, 2c1c
+	MOVLW   $10     		; 0408, 1910
+	BSF     $3,$5   		; 0409, 3683
+	MOVWF   $2e     		; 040A, 00ae
+	MOVWF   $36     		; 040B, 00b6
+	MOVWF   $3e     		; 040C, 00be
+	MOVWF   $46     		; 040D, 00c6
+	MOVWF   $4e     		; 040E, 00ce
+	MOVWF   $5e     		; 040F, 00de
+	MOVLW   $9      		; 0410, 1909
+	BCF     $3,$5   		; 0411, 3283
+	MOVWF   $4e     		; 0412, 00ce
+	MOVLW   $2      		; 0413, 1902
+	CALL    $4CF    		; 0414, 24cf
+	BCF     $a,$3   		; 0415, 318a
+	MOVLW   $9      		; 0416, 1909
+	MOVWF   $4e     		; 0417, 00ce
+	MOVLW   $3      		; 0418, 1903
+	CALL    $4CF    		; 0419, 24cf
+	BCF     $a,$3   		; 041A, 318a
+	GOTO    $43A    		; 041B, 2c3a
+	MOVFW   $5e     		; 041C, 085e
+	MOVWF   $5d     		; 041D, 00dd
+	CLRF    $5f     		; 041E, 01df
+	MOVLW   $a      		; 041F, 190a
+	SUBWF   $5d,$0  		; 0420, 025d
+	BTFSS   $3,$0   		; 0421, 3c03
+	GOTO    $42A    		; 0422, 2c2a
+	MOVLW   $f6     		; 0423, 19f6
+	ADDWF   $5d,$1  		; 0424, 07dd
+	MOVLW   $a      		; 0425, 190a
+	INCF    $5f,$1  		; 0426, 0adf
+	SUBWF   $5f,$0  		; 0427, 025f
+	BTFSS   $3,$0   		; 0428, 3c03
+	GOTO    $41F    		; 0429, 2c1f
+	MOVFW   $5f     		; 042A, 085f
+	MOVWF   $4e     		; 042B, 00ce
+	MOVLW   $2      		; 042C, 1902
+	CALL    $4CF    		; 042D, 24cf
+	BCF     $a,$3   		; 042E, 318a
+	MOVFW   $5d     		; 042F, 085d
+	MOVWF   $4e     		; 0430, 00ce
+	MOVLW   $3      		; 0431, 1903
+	CALL    $4CF    		; 0432, 24cf
+	BSF     $3,$5   		; 0433, 3683
+	CLRF    $2e     		; 0434, 01ae
+	CLRF    $36     		; 0435, 01b6
+	CLRF    $3e     		; 0436, 01be
+	CLRF    $46     		; 0437, 01c6
+	CLRF    $4e     		; 0438, 01ce
+	CLRF    $5e     		; 0439, 01de
+	BCF     $3,$5   		; 043A, 3283
+	CLRF    $60     		; 043B, 01e0
+	MOVFW   $60     		; 043C, 0860
+	ADDLW   $8a     		; 043D, 1c8a
+	MOVWF   $4      		; 043E, 0084
+	MOVLW   $88     		; 043F, 1988
+	BTFSC   $3,$0   		; 0440, 3803
+	ADDLW   $1      		; 0441, 1c01
+	MOVWF   $7f     		; 0442, 00ff
+	BCF     $a,$3   		; 0443, 318a
+	CALL    $700    		; 0444, 2700
+	BCF     $a,$3   		; 0445, 318a
+	SUBWF   $5e,$0  		; 0446, 025e
+	MOVLW   $7      		; 0447, 1907
+	BTFSS   $3,$0   		; 0448, 3c03
+	GOTO    $44F    		; 0449, 2c4f
+	INCF    $60,$1  		; 044A, 0ae0
+	SUBWF   $60,$0  		; 044B, 0260
+	BTFSS   $3,$0   		; 044C, 3c03
+	GOTO    $43C    		; 044D, 2c3c
+	MOVLW   $7      		; 044E, 1907
+	SUBWF   $60,$0  		; 044F, 0260
+	BTFSS   $3,$0   		; 0450, 3c03
+	GOTO    $454    		; 0451, 2c54
+	MOVLW   $6      		; 0452, 1906
+	MOVWF   $60     		; 0453, 00e0
+	MOVFW   $60     		; 0454, 0860
+	CALL    $57E    		; 0455, 257e
+	BCF     $a,$3   		; 0456, 318a
+	BCF     $3,$5   		; 0457, 3283
+	BTFSS   $2d,$2  		; 0458, 3d2d
+	GOTO    $45E    		; 0459, 2c5e
+	MOVLW   $10     		; 045A, 1910
+	BSF     $3,$5   		; 045B, 3683
+	MOVWF   $66     		; 045C, 00e6
+	RET             		; 045D, 0040
+	BSF     $3,$5   		; 045E, 3683
+	CLRF    $66     		; 045F, 01e6
+	RET             		; 0460, 0040
+	MOVWF   $5f     		; 0461, 00df
+	MOVLW   $63     		; 0462, 1963
+	CLRF    $5e     		; 0463, 01de
+	CLRF    $62     		; 0464, 01e2
+	CLRF    $61     		; 0465, 01e1
+	SUBWF   $5f,$0  		; 0466, 025f
+	BTFSS   $3,$0   		; 0467, 3c03
+	GOTO    $486    		; 0468, 2c86
+	CLRF    $62     		; 0469, 01e2
+	MOVFW   $62     		; 046A, 0862
+	MOVWF   $5d     		; 046B, 00dd
+	BCF     $3,$0   		; 046C, 3003
+	RLF     $5d,$1  		; 046D, 0ddd
+	BCF     $3,$0   		; 046E, 3003
+	RLF     $5d,$1  		; 046F, 0ddd
+	BCF     $3,$0   		; 0470, 3003
+	RLF     $5d,$0  		; 0471, 0d5d
+	ADDLW   $ad     		; 0472, 1cad
+	MOVWF   $4      		; 0473, 0084
+	MOVLW   $10     		; 0474, 1910
+	MOVWF   $0      		; 0475, 0080
+	MOVLW   $7      		; 0476, 1907
+	INCF    $62,$1  		; 0477, 0ae2
+	SUBWF   $62,$0  		; 0478, 0262
+	BTFSS   $3,$0   		; 0479, 3c03
+	GOTO    $46A    		; 047A, 2c6a
+	MOVLW   $9      		; 047B, 1909
+	MOVWF   $4e     		; 047C, 00ce
+	MOVLW   $0      		; 047D, 1900
+	CALL    $4CF    		; 047E, 24cf
+	BCF     $a,$3   		; 047F, 318a
+	MOVLW   $9      		; 0480, 1909
+	MOVWF   $4e     		; 0481, 00ce
+	MOVLW   $1      		; 0482, 1901
+	CALL    $4CF    		; 0483, 24cf
+	BCF     $a,$3   		; 0484, 318a
+	GOTO    $4B0    		; 0485, 2cb0
+	MOVFW   $5f     		; 0486, 085f
+	MOVWF   $5e     		; 0487, 00de
+	CLRF    $60     		; 0488, 01e0
+	MOVLW   $a      		; 0489, 190a
+	SUBWF   $5e,$0  		; 048A, 025e
+	BTFSS   $3,$0   		; 048B, 3c03
+	GOTO    $494    		; 048C, 2c94
+	MOVLW   $f6     		; 048D, 19f6
+	ADDWF   $5e,$1  		; 048E, 07de
+	MOVLW   $a      		; 048F, 190a
+	INCF    $60,$1  		; 0490, 0ae0
+	SUBWF   $60,$0  		; 0491, 0260
+	BTFSS   $3,$0   		; 0492, 3c03
+	GOTO    $489    		; 0493, 2c89
+	MOVFW   $60     		; 0494, 0860
+	MOVWF   $4e     		; 0495, 00ce
+	MOVLW   $0      		; 0496, 1900
+	CALL    $4CF    		; 0497, 24cf
+	BCF     $a,$3   		; 0498, 318a
+	MOVFW   $5e     		; 0499, 085e
+	MOVWF   $4e     		; 049A, 00ce
+	MOVLW   $1      		; 049B, 1901
+	CALL    $4CF    		; 049C, 24cf
+	BCF     $a,$3   		; 049D, 318a
+	CLRF    $62     		; 049E, 01e2
+	MOVFW   $62     		; 049F, 0862
+	MOVWF   $5d     		; 04A0, 00dd
+	BCF     $3,$0   		; 04A1, 3003
+	RLF     $5d,$1  		; 04A2, 0ddd
+	BCF     $3,$0   		; 04A3, 3003
+	RLF     $5d,$1  		; 04A4, 0ddd
+	BCF     $3,$0   		; 04A5, 3003
+	RLF     $5d,$0  		; 04A6, 0d5d
+	ADDLW   $ad     		; 04A7, 1cad
+	MOVWF   $4      		; 04A8, 0084
+	MOVLW   $7      		; 04A9, 1907
+	BCF     $3,$7   		; 04AA, 3383
+	CLRF    $0      		; 04AB, 0180
+	INCF    $62,$1  		; 04AC, 0ae2
+	SUBWF   $62,$0  		; 04AD, 0262
+	BTFSS   $3,$0   		; 04AE, 3c03
+	GOTO    $49F    		; 04AF, 2c9f
+	CLRF    $61     		; 04B0, 01e1
+	MOVFW   $61     		; 04B1, 0861
+	ADDLW   $8a     		; 04B2, 1c8a
+	MOVWF   $4      		; 04B3, 0084
+	MOVLW   $88     		; 04B4, 1988
+	BTFSC   $3,$0   		; 04B5, 3803
+	ADDLW   $1      		; 04B6, 1c01
+	MOVWF   $7f     		; 04B7, 00ff
+	BCF     $a,$3   		; 04B8, 318a
+	CALL    $700    		; 04B9, 2700
+	BCF     $a,$3   		; 04BA, 318a
+	SUBWF   $5f,$0  		; 04BB, 025f
+	MOVLW   $7      		; 04BC, 1907
+	BTFSS   $3,$0   		; 04BD, 3c03
+	GOTO    $4C4    		; 04BE, 2cc4
+	INCF    $61,$1  		; 04BF, 0ae1
+	SUBWF   $61,$0  		; 04C0, 0261
+	BTFSS   $3,$0   		; 04C1, 3c03
+	GOTO    $4B1    		; 04C2, 2cb1
+	MOVLW   $7      		; 04C3, 1907
+	SUBWF   $61,$0  		; 04C4, 0261
+	BTFSS   $3,$0   		; 04C5, 3c03
+	GOTO    $4C9    		; 04C6, 2cc9
+	MOVLW   $6      		; 04C7, 1906
+	MOVWF   $61     		; 04C8, 00e1
+	MOVFW   $61     		; 04C9, 0861
+	CALL    $542    		; 04CA, 2542
+	MOVLW   $10     		; 04CB, 1910
+	BSF     $3,$5   		; 04CC, 3683
+	MOVWF   $65     		; 04CD, 00e5
+	RET             		; 04CE, 0040
+	MOVWF   $5b     		; 04CF, 00db
+	MOVLW   $a      		; 04D0, 190a
+	SUBWF   $4e,$0  		; 04D1, 024e
+	BTFSC   $3,$0   		; 04D2, 3803
+	RET             		; 04D3, 0040
+	MOVLW   $5      		; 04D4, 1905
+	SUBWF   $5b,$0  		; 04D5, 025b
+	BTFSC   $3,$0   		; 04D6, 3803
+	RET             		; 04D7, 0040
+	MOVFW   $4e     		; 04D8, 084e
+	ADDLW   $80     		; 04D9, 1c80
+	MOVWF   $4      		; 04DA, 0084
+	MOVLW   $88     		; 04DB, 1988
+	BTFSC   $3,$0   		; 04DC, 3803
+	ADDLW   $1      		; 04DD, 1c01
+	MOVWF   $7f     		; 04DE, 00ff
+	BCF     $a,$3   		; 04DF, 318a
+	CALL    $700    		; 04E0, 2700
+	BCF     $a,$3   		; 04E1, 318a
+	MOVWF   $5a     		; 04E2, 00da
+	CLRF    $5c     		; 04E3, 01dc
+	BTFSC   $5a,$0  		; 04E4, 385a
+	GOTO    $4E8    		; 04E5, 2ce8
+	CLRF    $58     		; 04E6, 01d8
+	GOTO    $4EA    		; 04E7, 2cea
+	MOVLW   $10     		; 04E8, 1910
+	MOVWF   $58     		; 04E9, 00d8
+	MOVLW   $e      		; 04EA, 190e
+	CLRF    $59     		; 04EB, 01d9
+	MOVWF   $4b     		; 04EC, 00cb
+	MOVFW   $5b     		; 04ED, 085b
+	CALL    $534    		; 04EE, 2534
+	ADDLW   $48     		; 04EF, 1c48
+	MOVWF   $4f     		; 04F0, 00cf
+	MOVLW   $88     		; 04F1, 1988
+	BTFSC   $3,$0   		; 04F2, 3803
+	ADDLW   $1      		; 04F3, 1c01
+	MOVWF   $50     		; 04F4, 00d0
+	BCF     $3,$0   		; 04F5, 3003
+	RLF     $5c,$0  		; 04F6, 0d5c
+	ADDWF   $4f,$0  		; 04F7, 074f
+	MOVWF   $4      		; 04F8, 0084
+	MOVFW   $50     		; 04F9, 0850
+	BTFSC   $3,$0   		; 04FA, 3803
+	INCF    $50,$0  		; 04FB, 0a50
+	MOVWF   $7f     		; 04FC, 00ff
+	BCF     $a,$3   		; 04FD, 318a
+	CALL    $700    		; 04FE, 2700
+	BCF     $a,$3   		; 04FF, 318a
+	MOVWF   $51     		; 0500, 00d1
+	MOVLW   $a9     		; 0501, 19a9
+	BCF     $3,$0   		; 0502, 3003
+	RLF     $51,$1  		; 0503, 0dd1
+	BCF     $3,$0   		; 0504, 3003
+	RLF     $51,$1  		; 0505, 0dd1
+	BCF     $3,$0   		; 0506, 3003
+	RLF     $51,$1  		; 0507, 0dd1
+	ADDWF   $51,$0  		; 0508, 0751
+	MOVWF   $52     		; 0509, 00d2
+	MOVLW   $e      		; 050A, 190e
+	MOVWF   $4b     		; 050B, 00cb
+	MOVFW   $5b     		; 050C, 085b
+	CALL    $534    		; 050D, 2534
+	ADDLW   $48     		; 050E, 1c48
+	MOVWF   $53     		; 050F, 00d3
+	MOVLW   $88     		; 0510, 1988
+	BTFSC   $3,$0   		; 0511, 3803
+	ADDLW   $1      		; 0512, 1c01
+	MOVWF   $54     		; 0513, 00d4
+	BCF     $3,$0   		; 0514, 3003
+	RLF     $5c,$0  		; 0515, 0d5c
+	ADDWF   $53,$0  		; 0516, 0753
+	MOVWF   $55     		; 0517, 00d5
+	MOVFW   $54     		; 0518, 0854
+	BTFSC   $3,$0   		; 0519, 3803
+	ADDLW   $1      		; 051A, 1c01
+	MOVWF   $56     		; 051B, 00d6
+	MOVLW   $1      		; 051C, 1901
+	ADDWF   $55,$0  		; 051D, 0755
+	MOVWF   $4      		; 051E, 0084
+	MOVFW   $56     		; 051F, 0856
+	BTFSC   $3,$0   		; 0520, 3803
+	INCF    $56,$0  		; 0521, 0a56
+	MOVWF   $7f     		; 0522, 00ff
+	BCF     $a,$3   		; 0523, 318a
+	CALL    $700    		; 0524, 2700
+	BCF     $a,$3   		; 0525, 318a
+	ADDWF   $52,$0  		; 0526, 0752
+	MOVWF   $57     		; 0527, 00d7
+	MOVWF   $4      		; 0528, 0084
+	MOVFW   $58     		; 0529, 0858
+	BCF     $3,$7   		; 052A, 3383
+	MOVWF   $0      		; 052B, 0080
+	MOVLW   $7      		; 052C, 1907
+	BCF     $3,$0   		; 052D, 3003
+	RRF     $5a,$1  		; 052E, 0cda
+	INCF    $5c,$1  		; 052F, 0adc
+	SUBWF   $5c,$0  		; 0530, 025c
+	BTFSC   $3,$0   		; 0531, 3803
+	RET             		; 0532, 0040
+	GOTO    $4E4    		; 0533, 2ce4
+	MOVWF   $4d     		; 0534, 00cd
+	CLRF    $4c     		; 0535, 01cc
+	MOVFW   $4b     		; 0536, 084b
+	BTFSC   $4d,$0  		; 0537, 384d
+	ADDWF   $4c,$1  		; 0538, 07cc
+	BCF     $3,$0   		; 0539, 3003
+	RLF     $4b,$1  		; 053A, 0dcb
+	BCF     $3,$0   		; 053B, 3003
+	RRF     $4d,$1  		; 053C, 0ccd
+	TSTF    $4d     		; 053D, 08cd
+	BTFSS   $3,$2   		; 053E, 3d03
+	GOTO    $536    		; 053F, 2d36
+	MOVFW   $4c     		; 0540, 084c
+	RET             		; 0541, 0040
+	MOVWF   $4c     		; 0542, 00cc
+	CLRF    $4d     		; 0543, 01cd
+	MOVFW   $4d     		; 0544, 084d
+	MOVWF   $4b     		; 0545, 00cb
+	BCF     $3,$0   		; 0546, 3003
+	RLF     $4b,$1  		; 0547, 0dcb
+	BCF     $3,$0   		; 0548, 3003
+	RLF     $4b,$1  		; 0549, 0dcb
+	BCF     $3,$0   		; 054A, 3003
+	RLF     $4b,$0  		; 054B, 0d4b
+	ADDLW   $ad     		; 054C, 1cad
+	MOVWF   $4      		; 054D, 0084
+	MOVLW   $7      		; 054E, 1907
+	BCF     $3,$7   		; 054F, 3383
+	CLRF    $0      		; 0550, 0180
+	INCF    $4d,$1  		; 0551, 0acd
+	SUBWF   $4d,$0  		; 0552, 024d
+	BTFSC   $3,$0   		; 0553, 3803
+	GOTO    $569    		; 0554, 2d69
+	GOTO    $544    		; 0555, 2d44
+	MOVLW   $10     		; 0556, 1910
+	BSF     $3,$5   		; 0557, 3683
+	MOVWF   $5d     		; 0558, 00dd
+	MOVLW   $10     		; 0559, 1910
+	BSF     $3,$5   		; 055A, 3683
+	MOVWF   $4d     		; 055B, 00cd
+	MOVLW   $10     		; 055C, 1910
+	BSF     $3,$5   		; 055D, 3683
+	MOVWF   $45     		; 055E, 00c5
+	MOVLW   $10     		; 055F, 1910
+	BSF     $3,$5   		; 0560, 3683
+	MOVWF   $3d     		; 0561, 00bd
+	MOVLW   $10     		; 0562, 1910
+	BSF     $3,$5   		; 0563, 3683
+	MOVWF   $35     		; 0564, 00b5
+	MOVLW   $10     		; 0565, 1910
+	BSF     $3,$5   		; 0566, 3683
+	MOVWF   $2d     		; 0567, 00ad
+	RET             		; 0568, 0040
+	MOVFW   $4c     		; 0569, 084c
+	XORLW   $1      		; 056A, 1d01
+	BTFSC   $3,$2   		; 056B, 3903
+	GOTO    $565    		; 056C, 2d65
+	XORLW   $3      		; 056D, 1d03
+	BTFSC   $3,$2   		; 056E, 3903
+	GOTO    $562    		; 056F, 2d62
+	XORLW   $1      		; 0570, 1d01
+	BTFSC   $3,$2   		; 0571, 3903
+	GOTO    $55F    		; 0572, 2d5f
+	XORLW   $7      		; 0573, 1d07
+	BTFSC   $3,$2   		; 0574, 3903
+	GOTO    $55C    		; 0575, 2d5c
+	XORLW   $1      		; 0576, 1d01
+	BTFSC   $3,$2   		; 0577, 3903
+	GOTO    $559    		; 0578, 2d59
+	XORLW   $3      		; 0579, 1d03
+	BTFSC   $3,$2   		; 057A, 3903
+	GOTO    $556    		; 057B, 2d56
+	GOTO    $57D    		; 057C, 2d7d
+	RET             		; 057D, 0040
+	MOVWF   $4c     		; 057E, 00cc
+	CLRF    $4d     		; 057F, 01cd
+	MOVFW   $4d     		; 0580, 084d
+	MOVWF   $4b     		; 0581, 00cb
+	BCF     $3,$0   		; 0582, 3003
+	RLF     $4b,$1  		; 0583, 0dcb
+	BCF     $3,$0   		; 0584, 3003
+	RLF     $4b,$1  		; 0585, 0dcb
+	BCF     $3,$0   		; 0586, 3003
+	RLF     $4b,$0  		; 0587, 0d4b
+	ADDLW   $ae     		; 0588, 1cae
+	MOVWF   $4      		; 0589, 0084
+	MOVLW   $7      		; 058A, 1907
+	BCF     $3,$7   		; 058B, 3383
+	CLRF    $0      		; 058C, 0180
+	INCF    $4d,$1  		; 058D, 0acd
+	SUBWF   $4d,$0  		; 058E, 024d
+	BTFSC   $3,$0   		; 058F, 3803
+	GOTO    $5A5    		; 0590, 2da5
+	GOTO    $580    		; 0591, 2d80
+	MOVLW   $10     		; 0592, 1910
+	BSF     $3,$5   		; 0593, 3683
+	MOVWF   $5e     		; 0594, 00de
+	MOVLW   $10     		; 0595, 1910
+	BSF     $3,$5   		; 0596, 3683
+	MOVWF   $4e     		; 0597, 00ce
+	MOVLW   $10     		; 0598, 1910
+	BSF     $3,$5   		; 0599, 3683
+	MOVWF   $46     		; 059A, 00c6
+	MOVLW   $10     		; 059B, 1910
+	BSF     $3,$5   		; 059C, 3683
+	MOVWF   $3e     		; 059D, 00be
+	MOVLW   $10     		; 059E, 1910
+	BSF     $3,$5   		; 059F, 3683
+	MOVWF   $36     		; 05A0, 00b6
+	MOVLW   $10     		; 05A1, 1910
+	BSF     $3,$5   		; 05A2, 3683
+	MOVWF   $2e     		; 05A3, 00ae
+	RET             		; 05A4, 0040
+	MOVFW   $4c     		; 05A5, 084c
+	XORLW   $1      		; 05A6, 1d01
+	BTFSC   $3,$2   		; 05A7, 3903
+	GOTO    $5A1    		; 05A8, 2da1
+	XORLW   $3      		; 05A9, 1d03
+	BTFSC   $3,$2   		; 05AA, 3903
+	GOTO    $59E    		; 05AB, 2d9e
+	XORLW   $1      		; 05AC, 1d01
+	BTFSC   $3,$2   		; 05AD, 3903
+	GOTO    $59B    		; 05AE, 2d9b
+	XORLW   $7      		; 05AF, 1d07
+	BTFSC   $3,$2   		; 05B0, 3903
+	GOTO    $598    		; 05B1, 2d98
+	XORLW   $1      		; 05B2, 1d01
+	BTFSC   $3,$2   		; 05B3, 3903
+	GOTO    $595    		; 05B4, 2d95
+	XORLW   $3      		; 05B5, 1d03
+	BTFSC   $3,$2   		; 05B6, 3903
+	GOTO    $592    		; 05B7, 2d92
+	GOTO    $5B9    		; 05B8, 2db9
+	RET             		; 05B9, 0040
+	BCF     $3,$5   		; 05BA, 3283
+	CLRF    $4b     		; 05BB, 01cb
+	GOTO    $5C5    		; 05BC, 2dc5
+	CLRF    $4b     		; 05BD, 01cb
+	GOTO    $5D0    		; 05BE, 2dd0
+	CLRF    $4b     		; 05BF, 01cb
+	INCF    $4b,$1  		; 05C0, 0acb
+	GOTO    $5D0    		; 05C1, 2dd0
+	MOVLW   $2      		; 05C2, 1902
+	MOVWF   $4b     		; 05C3, 00cb
+	GOTO    $5D0    		; 05C4, 2dd0
+	MOVFW   $39     		; 05C5, 0839
+	XORLW   $0      		; 05C6, 1d00
+	BTFSC   $3,$2   		; 05C7, 3903
+	GOTO    $5BD    		; 05C8, 2dbd
+	XORLW   $40     		; 05C9, 1d40
+	BTFSC   $3,$2   		; 05CA, 3903
+	GOTO    $5BF    		; 05CB, 2dbf
+	XORLW   $c0     		; 05CC, 1dc0
+	BTFSC   $3,$2   		; 05CD, 3903
+	GOTO    $5C2    		; 05CE, 2dc2
+	GOTO    $5D0    		; 05CF, 2dd0
+	MOVFW   $34     		; 05D0, 0834
+	XORWF   $4b,$0  		; 05D1, 064b
+	BTFSC   $3,$2   		; 05D2, 3903
+	GOTO    $5F4    		; 05D3, 2df4
+	BSF     $3,$5   		; 05D4, 3683
+	CLRF    $2f     		; 05D5, 01af
+	CLRF    $37     		; 05D6, 01b7
+	CLRF    $3f     		; 05D7, 01bf
+	CLRF    $47     		; 05D8, 01c7
+	CLRF    $4f     		; 05D9, 01cf
+	CLRF    $57     		; 05DA, 01d7
+	CLRF    $67     		; 05DB, 01e7
+	CLRF    $30     		; 05DC, 01b0
+	CLRF    $38     		; 05DD, 01b8
+	BCF     $3,$5   		; 05DE, 3283
+	MOVFW   $4b     		; 05DF, 084b
+	MOVWF   $34     		; 05E0, 00b4
+	GOTO    $5F4    		; 05E1, 2df4
+	MOVLW   $10     		; 05E2, 1910
+	BSF     $3,$5   		; 05E3, 3683
+	MOVWF   $2f     		; 05E4, 00af
+	MOVWF   $37     		; 05E5, 00b7
+	MOVWF   $3f     		; 05E6, 00bf
+	RET             		; 05E7, 0040
+	MOVLW   $10     		; 05E8, 1910
+	BSF     $3,$5   		; 05E9, 3683
+	MOVWF   $47     		; 05EA, 00c7
+	MOVWF   $4f     		; 05EB, 00cf
+	MOVWF   $57     		; 05EC, 00d7
+	RET             		; 05ED, 0040
+	MOVLW   $10     		; 05EE, 1910
+	BSF     $3,$5   		; 05EF, 3683
+	MOVWF   $67     		; 05F0, 00e7
+	MOVWF   $30     		; 05F1, 00b0
+	MOVWF   $38     		; 05F2, 00b8
+	RET             		; 05F3, 0040
+	MOVFW   $4b     		; 05F4, 084b
+	XORLW   $0      		; 05F5, 1d00
+	BTFSC   $3,$2   		; 05F6, 3903
+	GOTO    $5E2    		; 05F7, 2de2
+	XORLW   $1      		; 05F8, 1d01
+	BTFSC   $3,$2   		; 05F9, 3903
+	GOTO    $5E8    		; 05FA, 2de8
+	XORLW   $3      		; 05FB, 1d03
+	BTFSC   $3,$2   		; 05FC, 3903
+	GOTO    $5EE    		; 05FD, 2dee
+	GOTO    $5FF    		; 05FE, 2dff
+	RET             		; 05FF, 0040
+	BCF     $3,$5   		; 0600, 3283
+	MOVLW   $64     		; 0601, 1964
+	BCF     $3,$6   		; 0602, 3303
+	CLRF    $64     		; 0603, 01e4
+	INCF    $32,$1  		; 0604, 0ab2
+	SUBWF   $32,$0  		; 0605, 0232
+	BTFSS   $3,$0   		; 0606, 3c03
+	GOTO    $60B    		; 0607, 2e0b
+	CLRF    $32     		; 0608, 01b2
+	CALL    $63C    		; 0609, 263c
+	BCF     $a,$3   		; 060A, 318a
+	BTFSS   $2d,$2  		; 060B, 3d2d
+	GOTO    $612    		; 060C, 2e12
+	DECF    $2a,$0  		; 060D, 032a
+	BTFSC   $3,$2   		; 060E, 3903
+	GOTO    $612    		; 060F, 2e12
+	MOVLW   $5      		; 0610, 1905
+	MOVWF   $2a     		; 0611, 00aa
+	MOVFW   $30     		; 0612, 0830
+	XORWF   $2a,$0  		; 0613, 062a
+	BTFSC   $3,$2   		; 0614, 3903
+	GOTO    $61A    		; 0615, 2e1a
+	CLRF    $64     		; 0616, 01e4
+	INCF    $64,$1  		; 0617, 0ae4
+	MOVFW   $2a     		; 0618, 082a
+	MOVWF   $30     		; 0619, 00b0
+	MOVFW   $2a     		; 061A, 082a
+	XORLW   $0      		; 061B, 1d00
+	BTFSC   $3,$2   		; 061C, 3903
+	GOTO    $63B    		; 061D, 2e3b
+	XORLW   $1      		; 061E, 1d01
+	BTFSC   $3,$2   		; 061F, 3903
+	GOTO    $62B    		; 0620, 2e2b
+	XORLW   $5      		; 0621, 1d05
+	BTFSC   $3,$2   		; 0622, 3903
+	GOTO    $62D    		; 0623, 2e2d
+	XORLW   $c      		; 0624, 1d0c
+	BTFSC   $3,$2   		; 0625, 3903
+	GOTO    $62F    		; 0626, 2e2f
+	XORLW   $4      		; 0627, 1d04
+	BTFSC   $3,$2   		; 0628, 3903
+	GOTO    $631    		; 0629, 2e31
+	GOTO    $63B    		; 062A, 2e3b
+	MOVFW   $64     		; 062B, 0864
+	GOTO    $64A    		; 062C, 2e4a
+	MOVFW   $64     		; 062D, 0864
+	GOTO    $3EE    		; 062E, 2bee
+	MOVFW   $64     		; 062F, 0864
+	GOTO    $64A    		; 0630, 2e4a
+	BTFSS   $2d,$2  		; 0631, 3d2d
+	GOTO    $636    		; 0632, 2e36
+	MOVLW   $5      		; 0633, 1905
+	MOVWF   $2a     		; 0634, 00aa
+	RET             		; 0635, 0040
+	CLRF    $29     		; 0636, 01a9
+	CLRF    $2a     		; 0637, 01aa
+	MOVFW   $2a     		; 0638, 082a
+	MOVWF   $30     		; 0639, 00b0
+	GOTO    $652    		; 063A, 2e52
+	RET             		; 063B, 0040
+	MOVLW   $b      		; 063C, 190b
+	SUBWF   $29,$0  		; 063D, 0229
+	BTFSS   $3,$0   		; 063E, 3c03
+	GOTO    $642    		; 063F, 2e42
+	MOVLW   $a      		; 0640, 190a
+	MOVWF   $29     		; 0641, 00a9
+	MOVFW   $29     		; 0642, 0829
+	BTFSS   $3,$2   		; 0643, 3d03
+	DECFSZ  $29,$1  		; 0644, 0ba9
+	RET             		; 0645, 0040
+	MOVLW   $c      		; 0646, 190c
+	MOVWF   $2a     		; 0647, 00aa
+	MOVWF   $30     		; 0648, 00b0
+	RET             		; 0649, 0040
+	MOVWF   $63     		; 064A, 00e3
+	DECFSZ  $63,$0  		; 064B, 0b63
+	RET             		; 064C, 0040
+	MOVLW   $b      		; 064D, 190b
+	MOVWF   $29     		; 064E, 00a9
+	CALL    $652    		; 064F, 2652
+	BCF     $a,$3   		; 0650, 318a
+	GOTO    $3F8    		; 0651, 2bf8
+	MOVLW   $40     		; 0652, 1940
+	CLRF    $4b     		; 0653, 01cb
+	MOVWF   $4c     		; 0654, 00cc
+	MOVLW   $a9     		; 0655, 19a9
+	GOTO    $657    		; 0656, 2e57
+	MOVWF   $4e     		; 0657, 00ce
+	MOVWF   $4f     		; 0658, 00cf
+	CLRF    $50     		; 0659, 01d0
+	MOVFW   $4c     		; 065A, 084c
+	SUBWF   $50,$0  		; 065B, 0250
+	BTFSC   $3,$0   		; 065C, 3803
+	RET             		; 065D, 0040
+	MOVFW   $50     		; 065E, 0850
+	ADDWF   $4f,$0  		; 065F, 074f
+	MOVWF   $4d     		; 0660, 00cd
+	MOVWF   $4      		; 0661, 0084
+	MOVFW   $4b     		; 0662, 084b
+	BCF     $3,$7   		; 0663, 3383
+	MOVWF   $0      		; 0664, 0080
+	INCF    $50,$1  		; 0665, 0ad0
+	GOTO    $65A    		; 0666, 2e5a
+	BCF     $3,$6   		; 0667, 3303
+	BTFSS   $6,$2   		; 0668, 3d06
+	GOTO    $66D    		; 0669, 2e6d
+	BSF     $3,$5   		; 066A, 3683
+	BSF     $21,$0  		; 066B, 3421
+	GOTO    $66F    		; 066C, 2e6f
+	BSF     $3,$5   		; 066D, 3683
+	BCF     $21,$0  		; 066E, 3021
+	BCF     $3,$5   		; 066F, 3283
+	BTFSC   $5,$7   		; 0670, 3b85
+	GOTO    $675    		; 0671, 2e75
+	BSF     $3,$5   		; 0672, 3683
+	BSF     $21,$1  		; 0673, 34a1
+	GOTO    $677    		; 0674, 2e77
+	BSF     $3,$5   		; 0675, 3683
+	BCF     $21,$1  		; 0676, 30a1
+	MOVFW   $21     		; 0677, 0821
+	XORWF   $22,$0  		; 0678, 0622
+	BTFSC   $3,$2   		; 0679, 3903
+	GOTO    $6B1    		; 067A, 2eb1
+	MOVLW   $2      		; 067B, 1902
+	INCF    $23,$1  		; 067C, 0aa3
+	SUBWF   $23,$0  		; 067D, 0223
+	BTFSS   $3,$0   		; 067E, 3c03
+	GOTO    $6B2    		; 067F, 2eb2
+	BTFSS   $22,$1  		; 0680, 3ca2
+	BTFSS   $21,$1  		; 0681, 3ca1
+	GOTO    $68C    		; 0682, 2e8c
+	MOVLW   $32     		; 0683, 1932
+	INCF    $25,$1  		; 0684, 0aa5
+	MOVWF   $26     		; 0685, 00a6
+	BSF     $24,$0  		; 0686, 3424
+	CLRF    $27     		; 0687, 01a7
+	CLRF    $28     		; 0688, 01a8
+	CALL    $6E7    		; 0689, 26e7
+	BCF     $a,$3   		; 068A, 318a
+	GOTO    $690    		; 068B, 2e90
+	BTFSC   $22,$1  		; 068C, 38a2
+	BTFSC   $21,$1  		; 068D, 38a1
+	GOTO    $690    		; 068E, 2e90
+	BCF     $24,$0  		; 068F, 3024
+	BSF     $3,$5   		; 0690, 3683
+	BTFSS   $22,$0  		; 0691, 3c22
+	BTFSS   $21,$0  		; 0692, 3c21
+	GOTO    $69C    		; 0693, 2e9c
+	BTFSC   $24,$4  		; 0694, 3a24
+	GOTO    $6A7    		; 0695, 2ea7
+	BSF     $24,$5  		; 0696, 36a4
+	BCF     $3,$5   		; 0697, 3283
+	BSF     $2e,$0  		; 0698, 342e
+	BSF     $3,$5   		; 0699, 3683
+	BCF     $24,$7  		; 069A, 33a4
+	GOTO    $6A7    		; 069B, 2ea7
+	BTFSC   $22,$0  		; 069C, 3822
+	BTFSC   $21,$0  		; 069D, 3821
+	GOTO    $6A7    		; 069E, 2ea7
+	BTFSS   $24,$5  		; 069F, 3ea4
+	GOTO    $6A7    		; 06A0, 2ea7
+	BCF     $a,$3   		; 06A1, 318a
+	CALL    $221    		; 06A2, 2221
+	BCF     $a,$3   		; 06A3, 318a
+	BCF     $2e,$0  		; 06A4, 302e
+	BSF     $3,$5   		; 06A5, 3683
+	BCF     $24,$5  		; 06A6, 32a4
+	BCF     $3,$5   		; 06A7, 3283
+	BSF     $3,$6   		; 06A8, 3703
+	CLRF    $5c     		; 06A9, 01dc
+	CLRF    $5d     		; 06AA, 01dd
+	BSF     $3,$5   		; 06AB, 3683
+	BCF     $3,$6   		; 06AC, 3303
+	CLRF    $23     		; 06AD, 01a3
+	MOVFW   $21     		; 06AE, 0821
+	MOVWF   $22     		; 06AF, 00a2
+	GOTO    $6B2    		; 06B0, 2eb2
+	CLRF    $23     		; 06B1, 01a3
+	MOVFW   $26     		; 06B2, 0826
+	BTFSC   $3,$2   		; 06B3, 3903
+	GOTO    $6B7    		; 06B4, 2eb7
+	DECF    $26,$1  		; 06B5, 03a6
+	GOTO    $6B8    		; 06B6, 2eb8
+	CLRF    $25     		; 06B7, 01a5
+	BTFSS   $24,$0  		; 06B8, 3c24
+	GOTO    $6D9    		; 06B9, 2ed9
+	MOVLW   $0      		; 06BA, 1900
+	SUBWF   $28,$0  		; 06BB, 0228
+	MOVLW   $96     		; 06BC, 1996
+	BTFSC   $3,$2   		; 06BD, 3903
+	SUBWF   $27,$0  		; 06BE, 0227
+	BTFSC   $3,$0   		; 06BF, 3803
+	GOTO    $6C9    		; 06C0, 2ec9
+	INCF    $27,$1  		; 06C1, 0aa7
+	BTFSC   $3,$2   		; 06C2, 3903
+	INCF    $28,$1  		; 06C3, 0aa8
+	BCF     $3,$5   		; 06C4, 3283
+	BSF     $3,$6   		; 06C5, 3703
+	CLRF    $5c     		; 06C6, 01dc
+	CLRF    $5d     		; 06C7, 01dd
+	GOTO    $6D9    		; 06C8, 2ed9
+	BCF     $24,$0  		; 06C9, 3024
+	CLRF    $25     		; 06CA, 01a5
+	BCF     $a,$3   		; 06CB, 318a
+	CALL    $221    		; 06CC, 2221
+	BCF     $a,$3   		; 06CD, 318a
+	BCF     $2e,$0  		; 06CE, 302e
+	BTFSS   $2d,$7  		; 06CF, 3fad
+	GOTO    $6D4    		; 06D0, 2ed4
+	MOVLW   $3      		; 06D1, 1903
+	BCF     $2d,$7  		; 06D2, 33ad
+	GOTO    $6D6    		; 06D3, 2ed6
+	MOVLW   $2      		; 06D4, 1902
+	BSF     $2d,$7  		; 06D5, 37ad
+	BCF     $a,$3   		; 06D6, 318a
+	CALL    $2FB    		; 06D7, 22fb
+	BCF     $a,$3   		; 06D8, 318a
+	BSF     $3,$5   		; 06D9, 3683
+	BCF     $3,$6   		; 06DA, 3303
+	TSTF    $25     		; 06DB, 08a5
+	BTFSS   $3,$2   		; 06DC, 3d03
+	GOTO    $6E2    		; 06DD, 2ee2
+	MOVFW   $21     		; 06DE, 0821
+	ANDLW   $5      		; 06DF, 1b05
+	BTFSC   $3,$2   		; 06E0, 3903
+	RET             		; 06E1, 0040
+	BCF     $3,$5   		; 06E2, 3283
+	BSF     $3,$6   		; 06E3, 3703
+	CLRF    $5c     		; 06E4, 01dc
+	CLRF    $5d     		; 06E5, 01dd
+	RET             		; 06E6, 0040
+	GOTO    $6EF    		; 06E7, 2eef
+	MOVLW   $40     		; 06E8, 1940
+	GOTO    $6EB    		; 06E9, 2eeb
+	MOVLW   $80     		; 06EA, 1980
+	MOVWF   $39     		; 06EB, 00b9
+	GOTO    $6FB    		; 06EC, 2efb
+	CLRF    $39     		; 06ED, 01b9
+	GOTO    $6FB    		; 06EE, 2efb
+	BCF     $3,$5   		; 06EF, 3283
+	MOVFW   $39     		; 06F0, 0839
+	XORLW   $0      		; 06F1, 1d00
+	BTFSC   $3,$2   		; 06F2, 3903
+	GOTO    $6E8    		; 06F3, 2ee8
+	XORLW   $40     		; 06F4, 1d40
+	BTFSC   $3,$2   		; 06F5, 3903
+	GOTO    $6EA    		; 06F6, 2eea
+	XORLW   $c0     		; 06F7, 1dc0
+	BTFSC   $3,$2   		; 06F8, 3903
+	GOTO    $6ED    		; 06F9, 2eed
+	GOTO    $6FB    		; 06FA, 2efb
+	MOVLW   $4      		; 06FB, 1904
+	BSF     $2d,$1  		; 06FC, 34ad
+	BCF     $a,$3   		; 06FD, 318a
+	GOTO    $2FB    		; 06FE, 2afb
+	NOP             		; 06FF, 0000
+	BTFSC   $7f,$7  		; 0700, 3bff
+	GOTO    $70A    		; 0701, 2f0a
+	BCF     $3,$7   		; 0702, 3383
+	BTFSC   $7f,$0  		; 0703, 387f
+	BSF     $3,$7   		; 0704, 3783
+	MOVFW   $0      		; 0705, 0800
+	INCF    $4,$1   		; 0706, 0a84
+	BTFSC   $3,$2   		; 0707, 3903
+	INCF    $7f,$1  		; 0708, 0aff
+	RET             		; 0709, 0040
+	MOVFW   $7f     		; 070A, 087f
+	ANDLW   $7f     		; 070B, 1b7f
+	MOVWF   $a      		; 070C, 008a
+	MOVFW   $4      		; 070D, 0804
+	INCF    $4,$1   		; 070E, 0a84
+	BTFSC   $3,$2   		; 070F, 3903
+	INCF    $7f,$1  		; 0710, 0aff
+	MOVWF   $2      		; 0711, 0082
+	RETLW   $e4     		; 0712, 18e4
+	RETLW   $c      		; 0713, 180c
+	RETLW   $f2     		; 0714, 18f2
+	RETLW   $c      		; 0715, 180c
+	RETLW   $0      		; 0716, 1800
+	RETLW   $d      		; 0717, 180d
+	RETLW   $e      		; 0718, 180e
+	RETLW   $d      		; 0719, 180d
+	RETLW   $1c     		; 071A, 181c
+	RETLW   $d      		; 071B, 180d
+	RETLW   $2a     		; 071C, 182a
+	RETLW   $d      		; 071D, 180d
+	RETLW   $38     		; 071E, 1838
+	RETLW   $d      		; 071F, 180d
+	RETLW   $46     		; 0720, 1846
+	RETLW   $d      		; 0721, 180d
+	RETLW   $54     		; 0722, 1854
+	RETLW   $d      		; 0723, 180d
+	RETLW   $62     		; 0724, 1862
+	RETLW   $d      		; 0725, 180d
+	RETLW   $70     		; 0726, 1870
+	RETLW   $d      		; 0727, 180d
+	RETLW   $7a     		; 0728, 187a
+	RETLW   $d      		; 0729, 180d
+	RETLW   $84     		; 072A, 1884
+	RETLW   $d      		; 072B, 180d
+	RETLW   $8e     		; 072C, 188e
+	RETLW   $d      		; 072D, 180d
+	RETLW   $98     		; 072E, 1898
+	RETLW   $d      		; 072F, 180d
+	RETLW   $a2     		; 0730, 18a2
+	RETLW   $d      		; 0731, 180d
+	RETLW   $ac     		; 0732, 18ac
+	RETLW   $d      		; 0733, 180d
+	RETLW   $b6     		; 0734, 18b6
+	RETLW   $d      		; 0735, 180d
+	RETLW   $c0     		; 0736, 18c0
+	RETLW   $d      		; 0737, 180d
+	RETLW   $ca     		; 0738, 18ca
+	RETLW   $d      		; 0739, 180d
+	RETLW   $d4     		; 073A, 18d4
+	RETLW   $d      		; 073B, 180d
+	RETLW   $de     		; 073C, 18de
+	RETLW   $d      		; 073D, 180d
+	RETLW   $e8     		; 073E, 18e8
+	RETLW   $d      		; 073F, 180d
+	RETLW   $f2     		; 0740, 18f2
+	RETLW   $d      		; 0741, 180d
+	RETLW   $fc     		; 0742, 18fc
+	RETLW   $d      		; 0743, 180d
+	RETLW   $6      		; 0744, 1806
+	RETLW   $e      		; 0745, 180e
+	RETLW   $10     		; 0746, 1810
+	RETLW   $e      		; 0747, 180e
+	RETLW   $1a     		; 0748, 181a
+	RETLW   $e      		; 0749, 180e
+	RETLW   $24     		; 074A, 1824
+	RETLW   $e      		; 074B, 180e
+	RETLW   $2e     		; 074C, 182e
+	RETLW   $e      		; 074D, 180e
+	RETLW   $38     		; 074E, 1838
+	RETLW   $e      		; 074F, 180e
+	RETLW   $3c     		; 0750, 183c
+	RETLW   $e      		; 0751, 180e
+	RETLW   $40     		; 0752, 1840
+	RETLW   $e      		; 0753, 180e
+	RETLW   $44     		; 0754, 1844
+	RETLW   $e      		; 0755, 180e
+	RETLW   $48     		; 0756, 1848
+	RETLW   $e      		; 0757, 180e
+	RETLW   $4c     		; 0758, 184c
+	RETLW   $e      		; 0759, 180e
+	RETLW   $50     		; 075A, 1850
+	RETLW   $e      		; 075B, 180e
+	RETLW   $54     		; 075C, 1854
+	RETLW   $e      		; 075D, 180e
+	RETLW   $58     		; 075E, 1858
+	RETLW   $e      		; 075F, 180e
+	RETLW   $5c     		; 0760, 185c
+	RETLW   $e      		; 0761, 180e
+	RETLW   $60     		; 0762, 1860
+	RETLW   $e      		; 0763, 180e
+	RETLW   $64     		; 0764, 1864
+	RETLW   $e      		; 0765, 180e
+	RETLW   $68     		; 0766, 1868
+	RETLW   $e      		; 0767, 180e
+	RETLW   $6c     		; 0768, 186c
+	RETLW   $e      		; 0769, 180e
+	RETLW   $70     		; 076A, 1870
+	RETLW   $e      		; 076B, 180e
+	RETLW   $74     		; 076C, 1874
+	RETLW   $e      		; 076D, 180e
+	RETLW   $78     		; 076E, 1878
+	RETLW   $e      		; 076F, 180e
+	RETLW   $7c     		; 0770, 187c
+	RETLW   $e      		; 0771, 180e
+	RETLW   $80     		; 0772, 1880
+	RETLW   $e      		; 0773, 180e
+	RETLW   $84     		; 0774, 1884
+	RETLW   $e      		; 0775, 180e
+	RETLW   $88     		; 0776, 1888
+	RETLW   $e      		; 0777, 180e
+	RETLW   $8c     		; 0778, 188c
+	RETLW   $e      		; 0779, 180e
+	RETLW   $90     		; 077A, 1890
+	RETLW   $e      		; 077B, 180e
+	RETLW   $94     		; 077C, 1894
+	RETLW   $e      		; 077D, 180e
+	RETLW   $98     		; 077E, 1898
+	RETLW   $e      		; 077F, 180e
+	RETLW   $9c     		; 0780, 189c
+	RETLW   $e      		; 0781, 180e
+	RETLW   $a0     		; 0782, 18a0
+	RETLW   $e      		; 0783, 180e
+	RETLW   $a4     		; 0784, 18a4
+	RETLW   $e      		; 0785, 180e
+	RETLW   $a8     		; 0786, 18a8
+	RETLW   $e      		; 0787, 180e
+	RETLW   $ac     		; 0788, 18ac
+	RETLW   $e      		; 0789, 180e
+	RETLW   $b0     		; 078A, 18b0
+	RETLW   $e      		; 078B, 180e
+	RETLW   $b4     		; 078C, 18b4
+	RETLW   $e      		; 078D, 180e
+	RETLW   $b8     		; 078E, 18b8
+	RETLW   $e      		; 078F, 180e
+	RETLW   $bc     		; 0790, 18bc
+	RETLW   $e      		; 0791, 180e
+	RETLW   $c0     		; 0792, 18c0
+	RETLW   $e      		; 0793, 180e
+	RETLW   $c4     		; 0794, 18c4
+	RETLW   $e      		; 0795, 180e
+	RETLW   $c8     		; 0796, 18c8
+	RETLW   $e      		; 0797, 180e
+	RETLW   $cc     		; 0798, 18cc
+	RETLW   $e      		; 0799, 180e
+	RETLW   $d0     		; 079A, 18d0
+	RETLW   $e      		; 079B, 180e
+	RETLW   $d4     		; 079C, 18d4
+	RETLW   $e      		; 079D, 180e
+	RETLW   $d8     		; 079E, 18d8
+	RETLW   $e      		; 079F, 180e
+	RETLW   $e2     		; 07A0, 18e2
+	RETLW   $e      		; 07A1, 180e
+	RETLW   $ec     		; 07A2, 18ec
+	RETLW   $e      		; 07A3, 180e
+	RETLW   $f6     		; 07A4, 18f6
+	RETLW   $e      		; 07A5, 180e
+	RETLW   $0      		; 07A6, 1800
+	RETLW   $f      		; 07A7, 180f
+	RETLW   $a      		; 07A8, 180a
+	RETLW   $f      		; 07A9, 180f
+	RETLW   $14     		; 07AA, 1814
+	RETLW   $f      		; 07AB, 180f
+	RETLW   $1e     		; 07AC, 181e
+	RETLW   $f      		; 07AD, 180f
+	RETLW   $28     		; 07AE, 1828
+	RETLW   $f      		; 07AF, 180f
+	RETLW   $32     		; 07B0, 1832
+	RETLW   $f      		; 07B1, 180f
+	RETLW   $3c     		; 07B2, 183c
+	RETLW   $f      		; 07B3, 180f
+	RETLW   $46     		; 07B4, 1846
+	RETLW   $f      		; 07B5, 180f
+	RETLW   $50     		; 07B6, 1850
+	RETLW   $f      		; 07B7, 180f
+	RETLW   $5a     		; 07B8, 185a
+	RETLW   $f      		; 07B9, 180f
+	RETLW   $64     		; 07BA, 1864
+	RETLW   $f      		; 07BB, 180f
+	RETLW   $6e     		; 07BC, 186e
+	RETLW   $f      		; 07BD, 180f
+	RETLW   $78     		; 07BE, 1878
+	RETLW   $f      		; 07BF, 180f
+	RETLW   $82     		; 07C0, 1882
+	RETLW   $f      		; 07C1, 180f
+	RETLW   $8c     		; 07C2, 188c
+	RETLW   $f      		; 07C3, 180f
+	RETLW   $96     		; 07C4, 1896
+	RETLW   $f      		; 07C5, 180f
+	RETLW   $a0     		; 07C6, 18a0
+	RETLW   $f      		; 07C7, 180f
+	RETLW   $a5     		; 07C8, 18a5
+	RETLW   $f      		; 07C9, 180f
+	RETLW   $aa     		; 07CA, 18aa
+	RETLW   $f      		; 07CB, 180f
+	RETLW   $af     		; 07CC, 18af
+	RETLW   $f      		; 07CD, 180f
+	RETLW   $b4     		; 07CE, 18b4
+	RETLW   $f      		; 07CF, 180f
+	RETLW   $b9     		; 07D0, 18b9
+	RETLW   $f      		; 07D1, 180f
+	RETLW   $be     		; 07D2, 18be
+	RETLW   $f      		; 07D3, 180f
+	RETLW   $c3     		; 07D4, 18c3
+	RETLW   $f      		; 07D5, 180f
+	RETLW   $c8     		; 07D6, 18c8
+	RETLW   $f      		; 07D7, 180f
+	RETLW   $cd     		; 07D8, 18cd
+	RETLW   $f      		; 07D9, 180f
+	RETLW   $2c     		; 07DA, 182c
+	RETLW   $10     		; 07DB, 1810
+	RETLW   $1      		; 07DC, 1801
+	RETLW   $2      		; 07DD, 1802
+	RETLW   $1      		; 07DE, 1801
+	RETLW   $3      		; 07DF, 1803
+	RETLW   $1      		; 07E0, 1801
+	RETLW   $4      		; 07E1, 1804
+	RETLW   $1      		; 07E2, 1801
+	RETLW   $5      		; 07E3, 1805
+	RETLW   $1      		; 07E4, 1801
+	RETLW   $6      		; 07E5, 1806
+	RETLW   $1      		; 07E6, 1801
+	RETLW   $7      		; 07E7, 1807
+	RETLW   $2      		; 07E8, 1802
+	RETLW   $1      		; 07E9, 1801
+	RETLW   $2      		; 07EA, 1802
+	RETLW   $3      		; 07EB, 1803
+	RETLW   $2      		; 07EC, 1802
+	RETLW   $4      		; 07ED, 1804
+	RETLW   $2      		; 07EE, 1802
+	RETLW   $5      		; 07EF, 1805
+	RETLW   $2      		; 07F0, 1802
+	RETLW   $6      		; 07F1, 1806
+	RETLW   $2      		; 07F2, 1802
+	RETLW   $7      		; 07F3, 1807
+	RETLW   $3      		; 07F4, 1803
+	RETLW   $1      		; 07F5, 1801
+	RETLW   $3      		; 07F6, 1803
+	RETLW   $2      		; 07F7, 1802
+	RETLW   $3      		; 07F8, 1803
+	RETLW   $4      		; 07F9, 1804
+	RETLW   $3      		; 07FA, 1803
+	RETLW   $5      		; 07FB, 1805
+	RETLW   $3      		; 07FC, 1803
+	RETLW   $6      		; 07FD, 1806
+	RETLW   $3      		; 07FE, 1803
+	RETLW   $7      		; 07FF, 1807
+	RETLW   $4      		; 0800, 1804
+	RETLW   $1      		; 0801, 1801
+	RETLW   $4      		; 0802, 1804
+	RETLW   $2      		; 0803, 1802
+	RETLW   $4      		; 0804, 1804
+	RETLW   $3      		; 0805, 1803
+	RETLW   $4      		; 0806, 1804
+	RETLW   $5      		; 0807, 1805
+	RETLW   $4      		; 0808, 1804
+	RETLW   $6      		; 0809, 1806
+	RETLW   $4      		; 080A, 1804
+	RETLW   $7      		; 080B, 1807
+	RETLW   $5      		; 080C, 1805
+	RETLW   $1      		; 080D, 1801
+	RETLW   $5      		; 080E, 1805
+	RETLW   $2      		; 080F, 1802
+	RETLW   $5      		; 0810, 1805
+	RETLW   $3      		; 0811, 1803
+	RETLW   $5      		; 0812, 1805
+	RETLW   $4      		; 0813, 1804
+	RETLW   $5      		; 0814, 1805
+	RETLW   $6      		; 0815, 1806
+	RETLW   $5      		; 0816, 1805
+	RETLW   $7      		; 0817, 1807
+	RETLW   $6      		; 0818, 1806
+	RETLW   $1      		; 0819, 1801
+	RETLW   $6      		; 081A, 1806
+	RETLW   $2      		; 081B, 1802
+	RETLW   $6      		; 081C, 1806
+	RETLW   $3      		; 081D, 1803
+	RETLW   $6      		; 081E, 1806
+	RETLW   $4      		; 081F, 1804
+	RETLW   $6      		; 0820, 1806
+	RETLW   $5      		; 0821, 1805
+	RETLW   $6      		; 0822, 1806
+	RETLW   $7      		; 0823, 1807
+	RETLW   $7      		; 0824, 1807
+	RETLW   $1      		; 0825, 1801
+	RETLW   $7      		; 0826, 1807
+	RETLW   $2      		; 0827, 1802
+	RETLW   $7      		; 0828, 1807
+	RETLW   $3      		; 0829, 1803
+	RETLW   $7      		; 082A, 1807
+	RETLW   $4      		; 082B, 1804
+	RETLW   $7      		; 082C, 1807
+	RETLW   $5      		; 082D, 1805
+	RETLW   $7      		; 082E, 1807
+	RETLW   $6      		; 082F, 1806
+	RETLW   $8      		; 0830, 1808
+	RETLW   $1      		; 0831, 1801
+	RETLW   $8      		; 0832, 1808
+	RETLW   $2      		; 0833, 1802
+	RETLW   $8      		; 0834, 1808
+	RETLW   $3      		; 0835, 1803
+	RETLW   $8      		; 0836, 1808
+	RETLW   $4      		; 0837, 1804
+	RETLW   $8      		; 0838, 1808
+	RETLW   $5      		; 0839, 1805
+	RETLW   $8      		; 083A, 1808
+	RETLW   $6      		; 083B, 1806
+	RETLW   $1      		; 083C, 1801
+	RETLW   $8      		; 083D, 1808
+	RETLW   $2      		; 083E, 1802
+	RETLW   $8      		; 083F, 1808
+	RETLW   $0      		; 0840, 1800
+	RETLW   $0      		; 0841, 1800
+	RETLW   $8      		; 0842, 1808
+	RETLW   $7      		; 0843, 1807
+	RETLW   $0      		; 0844, 1800
+	RETLW   $0      		; 0845, 1800
+	RETLW   $0      		; 0846, 1800
+	RETLW   $0      		; 0847, 1800
+	RETLW   $1      		; 0848, 1801
+	RETLW   $0      		; 0849, 1800
+	RETLW   $2      		; 084A, 1802
+	RETLW   $0      		; 084B, 1800
+	RETLW   $3      		; 084C, 1803
+	RETLW   $0      		; 084D, 1800
+	RETLW   $4      		; 084E, 1804
+	RETLW   $0      		; 084F, 1800
+	RETLW   $5      		; 0850, 1805
+	RETLW   $0      		; 0851, 1800
+	RETLW   $6      		; 0852, 1806
+	RETLW   $0      		; 0853, 1800
+	RETLW   $7      		; 0854, 1807
+	RETLW   $0      		; 0855, 1800
+	RETLW   $0      		; 0856, 1800
+	RETLW   $1      		; 0857, 1801
+	RETLW   $2      		; 0858, 1802
+	RETLW   $1      		; 0859, 1801
+	RETLW   $3      		; 085A, 1803
+	RETLW   $1      		; 085B, 1801
+	RETLW   $4      		; 085C, 1804
+	RETLW   $1      		; 085D, 1801
+	RETLW   $5      		; 085E, 1805
+	RETLW   $1      		; 085F, 1801
+	RETLW   $6      		; 0860, 1806
+	RETLW   $1      		; 0861, 1801
+	RETLW   $7      		; 0862, 1807
+	RETLW   $1      		; 0863, 1801
+	RETLW   $0      		; 0864, 1800
+	RETLW   $2      		; 0865, 1802
+	RETLW   $1      		; 0866, 1801
+	RETLW   $2      		; 0867, 1802
+	RETLW   $3      		; 0868, 1803
+	RETLW   $2      		; 0869, 1802
+	RETLW   $4      		; 086A, 1804
+	RETLW   $2      		; 086B, 1802
+	RETLW   $5      		; 086C, 1805
+	RETLW   $2      		; 086D, 1802
+	RETLW   $6      		; 086E, 1806
+	RETLW   $2      		; 086F, 1802
+	RETLW   $7      		; 0870, 1807
+	RETLW   $2      		; 0871, 1802
+	RETLW   $0      		; 0872, 1800
+	RETLW   $3      		; 0873, 1803
+	RETLW   $1      		; 0874, 1801
+	RETLW   $3      		; 0875, 1803
+	RETLW   $2      		; 0876, 1802
+	RETLW   $3      		; 0877, 1803
+	RETLW   $4      		; 0878, 1804
+	RETLW   $3      		; 0879, 1803
+	RETLW   $5      		; 087A, 1805
+	RETLW   $3      		; 087B, 1803
+	RETLW   $6      		; 087C, 1806
+	RETLW   $3      		; 087D, 1803
+	RETLW   $7      		; 087E, 1807
+	RETLW   $3      		; 087F, 1803
+	RETLW   $3f     		; 0880, 183f
+	RETLW   $6      		; 0881, 1806
+	RETLW   $5b     		; 0882, 185b
+	RETLW   $4f     		; 0883, 184f
+	RETLW   $66     		; 0884, 1866
+	RETLW   $6d     		; 0885, 186d
+	RETLW   $7d     		; 0886, 187d
+	RETLW   $7      		; 0887, 1807
+	RETLW   $7f     		; 0888, 187f
+	RETLW   $6f     		; 0889, 186f
+	RETLW   $10     		; 088A, 1810
+	RETLW   $1e     		; 088B, 181e
+	RETLW   $2c     		; 088C, 182c
+	RETLW   $3a     		; 088D, 183a
+	RETLW   $48     		; 088E, 1848
+	RETLW   $56     		; 088F, 1856
+	RETLW   $64     		; 0890, 1864
+	BSF     $a,$3   		; 0891, 358a
+	GOTO    $781    		; 0892, 2f81
+	BSF     $a,$3   		; 0893, 358a
+	GOTO    $78F    		; 0894, 2f8f
+	BSF     $a,$3   		; 0895, 358a
+	GOTO    $79D    		; 0896, 2f9d
+	BSF     $a,$3   		; 0897, 358a
+	GOTO    $7AB    		; 0898, 2fab
+	BSF     $a,$3   		; 0899, 358a
+	GOTO    $7B9    		; 089A, 2fb9
+	BSF     $a,$3   		; 089B, 358a
+	GOTO    $7C7    		; 089C, 2fc7
+	BSF     $a,$3   		; 089D, 358a
+	GOTO    $7D5    		; 089E, 2fd5
+	BSF     $a,$3   		; 089F, 358a
+	GOTO    $7E3    		; 08A0, 2fe3
+	BSF     $a,$3   		; 08A1, 358a
+	GOTO    $72A    		; 08A2, 2f2a
+	BSF     $a,$3   		; 08A3, 358a
+	GOTO    $733    		; 08A4, 2f33
+	BSF     $a,$3   		; 08A5, 358a
+	GOTO    $73C    		; 08A6, 2f3c
+	BSF     $a,$3   		; 08A7, 358a
+	GOTO    $745    		; 08A8, 2f45
+	BSF     $a,$3   		; 08A9, 358a
+	GOTO    $74E    		; 08AA, 2f4e
+	BSF     $a,$3   		; 08AB, 358a
+	GOTO    $757    		; 08AC, 2f57
+	BSF     $a,$3   		; 08AD, 358a
+	GOTO    $760    		; 08AE, 2f60
+	BSF     $a,$3   		; 08AF, 358a
+	GOTO    $769    		; 08B0, 2f69
+	NOP             		; 08B1, 0000
+	NOP             		; 08B2, 0000
+	NOP             		; 08B3, 0000
+	NOP             		; 08B4, 0000
+	NOP             		; 08B5, 0000
+	NOP             		; 08B6, 0000
+	NOP             		; 08B7, 0000
+	NOP             		; 08B8, 0000
+	NOP             		; 08B9, 0000
+	NOP             		; 08BA, 0000
+	NOP             		; 08BB, 0000
+	NOP             		; 08BC, 0000
+	NOP             		; 08BD, 0000
+	NOP             		; 08BE, 0000
+	NOP             		; 08BF, 0000
+	NOP             		; 08C0, 0000
+	NOP             		; 08C1, 0000
+	NOP             		; 08C2, 0000
+	NOP             		; 08C3, 0000
+	NOP             		; 08C4, 0000
+	NOP             		; 08C5, 0000
+	NOP             		; 08C6, 0000
+	NOP             		; 08C7, 0000
+	NOP             		; 08C8, 0000
+	NOP             		; 08C9, 0000
+	NOP             		; 08CA, 0000
+	NOP             		; 08CB, 0000
+	NOP             		; 08CC, 0000
+	NOP             		; 08CD, 0000
+	NOP             		; 08CE, 0000
+	NOP             		; 08CF, 0000
+	NOP             		; 08D0, 0000
+	NOP             		; 08D1, 0000
+	NOP             		; 08D2, 0000
+	NOP             		; 08D3, 0000
+	NOP             		; 08D4, 0000
+	NOP             		; 08D5, 0000
+	NOP             		; 08D6, 0000
+	NOP             		; 08D7, 0000
+	NOP             		; 08D8, 0000
+	NOP             		; 08D9, 0000
+	NOP             		; 08DA, 0000
+	NOP             		; 08DB, 0000
+	NOP             		; 08DC, 0000
+	NOP             		; 08DD, 0000
+	NOP             		; 08DE, 0000
+	NOP             		; 08DF, 0000
+	NOP             		; 08E0, 0000
+	NOP             		; 08E1, 0000
+	NOP             		; 08E2, 0000
+	NOP             		; 08E3, 0000
+	NOP             		; 08E4, 0000
+	NOP             		; 08E5, 0000
+	NOP             		; 08E6, 0000
+	NOP             		; 08E7, 0000
+	NOP             		; 08E8, 0000
+	NOP             		; 08E9, 0000
+	NOP             		; 08EA, 0000
+	NOP             		; 08EB, 0000
+	NOP             		; 08EC, 0000
+	NOP             		; 08ED, 0000
+	NOP             		; 08EE, 0000
+	NOP             		; 08EF, 0000
+	NOP             		; 08F0, 0000
+	NOP             		; 08F1, 0000
+	NOP             		; 08F2, 0000
+	NOP             		; 08F3, 0000
+	NOP             		; 08F4, 0000
+	NOP             		; 08F5, 0000
+	NOP             		; 08F6, 0000
+	NOP             		; 08F7, 0000
+	NOP             		; 08F8, 0000
+	NOP             		; 08F9, 0000
+	NOP             		; 08FA, 0000
+	NOP             		; 08FB, 0000
+	NOP             		; 08FC, 0000
+	NOP             		; 08FD, 0000
+	NOP             		; 08FE, 0000
+	NOP             		; 08FF, 0000
+	NOP             		; 0900, 0000
+	NOP             		; 0901, 0000
+	NOP             		; 0902, 0000
+	NOP             		; 0903, 0000
+	NOP             		; 0904, 0000
+	NOP             		; 0905, 0000
+	NOP             		; 0906, 0000
+	NOP             		; 0907, 0000
+	NOP             		; 0908, 0000
+	NOP             		; 0909, 0000
+	NOP             		; 090A, 0000
+	NOP             		; 090B, 0000
+	NOP             		; 090C, 0000
+	NOP             		; 090D, 0000
+	NOP             		; 090E, 0000
+	NOP             		; 090F, 0000
+	NOP             		; 0910, 0000
+	NOP             		; 0911, 0000
+	NOP             		; 0912, 0000
+	NOP             		; 0913, 0000
+	NOP             		; 0914, 0000
+	NOP             		; 0915, 0000
+	NOP             		; 0916, 0000
+	NOP             		; 0917, 0000
+	NOP             		; 0918, 0000
+	NOP             		; 0919, 0000
+	NOP             		; 091A, 0000
+	NOP             		; 091B, 0000
+	NOP             		; 091C, 0000
+	NOP             		; 091D, 0000
+	NOP             		; 091E, 0000
+	NOP             		; 091F, 0000
+	NOP             		; 0920, 0000
+	NOP             		; 0921, 0000
+	NOP             		; 0922, 0000
+	NOP             		; 0923, 0000
+	NOP             		; 0924, 0000
+	NOP             		; 0925, 0000
+	NOP             		; 0926, 0000
+	NOP             		; 0927, 0000
+	NOP             		; 0928, 0000
+	NOP             		; 0929, 0000
+	NOP             		; 092A, 0000
+	NOP             		; 092B, 0000
+	NOP             		; 092C, 0000
+	NOP             		; 092D, 0000
+	NOP             		; 092E, 0000
+	NOP             		; 092F, 0000
+	NOP             		; 0930, 0000
+	NOP             		; 0931, 0000
+	NOP             		; 0932, 0000
+	NOP             		; 0933, 0000
+	NOP             		; 0934, 0000
+	NOP             		; 0935, 0000
+	NOP             		; 0936, 0000
+	NOP             		; 0937, 0000
+	NOP             		; 0938, 0000
+	NOP             		; 0939, 0000
+	NOP             		; 093A, 0000
+	NOP             		; 093B, 0000
+	NOP             		; 093C, 0000
+	NOP             		; 093D, 0000
+	NOP             		; 093E, 0000
+	NOP             		; 093F, 0000
+	NOP             		; 0940, 0000
+	NOP             		; 0941, 0000
+	NOP             		; 0942, 0000
+	NOP             		; 0943, 0000
+	NOP             		; 0944, 0000
+	NOP             		; 0945, 0000
+	NOP             		; 0946, 0000
+	NOP             		; 0947, 0000
+	NOP             		; 0948, 0000
+	NOP             		; 0949, 0000
+	NOP             		; 094A, 0000
+	NOP             		; 094B, 0000
+	NOP             		; 094C, 0000
+	NOP             		; 094D, 0000
+	NOP             		; 094E, 0000
+	NOP             		; 094F, 0000
+	NOP             		; 0950, 0000
+	NOP             		; 0951, 0000
+	NOP             		; 0952, 0000
+	NOP             		; 0953, 0000
+	NOP             		; 0954, 0000
+	NOP             		; 0955, 0000
+	NOP             		; 0956, 0000
+	NOP             		; 0957, 0000
+	NOP             		; 0958, 0000
+	NOP             		; 0959, 0000
+	NOP             		; 095A, 0000
+	NOP             		; 095B, 0000
+	NOP             		; 095C, 0000
+	NOP             		; 095D, 0000
+	NOP             		; 095E, 0000
+	NOP             		; 095F, 0000
+	NOP             		; 0960, 0000
+	NOP             		; 0961, 0000
+	NOP             		; 0962, 0000
+	NOP             		; 0963, 0000
+	NOP             		; 0964, 0000
+	NOP             		; 0965, 0000
+	NOP             		; 0966, 0000
+	NOP             		; 0967, 0000
+	NOP             		; 0968, 0000
+	NOP             		; 0969, 0000
+	NOP             		; 096A, 0000
+	NOP             		; 096B, 0000
+	NOP             		; 096C, 0000
+	NOP             		; 096D, 0000
+	NOP             		; 096E, 0000
+	NOP             		; 096F, 0000
+	NOP             		; 0970, 0000
+	NOP             		; 0971, 0000
+	NOP             		; 0972, 0000
+	NOP             		; 0973, 0000
+	NOP             		; 0974, 0000
+	NOP             		; 0975, 0000
+	NOP             		; 0976, 0000
+	NOP             		; 0977, 0000
+	NOP             		; 0978, 0000
+	NOP             		; 0979, 0000
+	NOP             		; 097A, 0000
+	NOP             		; 097B, 0000
+	NOP             		; 097C, 0000
+	NOP             		; 097D, 0000
+	NOP             		; 097E, 0000
+	NOP             		; 097F, 0000
+	NOP             		; 0980, 0000
+	NOP             		; 0981, 0000
+	NOP             		; 0982, 0000
+	NOP             		; 0983, 0000
+	NOP             		; 0984, 0000
+	NOP             		; 0985, 0000
+	NOP             		; 0986, 0000
+	NOP             		; 0987, 0000
+	NOP             		; 0988, 0000
+	NOP             		; 0989, 0000
+	NOP             		; 098A, 0000
+	NOP             		; 098B, 0000
+	NOP             		; 098C, 0000
+	NOP             		; 098D, 0000
+	NOP             		; 098E, 0000
+	NOP             		; 098F, 0000
+	NOP             		; 0990, 0000
+	NOP             		; 0991, 0000
+	NOP             		; 0992, 0000
+	NOP             		; 0993, 0000
+	NOP             		; 0994, 0000
+	NOP             		; 0995, 0000
+	NOP             		; 0996, 0000
+	NOP             		; 0997, 0000
+	NOP             		; 0998, 0000
+	NOP             		; 0999, 0000
+	NOP             		; 099A, 0000
+	NOP             		; 099B, 0000
+	NOP             		; 099C, 0000
+	NOP             		; 099D, 0000
+	NOP             		; 099E, 0000
+	NOP             		; 099F, 0000
+	NOP             		; 09A0, 0000
+	NOP             		; 09A1, 0000
+	NOP             		; 09A2, 0000
+	NOP             		; 09A3, 0000
+	NOP             		; 09A4, 0000
+	NOP             		; 09A5, 0000
+	NOP             		; 09A6, 0000
+	NOP             		; 09A7, 0000
+	NOP             		; 09A8, 0000
+	NOP             		; 09A9, 0000
+	NOP             		; 09AA, 0000
+	NOP             		; 09AB, 0000
+	NOP             		; 09AC, 0000
+	NOP             		; 09AD, 0000
+	NOP             		; 09AE, 0000
+	NOP             		; 09AF, 0000
+	NOP             		; 09B0, 0000
+	NOP             		; 09B1, 0000
+	NOP             		; 09B2, 0000
+	NOP             		; 09B3, 0000
+	NOP             		; 09B4, 0000
+	NOP             		; 09B5, 0000
+	NOP             		; 09B6, 0000
+	NOP             		; 09B7, 0000
+	NOP             		; 09B8, 0000
+	NOP             		; 09B9, 0000
+	NOP             		; 09BA, 0000
+	NOP             		; 09BB, 0000
+	NOP             		; 09BC, 0000
+	NOP             		; 09BD, 0000
+	NOP             		; 09BE, 0000
+	NOP             		; 09BF, 0000
+	NOP             		; 09C0, 0000
+	NOP             		; 09C1, 0000
+	NOP             		; 09C2, 0000
+	NOP             		; 09C3, 0000
+	NOP             		; 09C4, 0000
+	NOP             		; 09C5, 0000
+	NOP             		; 09C6, 0000
+	NOP             		; 09C7, 0000
+	NOP             		; 09C8, 0000
+	NOP             		; 09C9, 0000
+	NOP             		; 09CA, 0000
+	NOP             		; 09CB, 0000
+	NOP             		; 09CC, 0000
+	NOP             		; 09CD, 0000
+	NOP             		; 09CE, 0000
+	NOP             		; 09CF, 0000
+	NOP             		; 09D0, 0000
+	NOP             		; 09D1, 0000
+	NOP             		; 09D2, 0000
+	NOP             		; 09D3, 0000
+	NOP             		; 09D4, 0000
+	NOP             		; 09D5, 0000
+	NOP             		; 09D6, 0000
+	NOP             		; 09D7, 0000
+	NOP             		; 09D8, 0000
+	NOP             		; 09D9, 0000
+	NOP             		; 09DA, 0000
+	NOP             		; 09DB, 0000
+	NOP             		; 09DC, 0000
+	NOP             		; 09DD, 0000
+	NOP             		; 09DE, 0000
+	NOP             		; 09DF, 0000
+	NOP             		; 09E0, 0000
+	NOP             		; 09E1, 0000
+	NOP             		; 09E2, 0000
+	NOP             		; 09E3, 0000
+	NOP             		; 09E4, 0000
+	NOP             		; 09E5, 0000
+	NOP             		; 09E6, 0000
+	NOP             		; 09E7, 0000
+	NOP             		; 09E8, 0000
+	NOP             		; 09E9, 0000
+	NOP             		; 09EA, 0000
+	NOP             		; 09EB, 0000
+	NOP             		; 09EC, 0000
+	NOP             		; 09ED, 0000
+	NOP             		; 09EE, 0000
+	NOP             		; 09EF, 0000
+	NOP             		; 09F0, 0000
+	NOP             		; 09F1, 0000
+	NOP             		; 09F2, 0000
+	NOP             		; 09F3, 0000
+	NOP             		; 09F4, 0000
+	NOP             		; 09F5, 0000
+	NOP             		; 09F6, 0000
+	NOP             		; 09F7, 0000
+	NOP             		; 09F8, 0000
+	NOP             		; 09F9, 0000
+	NOP             		; 09FA, 0000
+	NOP             		; 09FB, 0000
+	NOP             		; 09FC, 0000
+	NOP             		; 09FD, 0000
+	NOP             		; 09FE, 0000
+	NOP             		; 09FF, 0000
+	NOP             		; 0A00, 0000
+	NOP             		; 0A01, 0000
+	NOP             		; 0A02, 0000
+	NOP             		; 0A03, 0000
+	NOP             		; 0A04, 0000
+	NOP             		; 0A05, 0000
+	NOP             		; 0A06, 0000
+	NOP             		; 0A07, 0000
+	NOP             		; 0A08, 0000
+	NOP             		; 0A09, 0000
+	NOP             		; 0A0A, 0000
+	NOP             		; 0A0B, 0000
+	NOP             		; 0A0C, 0000
+	NOP             		; 0A0D, 0000
+	NOP             		; 0A0E, 0000
+	NOP             		; 0A0F, 0000
+	NOP             		; 0A10, 0000
+	NOP             		; 0A11, 0000
+	NOP             		; 0A12, 0000
+	NOP             		; 0A13, 0000
+	NOP             		; 0A14, 0000
+	NOP             		; 0A15, 0000
+	NOP             		; 0A16, 0000
+	NOP             		; 0A17, 0000
+	NOP             		; 0A18, 0000
+	NOP             		; 0A19, 0000
+	NOP             		; 0A1A, 0000
+	NOP             		; 0A1B, 0000
+	NOP             		; 0A1C, 0000
+	NOP             		; 0A1D, 0000
+	NOP             		; 0A1E, 0000
+	NOP             		; 0A1F, 0000
+	NOP             		; 0A20, 0000
+	NOP             		; 0A21, 0000
+	NOP             		; 0A22, 0000
+	NOP             		; 0A23, 0000
+	NOP             		; 0A24, 0000
+	NOP             		; 0A25, 0000
+	NOP             		; 0A26, 0000
+	NOP             		; 0A27, 0000
+	NOP             		; 0A28, 0000
+	NOP             		; 0A29, 0000
+	NOP             		; 0A2A, 0000
+	NOP             		; 0A2B, 0000
+	NOP             		; 0A2C, 0000
+	NOP             		; 0A2D, 0000
+	NOP             		; 0A2E, 0000
+	NOP             		; 0A2F, 0000
+	NOP             		; 0A30, 0000
+	NOP             		; 0A31, 0000
+	NOP             		; 0A32, 0000
+	NOP             		; 0A33, 0000
+	NOP             		; 0A34, 0000
+	NOP             		; 0A35, 0000
+	NOP             		; 0A36, 0000
+	NOP             		; 0A37, 0000
+	NOP             		; 0A38, 0000
+	NOP             		; 0A39, 0000
+	NOP             		; 0A3A, 0000
+	NOP             		; 0A3B, 0000
+	NOP             		; 0A3C, 0000
+	NOP             		; 0A3D, 0000
+	NOP             		; 0A3E, 0000
+	NOP             		; 0A3F, 0000
+	NOP             		; 0A40, 0000
+	NOP             		; 0A41, 0000
+	NOP             		; 0A42, 0000
+	NOP             		; 0A43, 0000
+	NOP             		; 0A44, 0000
+	NOP             		; 0A45, 0000
+	NOP             		; 0A46, 0000
+	NOP             		; 0A47, 0000
+	NOP             		; 0A48, 0000
+	NOP             		; 0A49, 0000
+	NOP             		; 0A4A, 0000
+	NOP             		; 0A4B, 0000
+	NOP             		; 0A4C, 0000
+	NOP             		; 0A4D, 0000
+	NOP             		; 0A4E, 0000
+	NOP             		; 0A4F, 0000
+	NOP             		; 0A50, 0000
+	NOP             		; 0A51, 0000
+	NOP             		; 0A52, 0000
+	NOP             		; 0A53, 0000
+	NOP             		; 0A54, 0000
+	NOP             		; 0A55, 0000
+	NOP             		; 0A56, 0000
+	NOP             		; 0A57, 0000
+	NOP             		; 0A58, 0000
+	NOP             		; 0A59, 0000
+	NOP             		; 0A5A, 0000
+	NOP             		; 0A5B, 0000
+	NOP             		; 0A5C, 0000
+	NOP             		; 0A5D, 0000
+	NOP             		; 0A5E, 0000
+	NOP             		; 0A5F, 0000
+	NOP             		; 0A60, 0000
+	NOP             		; 0A61, 0000
+	NOP             		; 0A62, 0000
+	NOP             		; 0A63, 0000
+	NOP             		; 0A64, 0000
+	NOP             		; 0A65, 0000
+	NOP             		; 0A66, 0000
+	NOP             		; 0A67, 0000
+	NOP             		; 0A68, 0000
+	NOP             		; 0A69, 0000
+	NOP             		; 0A6A, 0000
+	NOP             		; 0A6B, 0000
+	NOP             		; 0A6C, 0000
+	NOP             		; 0A6D, 0000
+	NOP             		; 0A6E, 0000
+	NOP             		; 0A6F, 0000
+	NOP             		; 0A70, 0000
+	NOP             		; 0A71, 0000
+	NOP             		; 0A72, 0000
+	NOP             		; 0A73, 0000
+	NOP             		; 0A74, 0000
+	NOP             		; 0A75, 0000
+	NOP             		; 0A76, 0000
+	NOP             		; 0A77, 0000
+	NOP             		; 0A78, 0000
+	NOP             		; 0A79, 0000
+	NOP             		; 0A7A, 0000
+	NOP             		; 0A7B, 0000
+	NOP             		; 0A7C, 0000
+	NOP             		; 0A7D, 0000
+	NOP             		; 0A7E, 0000
+	NOP             		; 0A7F, 0000
+	NOP             		; 0A80, 0000
+	NOP             		; 0A81, 0000
+	NOP             		; 0A82, 0000
+	NOP             		; 0A83, 0000
+	NOP             		; 0A84, 0000
+	NOP             		; 0A85, 0000
+	NOP             		; 0A86, 0000
+	NOP             		; 0A87, 0000
+	NOP             		; 0A88, 0000
+	NOP             		; 0A89, 0000
+	NOP             		; 0A8A, 0000
+	NOP             		; 0A8B, 0000
+	NOP             		; 0A8C, 0000
+	NOP             		; 0A8D, 0000
+	NOP             		; 0A8E, 0000
+	NOP             		; 0A8F, 0000
+	NOP             		; 0A90, 0000
+	NOP             		; 0A91, 0000
+	NOP             		; 0A92, 0000
+	NOP             		; 0A93, 0000
+	NOP             		; 0A94, 0000
+	NOP             		; 0A95, 0000
+	NOP             		; 0A96, 0000
+	NOP             		; 0A97, 0000
+	NOP             		; 0A98, 0000
+	NOP             		; 0A99, 0000
+	NOP             		; 0A9A, 0000
+	NOP             		; 0A9B, 0000
+	NOP             		; 0A9C, 0000
+	NOP             		; 0A9D, 0000
+	NOP             		; 0A9E, 0000
+	NOP             		; 0A9F, 0000
+	NOP             		; 0AA0, 0000
+	NOP             		; 0AA1, 0000
+	NOP             		; 0AA2, 0000
+	NOP             		; 0AA3, 0000
+	NOP             		; 0AA4, 0000
+	NOP             		; 0AA5, 0000
+	NOP             		; 0AA6, 0000
+	NOP             		; 0AA7, 0000
+	NOP             		; 0AA8, 0000
+	NOP             		; 0AA9, 0000
+	NOP             		; 0AAA, 0000
+	NOP             		; 0AAB, 0000
+	NOP             		; 0AAC, 0000
+	NOP             		; 0AAD, 0000
+	NOP             		; 0AAE, 0000
+	NOP             		; 0AAF, 0000
+	CLRWDT          		; 0AB0, 1e04
+	CLRF    $0      		; 0AB1, 0180
+	INCF    $4,$1   		; 0AB2, 0a84
+	XORWF   $4,$0   		; 0AB3, 0604
+	BTFSC   $3,$2   		; 0AB4, 3903
+	RETLW   $0      		; 0AB5, 1800
+	XORWF   $4,$0   		; 0AB6, 0604
+	GOTO    $2B1    		; 0AB7, 2ab1
+	MOVLW   $20     		; 0AB8, 1920
+	BCF     $3,$7   		; 0AB9, 3383
+	MOVWF   $4      		; 0ABA, 0084
+	MOVLW   $4b     		; 0ABB, 194b
+	BSF     $a,$3   		; 0ABC, 358a
+	CALL    $2B0    		; 0ABD, 22b0
+	BSF     $a,$3   		; 0ABE, 358a
+	MOVLW   $a0     		; 0ABF, 19a0
+	MOVWF   $4      		; 0AC0, 0084
+	MOVLW   $e9     		; 0AC1, 19e9
+	BSF     $a,$3   		; 0AC2, 358a
+	CALL    $2B0    		; 0AC3, 22b0
+	CLRF    $3      		; 0AC4, 0183
+	BSF     $a,$3   		; 0AC5, 358a
+	GOTO    $3D8    		; 0AC6, 2bd8
+	MOVLW   $20     		; 0AC7, 1920
+	BCF     $3,$7   		; 0AC8, 3383
+	MOVWF   $4      		; 0AC9, 0084
+	MOVLW   $80     		; 0ACA, 1980
+	SUBWF   $4,$0   		; 0ACB, 0204
+	BTFSC   $3,$0   		; 0ACC, 3803
+	GOTO    $2D2    		; 0ACD, 2ad2
+	BCF     $3,$6   		; 0ACE, 3303
+	CLRF    $0      		; 0ACF, 0180
+	INCF    $4,$1   		; 0AD0, 0a84
+	GOTO    $2CA    		; 0AD1, 2aca
+	MOVLW   $a0     		; 0AD2, 19a0
+	MOVWF   $4      		; 0AD3, 0084
+	MOVLW   $f0     		; 0AD4, 19f0
+	SUBWF   $4,$0   		; 0AD5, 0204
+	BTFSC   $3,$0   		; 0AD6, 3803
+	GOTO    $2DC    		; 0AD7, 2adc
+	BCF     $3,$6   		; 0AD8, 3303
+	CLRF    $0      		; 0AD9, 0180
+	INCF    $4,$1   		; 0ADA, 0a84
+	GOTO    $2D4    		; 0ADB, 2ad4
+	MOVLW   $20     		; 0ADC, 1920
+	BSF     $3,$7   		; 0ADD, 3783
+	MOVWF   $4      		; 0ADE, 0084
+	MOVLW   $60     		; 0ADF, 1960
+	SUBWF   $4,$0   		; 0AE0, 0204
+	BTFSC   $3,$0   		; 0AE1, 3803
+	GOTO    $2E7    		; 0AE2, 2ae7
+	BCF     $3,$6   		; 0AE3, 3303
+	CLRF    $0      		; 0AE4, 0180
+	INCF    $4,$1   		; 0AE5, 0a84
+	GOTO    $2DF    		; 0AE6, 2adf
+	BCF     $3,$7   		; 0AE7, 3383
+	BCF     $3,$5   		; 0AE8, 3283
+	BCF     $3,$6   		; 0AE9, 3303
+	RET             		; 0AEA, 0040
+	BTFSS   $2d,$2  		; 0AEB, 3d2d
+	GOTO    $304    		; 0AEC, 2b04
+	BTFSC   $5,$6   		; 0AED, 3b05
+	GOTO    $301    		; 0AEE, 2b01
+	BSF     $3,$5   		; 0AEF, 3683
+	MOVLW   $3      		; 0AF0, 1903
+	INCF    $20,$1  		; 0AF1, 0aa0
+	SUBWF   $20,$0  		; 0AF2, 0220
+	BTFSS   $3,$0   		; 0AF3, 3c03
+	RET             		; 0AF4, 0040
+	BCF     $3,$5   		; 0AF5, 3283
+	BCF     $2d,$2  		; 0AF6, 312d
+	BCF     $2d,$3  		; 0AF7, 31ad
+	BSF     $3,$5   		; 0AF8, 3683
+	CLRF    $20     		; 0AF9, 01a0
+	BCF     $3,$5   		; 0AFA, 3283
+	MOVLW   $7      		; 0AFB, 1907
+	BSF     $3,$6   		; 0AFC, 3703
+	CLRF    $5c     		; 0AFD, 01dc
+	CLRF    $5d     		; 0AFE, 01dd
+	BCF     $a,$3   		; 0AFF, 318a
+	GOTO    $2FB    		; 0B00, 2afb
+	BSF     $3,$5   		; 0B01, 3683
+	CLRF    $20     		; 0B02, 01a0
+	RET             		; 0B03, 0040
+	BTFSS   $5,$6   		; 0B04, 3f05
+	GOTO    $301    		; 0B05, 2b01
+	BSF     $3,$5   		; 0B06, 3683
+	MOVLW   $3      		; 0B07, 1903
+	INCF    $20,$1  		; 0B08, 0aa0
+	SUBWF   $20,$0  		; 0B09, 0220
+	BTFSS   $3,$0   		; 0B0A, 3c03
+	RET             		; 0B0B, 0040
+	MOVLW   $6      		; 0B0C, 1906
+	BCF     $a,$3   		; 0B0D, 318a
+	CALL    $2FB    		; 0B0E, 22fb
+	BSF     $2d,$2  		; 0B0F, 352d
+	BCF     $2d,$3  		; 0B10, 31ad
+	BSF     $3,$5   		; 0B11, 3683
+	CLRF    $20     		; 0B12, 01a0
+	BCF     $3,$5   		; 0B13, 3283
+	BSF     $3,$6   		; 0B14, 3703
+	CLRF    $5a     		; 0B15, 01da
+	CLRF    $5b     		; 0B16, 01db
+	RET             		; 0B17, 0040
+	BCF     $3,$5   		; 0B18, 3283
+	BCF     $3,$6   		; 0B19, 3303
+	BTFSS   $2d,$2  		; 0B1A, 3d2d
+	GOTO    $351    		; 0B1B, 2b51
+	BTFSC   $2d,$3  		; 0B1C, 39ad
+	GOTO    $346    		; 0B1D, 2b46
+	MOVLW   $f      		; 0B1E, 190f
+	SUBWF   $3b,$0  		; 0B1F, 023b
+	MOVLW   $6e     		; 0B20, 196e
+	BTFSC   $3,$2   		; 0B21, 3903
+	SUBWF   $3a,$0  		; 0B22, 023a
+	BTFSS   $3,$0   		; 0B23, 3c03
+	GOTO    $342    		; 0B24, 2b42
+	MOVLW   $10     		; 0B25, 1910
+	SUBWF   $3b,$0  		; 0B26, 023b
+	MOVLW   $7c     		; 0B27, 197c
+	BTFSC   $3,$2   		; 0B28, 3903
+	SUBWF   $3a,$0  		; 0B29, 023a
+	BTFSS   $3,$0   		; 0B2A, 3c03
+	BTFSC   $5,$6   		; 0B2B, 3b05
+	GOTO    $331    		; 0B2C, 2b31
+	MOVLW   $64     		; 0B2D, 1964
+	SUBWF   $44,$0  		; 0B2E, 0244
+	BTFSS   $3,$0   		; 0B2F, 3c03
+	GOTO    $342    		; 0B30, 2b42
+	MOVLW   $0      		; 0B31, 1900
+	BSF     $3,$6   		; 0B32, 3703
+	SUBWF   $5b,$0  		; 0B33, 025b
+	MOVLW   $14     		; 0B34, 1914
+	BTFSC   $3,$2   		; 0B35, 3903
+	SUBWF   $5a,$0  		; 0B36, 025a
+	BTFSC   $3,$0   		; 0B37, 3803
+	GOTO    $33D    		; 0B38, 2b3d
+	INCF    $5a,$1  		; 0B39, 0ada
+	BTFSC   $3,$2   		; 0B3A, 3903
+	INCF    $5b,$1  		; 0B3B, 0adb
+	RET             		; 0B3C, 0040
+	CLRF    $5a     		; 0B3D, 01da
+	CLRF    $5b     		; 0B3E, 01db
+	BCF     $3,$6   		; 0B3F, 3303
+	BSF     $2d,$3  		; 0B40, 35ad
+	RET             		; 0B41, 0040
+	BSF     $3,$6   		; 0B42, 3703
+	CLRF    $5a     		; 0B43, 01da
+	CLRF    $5b     		; 0B44, 01db
+	RET             		; 0B45, 0040
+	MOVFW   $2a     		; 0B46, 082a
+	XORLW   $5      		; 0B47, 1d05
+	BTFSS   $3,$2   		; 0B48, 3d03
+	RET             		; 0B49, 0040
+	MOVFW   $44     		; 0B4A, 0844
+	XORLW   $64     		; 0B4B, 1d64
+	BTFSS   $3,$2   		; 0B4C, 3d03
+	RET             		; 0B4D, 0040
+	MOVFW   $44     		; 0B4E, 0844
+	MOVWF   $36     		; 0B4F, 00b6
+	GOTO    $342    		; 0B50, 2b42
+	TSTF    $29     		; 0B51, 08a9
+	BTFSS   $3,$2   		; 0B52, 3d03
+	RET             		; 0B53, 0040
+	MOVLW   $1      		; 0B54, 1901
+	BSF     $3,$6   		; 0B55, 3703
+	SUBWF   $5d,$0  		; 0B56, 025d
+	MOVLW   $2c     		; 0B57, 192c
+	BTFSC   $3,$2   		; 0B58, 3903
+	SUBWF   $5c,$0  		; 0B59, 025c
+	BTFSC   $3,$0   		; 0B5A, 3803
+	GOTO    $360    		; 0B5B, 2b60
+	INCF    $5c,$1  		; 0B5C, 0adc
+	BTFSC   $3,$2   		; 0B5D, 3903
+	INCF    $5d,$1  		; 0B5E, 0add
+	RET             		; 0B5F, 0040
+	BCF     $3,$6   		; 0B60, 3303
+	BCF     $2d,$0  		; 0B61, 302d
+	RET             		; 0B62, 0040
+	CLRF    $54     		; 0B63, 01d4
+	BTFSS   $4e,$7  		; 0B64, 3fce
+	GOTO    $373    		; 0B65, 2b73
+	COMF    $4b,$1  		; 0B66, 09cb
+	COMF    $4c,$1  		; 0B67, 09cc
+	COMF    $4d,$1  		; 0B68, 09cd
+	COMF    $4e,$1  		; 0B69, 09ce
+	INCF    $4b,$1  		; 0B6A, 0acb
+	BTFSC   $3,$2   		; 0B6B, 3903
+	INCF    $4c,$1  		; 0B6C, 0acc
+	BTFSC   $3,$2   		; 0B6D, 3903
+	INCF    $4d,$1  		; 0B6E, 0acd
+	BTFSC   $3,$2   		; 0B6F, 3903
+	INCF    $4e,$1  		; 0B70, 0ace
+	CLRF    $54     		; 0B71, 01d4
+	INCF    $54,$1  		; 0B72, 0ad4
+	BTFSS   $52,$7  		; 0B73, 3fd2
+	GOTO    $382    		; 0B74, 2b82
+	COMF    $4f,$1  		; 0B75, 09cf
+	COMF    $50,$1  		; 0B76, 09d0
+	COMF    $51,$1  		; 0B77, 09d1
+	COMF    $52,$1  		; 0B78, 09d2
+	INCF    $4f,$1  		; 0B79, 0acf
+	BTFSC   $3,$2   		; 0B7A, 3903
+	INCF    $50,$1  		; 0B7B, 0ad0
+	BTFSC   $3,$2   		; 0B7C, 3903
+	INCF    $51,$1  		; 0B7D, 0ad1
+	BTFSC   $3,$2   		; 0B7E, 3903
+	INCF    $52,$1  		; 0B7F, 0ad2
+	MOVLW   $1      		; 0B80, 1901
+	XORWF   $54,$1  		; 0B81, 06d4
+	CLRF    $55     		; 0B82, 01d5
+	CLRF    $56     		; 0B83, 01d6
+	CLRF    $57     		; 0B84, 01d7
+	CLRF    $58     		; 0B85, 01d8
+	MOVFW   $4e     		; 0B86, 084e
+	IORWF   $4d,$0  		; 0B87, 044d
+	IORWF   $4c,$0  		; 0B88, 044c
+	IORWF   $4b,$0  		; 0B89, 044b
+	BTFSC   $3,$2   		; 0B8A, 3903
+	GOTO    $3C1    		; 0B8B, 2bc1
+	CLRF    $53     		; 0B8C, 01d3
+	INCF    $53,$1  		; 0B8D, 0ad3
+	BTFSC   $4e,$7  		; 0B8E, 3bce
+	GOTO    $396    		; 0B8F, 2b96
+	BCF     $3,$0   		; 0B90, 3003
+	RLF     $4b,$1  		; 0B91, 0dcb
+	RLF     $4c,$1  		; 0B92, 0dcc
+	RLF     $4d,$1  		; 0B93, 0dcd
+	RLF     $4e,$1  		; 0B94, 0dce
+	GOTO    $38D    		; 0B95, 2b8d
+	BCF     $3,$0   		; 0B96, 3003
+	RLF     $55,$1  		; 0B97, 0dd5
+	RLF     $56,$1  		; 0B98, 0dd6
+	RLF     $57,$1  		; 0B99, 0dd7
+	RLF     $58,$1  		; 0B9A, 0dd8
+	MOVFW   $4e     		; 0B9B, 084e
+	SUBWF   $52,$0  		; 0B9C, 0252
+	BTFSS   $3,$2   		; 0B9D, 3d03
+	GOTO    $3A9    		; 0B9E, 2ba9
+	MOVFW   $4d     		; 0B9F, 084d
+	SUBWF   $51,$0  		; 0BA0, 0251
+	BTFSS   $3,$2   		; 0BA1, 3d03
+	GOTO    $3A9    		; 0BA2, 2ba9
+	MOVFW   $4c     		; 0BA3, 084c
+	SUBWF   $50,$0  		; 0BA4, 0250
+	BTFSS   $3,$2   		; 0BA5, 3d03
+	GOTO    $3A9    		; 0BA6, 2ba9
+	MOVFW   $4b     		; 0BA7, 084b
+	SUBWF   $4f,$0  		; 0BA8, 024f
+	BTFSS   $3,$0   		; 0BA9, 3c03
+	GOTO    $3BB    		; 0BAA, 2bbb
+	MOVFW   $4b     		; 0BAB, 084b
+	SUBWF   $4f,$1  		; 0BAC, 02cf
+	MOVFW   $4c     		; 0BAD, 084c
+	BTFSS   $3,$0   		; 0BAE, 3c03
+	INCFSZ  $4c,$0  		; 0BAF, 0f4c
+	SUBWF   $50,$1  		; 0BB0, 02d0
+	MOVFW   $4d     		; 0BB1, 084d
+	BTFSS   $3,$0   		; 0BB2, 3c03
+	INCFSZ  $4d,$0  		; 0BB3, 0f4d
+	SUBWF   $51,$1  		; 0BB4, 02d1
+	MOVFW   $4e     		; 0BB5, 084e
+	BTFSS   $3,$0   		; 0BB6, 3c03
+	INCFSZ  $4e,$0  		; 0BB7, 0f4e
+	SUBWF   $52,$1  		; 0BB8, 02d2
+	BSF     $55,$0  		; 0BB9, 3455
+	BCF     $3,$0   		; 0BBA, 3003
+	RRF     $4e,$1  		; 0BBB, 0cce
+	RRF     $4d,$1  		; 0BBC, 0ccd
+	RRF     $4c,$1  		; 0BBD, 0ccc
+	RRF     $4b,$1  		; 0BBE, 0ccb
+	DECFSZ  $53,$1  		; 0BBF, 0bd3
+	GOTO    $396    		; 0BC0, 2b96
+	MOVFW   $54     		; 0BC1, 0854
+	BTFSC   $3,$2   		; 0BC2, 3903
+	GOTO    $3CF    		; 0BC3, 2bcf
+	COMF    $55,$1  		; 0BC4, 09d5
+	COMF    $56,$1  		; 0BC5, 09d6
+	COMF    $57,$1  		; 0BC6, 09d7
+	COMF    $58,$1  		; 0BC7, 09d8
+	INCF    $55,$1  		; 0BC8, 0ad5
+	BTFSC   $3,$2   		; 0BC9, 3903
+	INCF    $56,$1  		; 0BCA, 0ad6
+	BTFSC   $3,$2   		; 0BCB, 3903
+	INCF    $57,$1  		; 0BCC, 0ad7
+	BTFSC   $3,$2   		; 0BCD, 3903
+	INCF    $58,$1  		; 0BCE, 0ad8
+	MOVFW   $58     		; 0BCF, 0858
+	MOVWF   $4e     		; 0BD0, 00ce
+	MOVFW   $57     		; 0BD1, 0857
+	MOVWF   $4d     		; 0BD2, 00cd
+	MOVFW   $56     		; 0BD3, 0856
+	MOVWF   $4c     		; 0BD4, 00cc
+	MOVFW   $55     		; 0BD5, 0855
+	MOVWF   $4b     		; 0BD6, 00cb
+	RET             		; 0BD7, 0040
+	CLRWDT          		; 0BD8, 1e04
+	CLRF    $b      		; 0BD9, 018b
+	BCF     $3,$5   		; 0BDA, 3283
+	BCF     $3,$6   		; 0BDB, 3303
+	CLRF    $d      		; 0BDC, 018d
+	BSF     $a,$3   		; 0BDD, 358a
+	CALL    $4A8    		; 0BDE, 24a8
+	BSF     $a,$3   		; 0BDF, 358a
+	BSF     $a,$3   		; 0BE0, 358a
+	CALL    $4E1    		; 0BE1, 24e1
+	BSF     $a,$3   		; 0BE2, 358a
+	BSF     $a,$3   		; 0BE3, 358a
+	CALL    $508    		; 0BE4, 2508
+	BSF     $a,$3   		; 0BE5, 358a
+	BSF     $a,$3   		; 0BE6, 358a
+	CALL    $523    		; 0BE7, 2523
+	BSF     $a,$3   		; 0BE8, 358a
+	BSF     $3,$6   		; 0BE9, 3703
+	MOVFW   $65     		; 0BEA, 0865
+	XORLW   $a5     		; 0BEB, 1da5
+	MOVLW   $5a     		; 0BEC, 195a
+	BTFSC   $3,$2   		; 0BED, 3903
+	XORWF   $64,$0  		; 0BEE, 0664
+	BTFSS   $3,$2   		; 0BEF, 3d03
+	GOTO    $40C    		; 0BF0, 2c0c
+	BCF     $3,$6   		; 0BF1, 3303
+	BSF     $2e,$7  		; 0BF2, 37ae
+	BCF     $2e,$0  		; 0BF3, 302e
+	BCF     $a,$3   		; 0BF4, 318a
+	CALL    $221    		; 0BF5, 2221
+	BSF     $a,$3   		; 0BF6, 358a
+	MOVLW   $a      		; 0BF7, 190a
+	BCF     $a,$3   		; 0BF8, 318a
+	CALL    $2FB    		; 0BF9, 22fb
+	BSF     $a,$3   		; 0BFA, 358a
+	BTFSC   $5,$6   		; 0BFB, 3b05
+	BSF     $2d,$2  		; 0BFC, 352d
+	BTFSS   $6,$2   		; 0BFD, 3d06
+	GOTO    $401    		; 0BFE, 2c01
+	BSF     $3,$5   		; 0BFF, 3683
+	BSF     $22,$0  		; 0C00, 3422
+	BSF     $3,$5   		; 0C01, 3683
+	CLRF    $24     		; 0C02, 01a4
+	CLRF    $25     		; 0C03, 01a5
+	BCF     $3,$5   		; 0C04, 3283
+	BCF     $2d,$4  		; 0C05, 322d
+	BSF     $3,$6   		; 0C06, 3703
+	CLRF    $5c     		; 0C07, 01dc
+	CLRF    $5d     		; 0C08, 01dd
+	BCF     $3,$6   		; 0C09, 3303
+	BSF     $2d,$0  		; 0C0A, 342d
+	GOTO    $422    		; 0C0B, 2c22
+	BSF     $a,$3   		; 0C0C, 358a
+	CALL    $2C7    		; 0C0D, 22c7
+	BSF     $a,$3   		; 0C0E, 358a
+	MOVLW   $0      		; 0C0F, 1900
+	BCF     $3,$6   		; 0C10, 3303
+	CLRF    $39     		; 0C11, 01b9
+	BSF     $3,$6   		; 0C12, 3703
+	MOVWF   $63     		; 0C13, 00e3
+	MOVLW   $3      		; 0C14, 1903
+	MOVWF   $62     		; 0C15, 00e2
+	MOVLW   $e4     		; 0C16, 19e4
+	MOVWF   $61     		; 0C17, 00e1
+	MOVLW   $18     		; 0C18, 1918
+	MOVWF   $60     		; 0C19, 00e0
+	MOVLW   $64     		; 0C1A, 1964
+	BCF     $3,$6   		; 0C1B, 3303
+	MOVWF   $2f     		; 0C1C, 00af
+	MOVLW   $1      		; 0C1D, 1901
+	BCF     $a,$3   		; 0C1E, 318a
+	CALL    $2FB    		; 0C1F, 22fb
+	BSF     $a,$3   		; 0C20, 358a
+	BSF     $2d,$4  		; 0C21, 362d
+	BTFSS   $2d,$6  		; 0C22, 3f2d
+	GOTO    $47C    		; 0C23, 2c7c
+	BCF     $2d,$6  		; 0C24, 332d
+	CLRWDT          		; 0C25, 1e04
+	BCF     $3,$5   		; 0C26, 3283
+	MOVLW   $e      		; 0C27, 190e
+	BCF     $3,$6   		; 0C28, 3303
+	CLRF    $4b     		; 0C29, 01cb
+	INCF    $4b,$1  		; 0C2A, 0acb
+	BCF     $a,$3   		; 0C2B, 318a
+	CALL    $1B7    		; 0C2C, 21b7
+	BSF     $a,$3   		; 0C2D, 358a
+	MOVFW   $4c     		; 0C2E, 084c
+	MOVWF   $3b     		; 0C2F, 00bb
+	MOVFW   $4b     		; 0C30, 084b
+	MOVWF   $3a     		; 0C31, 00ba
+	MOVWF   $4b     		; 0C32, 00cb
+	MOVFW   $3b     		; 0C33, 083b
+	MOVWF   $4c     		; 0C34, 00cc
+	MOVLW   $4b     		; 0C35, 194b
+	CLRF    $4d     		; 0C36, 01cd
+	CLRF    $4e     		; 0C37, 01ce
+	CLRF    $52     		; 0C38, 01d2
+	MOVWF   $51     		; 0C39, 00d1
+	CLRF    $50     		; 0C3A, 01d0
+	CLRF    $4f     		; 0C3B, 01cf
+	BSF     $a,$3   		; 0C3C, 358a
+	CALL    $363    		; 0C3D, 2363
+	BSF     $a,$3   		; 0C3E, 358a
+	MOVFW   $4c     		; 0C3F, 084c
+	MOVWF   $3b     		; 0C40, 00bb
+	MOVFW   $4b     		; 0C41, 084b
+	MOVWF   $3a     		; 0C42, 00ba
+	BSF     $a,$3   		; 0C43, 358a
+	CALL    $540    		; 0C44, 2540
+	BSF     $a,$3   		; 0C45, 358a
+	BCF     $3,$5   		; 0C46, 3283
+	BCF     $3,$6   		; 0C47, 3303
+	BTFSC   $2d,$4  		; 0C48, 3a2d
+	GOTO    $479    		; 0C49, 2c79
+	BTFSS   $2e,$7  		; 0C4A, 3fae
+	GOTO    $470    		; 0C4B, 2c70
+	MOVLW   $a      		; 0C4C, 190a
+	SUBWF   $3b,$0  		; 0C4D, 023b
+	MOVLW   $f0     		; 0C4E, 19f0
+	BTFSC   $3,$2   		; 0C4F, 3903
+	SUBWF   $3a,$0  		; 0C50, 023a
+	BTFSC   $3,$0   		; 0C51, 3803
+	GOTO    $455    		; 0C52, 2c55
+	INCF    $35,$1  		; 0C53, 0ab5
+	GOTO    $456    		; 0C54, 2c56
+	CLRF    $35     		; 0C55, 01b5
+	MOVLW   $ea     		; 0C56, 19ea
+	BSF     $3,$6   		; 0C57, 3703
+	SUBWF   $5f,$0  		; 0C58, 025f
+	MOVLW   $60     		; 0C59, 1960
+	BTFSC   $3,$2   		; 0C5A, 3903
+	SUBWF   $5e,$0  		; 0C5B, 025e
+	BTFSC   $3,$0   		; 0C5C, 3803
+	GOTO    $476    		; 0C5D, 2c76
+	INCF    $5e,$1  		; 0C5E, 0ade
+	BTFSC   $3,$2   		; 0C5F, 3903
+	INCF    $5f,$1  		; 0C60, 0adf
+	MOVLW   $0      		; 0C61, 1900
+	SUBWF   $5f,$0  		; 0C62, 025f
+	MOVLW   $2      		; 0C63, 1902
+	BTFSC   $3,$2   		; 0C64, 3903
+	SUBWF   $5e,$0  		; 0C65, 025e
+	BTFSS   $3,$0   		; 0C66, 3c03
+	GOTO    $476    		; 0C67, 2c76
+	BCF     $3,$6   		; 0C68, 3303
+	BTFSS   $2e,$1  		; 0C69, 3cae
+	GOTO    $476    		; 0C6A, 2c76
+	MOVFW   $3b     		; 0C6B, 083b
+	MOVWF   $3d     		; 0C6C, 00bd
+	MOVFW   $3a     		; 0C6D, 083a
+	MOVWF   $3c     		; 0C6E, 00bc
+	GOTO    $476    		; 0C6F, 2c76
+	BSF     $a,$3   		; 0C70, 358a
+	CALL    $2EB    		; 0C71, 22eb
+	BSF     $a,$3   		; 0C72, 358a
+	BSF     $a,$3   		; 0C73, 358a
+	CALL    $318    		; 0C74, 2318
+	BSF     $a,$3   		; 0C75, 358a
+	BCF     $a,$3   		; 0C76, 318a
+	CALL    $667    		; 0C77, 2667
+	BSF     $a,$3   		; 0C78, 358a
+	BCF     $a,$3   		; 0C79, 318a
+	CALL    $600    		; 0C7A, 2600
+	BSF     $a,$3   		; 0C7B, 358a
+	BCF     $3,$5   		; 0C7C, 3283
+	BTFSS   $2d,$0  		; 0C7D, 3c2d
+	GOTO    $483    		; 0C7E, 2c83
+	BCF     $a,$3   		; 0C7F, 318a
+	CALL    $13     		; 0C80, 2013
+	BSF     $a,$3   		; 0C81, 358a
+	GOTO    $422    		; 0C82, 2c22
+	BSF     $a,$3   		; 0C83, 358a
+	CALL    $487    		; 0C84, 2487
+	BSF     $a,$3   		; 0C85, 358a
+	GOTO    $422    		; 0C86, 2c22
+	TSTF    $29     		; 0C87, 08a9
+	BTFSC   $3,$2   		; 0C88, 3903
+	BTFSS   $2b,$5  		; 0C89, 3eab
+	RET             		; 0C8A, 0040
+	BTFSS   $2d,$5  		; 0C8B, 3ead
+	RET             		; 0C8C, 0040
+	CALL    $4B7    		; 0C8D, 24b7
+	BSF     $a,$3   		; 0C8E, 358a
+	MOVLW   $2      		; 0C8F, 1902
+	BSF     $3,$6   		; 0C90, 3703
+	MOVWF   $5c     		; 0C91, 00dc
+	CLRF    $5d     		; 0C92, 01dd
+	BSF     $3,$6   		; 0C93, 3703
+	MOVFW   $5d     		; 0C94, 085d
+	IORWF   $5c,$0  		; 0C95, 045c
+	BCF     $3,$6   		; 0C96, 3303
+	BTFSC   $3,$2   		; 0C97, 3903
+	GOTO    $4A6    		; 0C98, 2ca6
+	BTFSS   $2d,$6  		; 0C99, 3f2d
+	GOTO    $493    		; 0C9A, 2c93
+	BCF     $2d,$6  		; 0C9B, 332d
+	CLRWDT          		; 0C9C, 1e04
+	MOVLW   $1      		; 0C9D, 1901
+	BCF     $3,$5   		; 0C9E, 3283
+	BSF     $3,$6   		; 0C9F, 3703
+	SUBWF   $5c,$1  		; 0CA0, 02dc
+	MOVLW   $0      		; 0CA1, 1900
+	BTFSS   $3,$0   		; 0CA2, 3c03
+	DECF    $5d,$1  		; 0CA3, 03dd
+	SUBWF   $5d,$1  		; 0CA4, 02dd
+	GOTO    $493    		; 0CA5, 2c93
+	BSF     $2d,$0  		; 0CA6, 342d
+	RET             		; 0CA7, 0040
+	MOVFW   $f      		; 0CA8, 080f
+	ANDLW   $fc     		; 0CA9, 1bfc
+	IORLW   $3      		; 0CAA, 1a03
+	MOVWF   $f      		; 0CAB, 008f
+	CALL    $4D0    		; 0CAC, 24d0
+	BSF     $a,$3   		; 0CAD, 358a
+	BCF     $3,$5   		; 0CAE, 3283
+	BCF     $3,$6   		; 0CAF, 3303
+	BCF     $f,$3   		; 0CB0, 318f
+	CALL    $4D0    		; 0CB1, 24d0
+	BSF     $a,$3   		; 0CB2, 358a
+	BCF     $3,$5   		; 0CB3, 3283
+	BCF     $3,$6   		; 0CB4, 3303
+	BSF     $f,$2   		; 0CB5, 350f
+	GOTO    $4D0    		; 0CB6, 2cd0
+	BTFSC   $2d,$4  		; 0CB7, 3a2d
+	BCF     $2d,$4  		; 0CB8, 322d
+	BTFSC   $5,$6   		; 0CB9, 3b05
+	RET             		; 0CBA, 0040
+	BSF     $11,$6  		; 0CBB, 3711
+	BSF     $14,$6  		; 0CBC, 3714
+	BSF     $15,$4  		; 0CBD, 3615
+	CALL    $4E1    		; 0CBE, 24e1
+	BSF     $a,$3   		; 0CBF, 358a
+	CLRF    $b      		; 0CC0, 018b
+	CLRF    $d      		; 0CC1, 018d
+	BSF     $f,$4   		; 0CC2, 360f
+	CALL    $4D0    		; 0CC3, 24d0
+	BSF     $a,$3   		; 0CC4, 358a
+	SLEEP           		; 0CC5, 1e03
+	BCF     $3,$5   		; 0CC6, 3283
+	BCF     $3,$6   		; 0CC7, 3303
+	BCF     $f,$4   		; 0CC8, 320f
+	CALL    $4D0    		; 0CC9, 24d0
+	BSF     $a,$3   		; 0CCA, 358a
+	CALL    $508    		; 0CCB, 2508
+	BSF     $a,$3   		; 0CCC, 358a
+	CALL    $4E1    		; 0CCD, 24e1
+	BSF     $a,$3   		; 0CCE, 358a
+	GOTO    $523    		; 0CCF, 2d23
+	NOP             		; 0CD0, 0000
+	NOP             		; 0CD1, 0000
+	NOP             		; 0CD2, 0000
+	NOP             		; 0CD3, 0000
+	NOP             		; 0CD4, 0000
+	NOP             		; 0CD5, 0000
+	NOP             		; 0CD6, 0000
+	NOP             		; 0CD7, 0000
+	NOP             		; 0CD8, 0000
+	NOP             		; 0CD9, 0000
+	NOP             		; 0CDA, 0000
+	NOP             		; 0CDB, 0000
+	NOP             		; 0CDC, 0000
+	NOP             		; 0CDD, 0000
+	NOP             		; 0CDE, 0000
+	NOP             		; 0CDF, 0000
+	RET             		; 0CE0, 0040
+	MOVLW   $fc     		; 0CE1, 19fc
+	BCF     $3,$5   		; 0CE2, 3283
+	BCF     $3,$6   		; 0CE3, 3303
+	MOVWF   $5      		; 0CE4, 0085
+	MOVLW   $89     		; 0CE5, 1989
+	BSF     $3,$5   		; 0CE6, 3683
+	MOVWF   $8      		; 0CE7, 0088
+	MOVLW   $36     		; 0CE8, 1936
+	MOVWF   $7      		; 0CE9, 0087
+	MOVWF   $6      		; 0CEA, 0086
+	MOVLW   $11     		; 0CEB, 1911
+	MOVWF   $5      		; 0CEC, 0085
+	MOVLW   $4      		; 0CED, 1904
+	BCF     $3,$5   		; 0CEE, 3283
+	MOVWF   $6      		; 0CEF, 0086
+	MOVLW   $66     		; 0CF0, 1966
+	BSF     $3,$5   		; 0CF1, 3683
+	MOVWF   $f      		; 0CF2, 008f
+	MOVWF   $e      		; 0CF3, 008e
+	MOVLW   $f0     		; 0CF4, 19f0
+	MOVWF   $d      		; 0CF5, 008d
+	MOVLW   $66     		; 0CF6, 1966
+	MOVWF   $c      		; 0CF7, 008c
+	BCF     $3,$5   		; 0CF8, 3283
+	CLRF    $7      		; 0CF9, 0187
+	BSF     $3,$5   		; 0CFA, 3683
+	MOVWF   $10     		; 0CFB, 0090
+	MOVLW   $d8     		; 0CFC, 19d8
+	BCF     $3,$5   		; 0CFD, 3283
+	BSF     $3,$6   		; 0CFE, 3703
+	ANDWF   $5,$1   		; 0CFF, 0585
+	MOVLW   $f8     		; 0D00, 19f8
+	BCF     $3,$6   		; 0D01, 3303
+	ANDWF   $18,$1  		; 0D02, 0598
+	MOVLW   $5      		; 0D03, 1905
+	IORWF   $18,$1  		; 0D04, 0498
+	MOVLW   $3f     		; 0D05, 193f
+	ANDWF   $19,$1  		; 0D06, 0599
+	RET             		; 0D07, 0040
+	BCF     $3,$5   		; 0D08, 3283
+	MOVLW   $f0     		; 0D09, 19f0
+	BCF     $3,$6   		; 0D0A, 3303
+	BCF     $d,$0   		; 0D0B, 300d
+	BCF     $e,$0   		; 0D0C, 300e
+	ANDWF   $16,$1  		; 0D0D, 0596
+	MOVLW   $3      		; 0D0E, 1903
+	IORWF   $16,$1  		; 0D0F, 0496
+	BSF     $16,$6  		; 0D10, 3716
+	BSF     $16,$5  		; 0D11, 3696
+	BSF     $16,$4  		; 0D12, 3616
+	MOVLW   $f3     		; 0D13, 19f3
+	BSF     $3,$5   		; 0D14, 3683
+	ANDWF   $1,$1   		; 0D15, 0581
+	MOVLW   $c      		; 0D16, 190c
+	IORWF   $1,$1   		; 0D17, 0481
+	CLRWDT          		; 0D18, 1e04
+	BCF     $b,$3   		; 0D19, 318b
+	BCF     $3,$5   		; 0D1A, 3283
+	MOVLW   $fc     		; 0D1B, 19fc
+	BCF     $3,$6   		; 0D1C, 3303
+	BCF     $c,$3   		; 0D1D, 318c
+	BSF     $3,$5   		; 0D1E, 3683
+	ANDWF   $1,$1   		; 0D1F, 0581
+	MOVLW   $3      		; 0D20, 1903
+	IORWF   $1,$1   		; 0D21, 0481
+	RET             		; 0D22, 0040
+	BCF     $3,$5   		; 0D23, 3283
+	BSF     $11,$6  		; 0D24, 3711
+	BCF     $b,$4   		; 0D25, 320b
+	BCF     $c,$4   		; 0D26, 320c
+	BCF     $11,$4  		; 0D27, 3211
+	MOVLW   $f0     		; 0D28, 19f0
+	ANDWF   $11,$1  		; 0D29, 0591
+	BSF     $11,$0  		; 0D2A, 3411
+	MOVLW   $9c     		; 0D2B, 199c
+	MOVWF   $1      		; 0D2C, 0081
+	MOVWF   $10     		; 0D2D, 0090
+	BSF     $14,$6  		; 0D2E, 3714
+	MOVLW   $f0     		; 0D2F, 19f0
+	BCF     $b,$5   		; 0D30, 328b
+	BCF     $c,$5   		; 0D31, 328c
+	ANDWF   $14,$1  		; 0D32, 0594
+	MOVLW   $5      		; 0D33, 1905
+	IORWF   $14,$1  		; 0D34, 0494
+	MOVLW   $83     		; 0D35, 1983
+	MOVWF   $12     		; 0D36, 0092
+	MOVWF   $13     		; 0D37, 0093
+	BSF     $15,$4  		; 0D38, 3615
+	MOVLW   $fc     		; 0D39, 19fc
+	BCF     $b,$6   		; 0D3A, 330b
+	BCF     $c,$6   		; 0D3B, 330c
+	ANDWF   $15,$1  		; 0D3C, 0595
+	BSF     $b,$4   		; 0D3D, 360b
+	BCF     $11,$6  		; 0D3E, 3311
+	RET             		; 0D3F, 0040
+	BTFSS   $2d,$5  		; 0D40, 3ead
+	GOTO    $61C    		; 0D41, 2e1c
+	BTFSS   $2e,$7  		; 0D42, 3fae
+	GOTO    $549    		; 0D43, 2d49
+	CLRF    $45     		; 0D44, 01c5
+	CLRF    $46     		; 0D45, 01c6
+	CLRF    $47     		; 0D46, 01c7
+	CLRF    $48     		; 0D47, 01c8
+	RET             		; 0D48, 0040
+	BTFSS   $2d,$2  		; 0D49, 3d2d
+	GOTO    $5AB    		; 0D4A, 2dab
+	MOVFW   $3a     		; 0D4B, 083a
+	ADDLW   $14     		; 0D4C, 1c14
+	MOVWF   $4b     		; 0D4D, 00cb
+	MOVFW   $3b     		; 0D4E, 083b
+	BTFSC   $3,$0   		; 0D4F, 3803
+	ADDLW   $1      		; 0D50, 1c01
+	MOVWF   $4c     		; 0D51, 00cc
+	MOVFW   $4a     		; 0D52, 084a
+	SUBWF   $4c,$0  		; 0D53, 024c
+	BTFSS   $3,$2   		; 0D54, 3d03
+	GOTO    $558    		; 0D55, 2d58
+	MOVFW   $49     		; 0D56, 0849
+	SUBWF   $4b,$0  		; 0D57, 024b
+	BTFSS   $3,$0   		; 0D58, 3c03
+	BTFSC   $2d,$1  		; 0D59, 38ad
+	GOTO    $566    		; 0D5A, 2d66
+	CLRF    $45     		; 0D5B, 01c5
+	CLRF    $46     		; 0D5C, 01c6
+	CALL    $64D    		; 0D5D, 264d
+	BSF     $a,$3   		; 0D5E, 358a
+	BTFSC   $3,$2   		; 0D5F, 3903
+	SUBWF   $47,$0  		; 0D60, 0247
+	BTFSS   $3,$0   		; 0D61, 3c03
+	GOTO    $58A    		; 0D62, 2d8a
+	CLRF    $47     		; 0D63, 01c7
+	CLRF    $48     		; 0D64, 01c8
+	GOTO    $58A    		; 0D65, 2d8a
+	CLRF    $47     		; 0D66, 01c7
+	CLRF    $48     		; 0D67, 01c8
+	BSF     $2d,$1  		; 0D68, 34ad
+	BTFSC   $2d,$3  		; 0D69, 39ad
+	GOTO    $584    		; 0D6A, 2d84
+	MOVLW   $f      		; 0D6B, 190f
+	SUBWF   $3b,$0  		; 0D6C, 023b
+	MOVLW   $b4     		; 0D6D, 19b4
+	BTFSC   $3,$2   		; 0D6E, 3903
+	SUBWF   $3a,$0  		; 0D6F, 023a
+	BTFSC   $3,$0   		; 0D70, 3803
+	GOTO    $584    		; 0D71, 2d84
+	BCF     $3,$0   		; 0D72, 3003
+	RLF     $44,$0  		; 0D73, 0d44
+	CALL    $646    		; 0D74, 2646
+	BCF     $a,$3   		; 0D75, 318a
+	CALL    $700    		; 0D76, 2700
+	BSF     $a,$3   		; 0D77, 358a
+	MOVWF   $4b     		; 0D78, 00cb
+	BCF     $a,$3   		; 0D79, 318a
+	CALL    $700    		; 0D7A, 2700
+	BSF     $a,$3   		; 0D7B, 358a
+	MOVWF   $4c     		; 0D7C, 00cc
+	SUBWF   $3b,$0  		; 0D7D, 023b
+	BTFSS   $3,$2   		; 0D7E, 3d03
+	GOTO    $582    		; 0D7F, 2d82
+	MOVFW   $4b     		; 0D80, 084b
+	SUBWF   $3a,$0  		; 0D81, 023a
+	BTFSS   $3,$0   		; 0D82, 3c03
+	GOTO    $588    		; 0D83, 2d88
+	INCF    $45,$1  		; 0D84, 0ac5
+	BTFSC   $3,$2   		; 0D85, 3903
+	INCF    $46,$1  		; 0D86, 0ac6
+	GOTO    $58A    		; 0D87, 2d8a
+	CLRF    $45     		; 0D88, 01c5
+	CLRF    $46     		; 0D89, 01c6
+	MOVLW   $a      		; 0D8A, 190a
+	SUBWF   $44,$0  		; 0D8B, 0244
+	BTFSS   $3,$0   		; 0D8C, 3c03
+	GOTO    $596    		; 0D8D, 2d96
+	MOVLW   $5a     		; 0D8E, 195a
+	SUBWF   $44,$0  		; 0D8F, 0244
+	BTFSC   $3,$0   		; 0D90, 3803
+	GOTO    $596    		; 0D91, 2d96
+	MOVLW   $b8     		; 0D92, 19b8
+	MOVWF   $4e     		; 0D93, 00ce
+	MOVLW   $b      		; 0D94, 190b
+	GOTO    $599    		; 0D95, 2d99
+	MOVLW   $a0     		; 0D96, 19a0
+	MOVWF   $4e     		; 0D97, 00ce
+	MOVLW   $f      		; 0D98, 190f
+	MOVWF   $4f     		; 0D99, 00cf
+	SUBWF   $46,$0  		; 0D9A, 0246
+	BTFSS   $3,$2   		; 0D9B, 3d03
+	GOTO    $59F    		; 0D9C, 2d9f
+	MOVFW   $4e     		; 0D9D, 084e
+	SUBWF   $45,$0  		; 0D9E, 0245
+	BTFSS   $3,$0   		; 0D9F, 3c03
+	RET             		; 0DA0, 0040
+	MOVLW   $64     		; 0DA1, 1964
+	CLRF    $45     		; 0DA2, 01c5
+	CLRF    $46     		; 0DA3, 01c6
+	SUBWF   $44,$0  		; 0DA4, 0244
+	BTFSS   $3,$0   		; 0DA5, 3c03
+	INCF    $44,$1  		; 0DA6, 0ac4
+	MOVFW   $44     		; 0DA7, 0844
+	BTFSS   $3,$2   		; 0DA8, 3d03
+	BCF     $2e,$3  		; 0DA9, 31ae
+	RET             		; 0DAA, 0040
+	MOVLW   $2      		; 0DAB, 1902
+	CLRF    $45     		; 0DAC, 01c5
+	CLRF    $46     		; 0DAD, 01c6
+	SUBWF   $44,$0  		; 0DAE, 0244
+	BTFSS   $3,$0   		; 0DAF, 3c03
+	GOTO    $60B    		; 0DB0, 2e0b
+	BCF     $3,$0   		; 0DB1, 3003
+	RLF     $44,$0  		; 0DB2, 0d44
+	CALL    $646    		; 0DB3, 2646
+	BCF     $a,$3   		; 0DB4, 318a
+	CALL    $700    		; 0DB5, 2700
+	BSF     $a,$3   		; 0DB6, 358a
+	MOVWF   $4b     		; 0DB7, 00cb
+	BCF     $a,$3   		; 0DB8, 318a
+	CALL    $700    		; 0DB9, 2700
+	BSF     $a,$3   		; 0DBA, 358a
+	MOVWF   $4c     		; 0DBB, 00cc
+	SUBWF   $3b,$0  		; 0DBC, 023b
+	BTFSS   $3,$2   		; 0DBD, 3d03
+	GOTO    $5C1    		; 0DBE, 2dc1
+	MOVFW   $4b     		; 0DBF, 084b
+	SUBWF   $3a,$0  		; 0DC0, 023a
+	BTFSC   $3,$0   		; 0DC1, 3803
+	GOTO    $5C7    		; 0DC2, 2dc7
+	INCF    $47,$1  		; 0DC3, 0ac7
+	BTFSC   $3,$2   		; 0DC4, 3903
+	INCF    $48,$1  		; 0DC5, 0ac8
+	GOTO    $5C9    		; 0DC6, 2dc9
+	CLRF    $47     		; 0DC7, 01c7
+	CLRF    $48     		; 0DC8, 01c8
+	MOVLW   $0      		; 0DC9, 1900
+	SUBWF   $48,$0  		; 0DCA, 0248
+	MOVLW   $64     		; 0DCB, 1964
+	BTFSC   $3,$2   		; 0DCC, 3903
+	SUBWF   $47,$0  		; 0DCD, 0247
+	BTFSS   $3,$0   		; 0DCE, 3c03
+	RET             		; 0DCF, 0040
+	CLRF    $47     		; 0DD0, 01c7
+	CLRF    $48     		; 0DD1, 01c8
+	MOVFW   $44     		; 0DD2, 0844
+	MOVWF   $50     		; 0DD3, 00d0
+	TSTF    $50     		; 0DD4, 08d0
+	BTFSC   $3,$2   		; 0DD5, 3903
+	GOTO    $5EA    		; 0DD6, 2dea
+	DECF    $50,$1  		; 0DD7, 03d0
+	BCF     $3,$0   		; 0DD8, 3003
+	RLF     $50,$0  		; 0DD9, 0d50
+	CALL    $646    		; 0DDA, 2646
+	BCF     $a,$3   		; 0DDB, 318a
+	CALL    $700    		; 0DDC, 2700
+	BSF     $a,$3   		; 0DDD, 358a
+	MOVWF   $4b     		; 0DDE, 00cb
+	BCF     $a,$3   		; 0DDF, 318a
+	CALL    $700    		; 0DE0, 2700
+	BSF     $a,$3   		; 0DE1, 358a
+	MOVWF   $4c     		; 0DE2, 00cc
+	SUBWF   $3b,$0  		; 0DE3, 023b
+	BTFSS   $3,$2   		; 0DE4, 3d03
+	GOTO    $5E8    		; 0DE5, 2de8
+	MOVFW   $4b     		; 0DE6, 084b
+	SUBWF   $3a,$0  		; 0DE7, 023a
+	BTFSS   $3,$0   		; 0DE8, 3c03
+	GOTO    $5D4    		; 0DE9, 2dd4
+	MOVFW   $50     		; 0DEA, 0850
+	ADDLW   $1e     		; 0DEB, 1c1e
+	MOVWF   $4b     		; 0DEC, 00cb
+	MOVLW   $0      		; 0DED, 1900
+	BTFSC   $3,$0   		; 0DEE, 3803
+	MOVLW   $1      		; 0DEF, 1901
+	MOVWF   $4c     		; 0DF0, 00cc
+	XORLW   $80     		; 0DF1, 1d80
+	MOVWF   $4d     		; 0DF2, 00cd
+	MOVLW   $80     		; 0DF3, 1980
+	SUBWF   $4d,$0  		; 0DF4, 024d
+	BTFSS   $3,$2   		; 0DF5, 3d03
+	GOTO    $5F9    		; 0DF6, 2df9
+	MOVFW   $44     		; 0DF7, 0844
+	SUBWF   $4b,$0  		; 0DF8, 024b
+	BTFSC   $3,$0   		; 0DF9, 3803
+	RET             		; 0DFA, 0040
+	BCF     $3,$5   		; 0DFB, 3283
+	BCF     $3,$6   		; 0DFC, 3303
+	MOVFW   $50     		; 0DFD, 0850
+	MOVWF   $44     		; 0DFE, 00c4
+	GOTO    $609    		; 0DFF, 2e09
+	CALL    $64D    		; 0E00, 264d
+	BSF     $a,$3   		; 0E01, 358a
+	BTFSC   $3,$2   		; 0E02, 3903
+	SUBWF   $47,$0  		; 0E03, 0247
+	BTFSS   $3,$0   		; 0E04, 3c03
+	RET             		; 0E05, 0040
+	CLRF    $47     		; 0E06, 01c7
+	CLRF    $48     		; 0E07, 01c8
+	CLRF    $44     		; 0E08, 01c4
+	BSF     $2d,$1  		; 0E09, 34ad
+	RET             		; 0E0A, 0040
+	MOVLW   $c      		; 0E0B, 190c
+	SUBWF   $3b,$0  		; 0E0C, 023b
+	MOVLW   $b2     		; 0E0D, 19b2
+	BTFSC   $3,$2   		; 0E0E, 3903
+	SUBWF   $3a,$0  		; 0E0F, 023a
+	BTFSS   $3,$0   		; 0E10, 3c03
+	GOTO    $600    		; 0E11, 2e00
+	MOVLW   $c      		; 0E12, 190c
+	CLRF    $47     		; 0E13, 01c7
+	CLRF    $48     		; 0E14, 01c8
+	SUBWF   $3b,$0  		; 0E15, 023b
+	MOVLW   $e4     		; 0E16, 19e4
+	BTFSC   $3,$2   		; 0E17, 3903
+	SUBWF   $3a,$0  		; 0E18, 023a
+	BTFSC   $3,$0   		; 0E19, 3803
+	RET             		; 0E1A, 0040
+	GOTO    $608    		; 0E1B, 2e08
+	DECF    $2a,$0  		; 0E1C, 032a
+	BTFSC   $3,$2   		; 0E1D, 3903
+	GOTO    $641    		; 0E1E, 2e41
+	BSF     $2d,$5  		; 0E1F, 36ad
+	CLRF    $45     		; 0E20, 01c5
+	CLRF    $46     		; 0E21, 01c6
+	CLRF    $47     		; 0E22, 01c7
+	CLRF    $48     		; 0E23, 01c8
+	BSF     $2d,$1  		; 0E24, 34ad
+	CLRF    $44     		; 0E25, 01c4
+	MOVLW   $64     		; 0E26, 1964
+	SUBWF   $44,$0  		; 0E27, 0244
+	BTFSC   $3,$0   		; 0E28, 3803
+	GOTO    $63E    		; 0E29, 2e3e
+	BCF     $3,$0   		; 0E2A, 3003
+	RLF     $44,$0  		; 0E2B, 0d44
+	CALL    $646    		; 0E2C, 2646
+	BCF     $a,$3   		; 0E2D, 318a
+	CALL    $700    		; 0E2E, 2700
+	BSF     $a,$3   		; 0E2F, 358a
+	MOVWF   $4b     		; 0E30, 00cb
+	BCF     $a,$3   		; 0E31, 318a
+	CALL    $700    		; 0E32, 2700
+	BSF     $a,$3   		; 0E33, 358a
+	MOVWF   $4c     		; 0E34, 00cc
+	SUBWF   $4a,$0  		; 0E35, 024a
+	BTFSS   $3,$2   		; 0E36, 3d03
+	GOTO    $63A    		; 0E37, 2e3a
+	MOVFW   $4b     		; 0E38, 084b
+	SUBWF   $49,$0  		; 0E39, 0249
+	BTFSS   $3,$0   		; 0E3A, 3c03
+	GOTO    $63E    		; 0E3B, 2e3e
+	INCF    $44,$1  		; 0E3C, 0ac4
+	GOTO    $626    		; 0E3D, 2e26
+	MOVFW   $44     		; 0E3E, 0844
+	MOVWF   $36     		; 0E3F, 00b6
+	RET             		; 0E40, 0040
+	MOVFW   $3b     		; 0E41, 083b
+	MOVWF   $4a     		; 0E42, 00ca
+	MOVFW   $3a     		; 0E43, 083a
+	MOVWF   $49     		; 0E44, 00c9
+	RET             		; 0E45, 0040
+	ADDLW   $12     		; 0E46, 1c12
+	MOVWF   $4      		; 0E47, 0084
+	MOVLW   $87     		; 0E48, 1987
+	BTFSC   $3,$0   		; 0E49, 3803
+	ADDLW   $1      		; 0E4A, 1c01
+	MOVWF   $7f     		; 0E4B, 00ff
+	RET             		; 0E4C, 0040
+	INCF    $47,$1  		; 0E4D, 0ac7
+	BTFSC   $3,$2   		; 0E4E, 3903
+	INCF    $48,$1  		; 0E4F, 0ac8
+	MOVLW   $0      		; 0E50, 1900
+	SUBWF   $48,$0  		; 0E51, 0248
+	RETLW   $64     		; 0E52, 1864
+	BTFSS   $e,$4   		; 0E53, 3e0e
+	GOTO    $65D    		; 0E54, 2e5d
+	BTFSC   $2e,$7  		; 0E55, 3bae
+	BTFSC   $2e,$6  		; 0E56, 3b2e
+	GOTO    $65B    		; 0E57, 2e5b
+	BSF     $5,$4   		; 0E58, 3605
+	BSF     $5,$2   		; 0E59, 3505
+	BSF     $2e,$6  		; 0E5A, 372e
+	BCF     $e,$4   		; 0E5B, 320e
+	GOTO    $691    		; 0E5C, 2e91
+	BTFSS   $e,$0   		; 0E5D, 3c0e
+	GOTO    $66A    		; 0E5E, 2e6a
+	BTFSC   $2e,$7  		; 0E5F, 3bae
+	GOTO    $663    		; 0E60, 2e63
+	BTFSS   $d,$0   		; 0E61, 3c0d
+	GOTO    $668    		; 0E62, 2e68
+	BTFSC   $2e,$6  		; 0E63, 3b2e
+	GOTO    $668    		; 0E64, 2e68
+	BSF     $5,$4   		; 0E65, 3605
+	BSF     $5,$2   		; 0E66, 3505
+	BSF     $2e,$6  		; 0E67, 372e
+	BCF     $e,$0   		; 0E68, 300e
+	GOTO    $691    		; 0E69, 2e91
+	BTFSS   $c,$4   		; 0E6A, 3e0c
+	GOTO    $682    		; 0E6B, 2e82
+	MOVLW   $64     		; 0E6C, 1964
+	BSF     $3,$6   		; 0E6D, 3703
+	INCF    $59,$1  		; 0E6E, 0ad9
+	SUBWF   $59,$0  		; 0E6F, 0259
+	BTFSS   $3,$0   		; 0E70, 3c03
+	GOTO    $675    		; 0E71, 2e75
+	CLRF    $59     		; 0E72, 01d9
+	BCF     $3,$6   		; 0E73, 3303
+	BSF     $2d,$6  		; 0E74, 372d
+	CALL    $69C    		; 0E75, 269c
+	BSF     $a,$3   		; 0E76, 358a
+	MOVFW   $31     		; 0E77, 0831
+	BTFSC   $3,$2   		; 0E78, 3903
+	GOTO    $67D    		; 0E79, 2e7d
+	BCF     $6,$1   		; 0E7A, 3086
+	CLRF    $31     		; 0E7B, 01b1
+	GOTO    $680    		; 0E7C, 2e80
+	BSF     $6,$1   		; 0E7D, 3486
+	CLRF    $31     		; 0E7E, 01b1
+	INCF    $31,$1  		; 0E7F, 0ab1
+	BCF     $c,$4   		; 0E80, 320c
+	GOTO    $691    		; 0E81, 2e91
+	BTFSS   $c,$0   		; 0E82, 3c0c
+	GOTO    $686    		; 0E83, 2e86
+	BCF     $c,$0   		; 0E84, 300c
+	GOTO    $691    		; 0E85, 2e91
+	BTFSS   $c,$1   		; 0E86, 3c8c
+	GOTO    $68A    		; 0E87, 2e8a
+	BCF     $c,$1   		; 0E88, 308c
+	GOTO    $691    		; 0E89, 2e91
+	BTFSS   $c,$2   		; 0E8A, 3d0c
+	GOTO    $68E    		; 0E8B, 2e8e
+	BCF     $c,$2   		; 0E8C, 310c
+	GOTO    $691    		; 0E8D, 2e91
+	BTFSS   $c,$3   		; 0E8E, 3d8c
+	GOTO    $691    		; 0E8F, 2e91
+	BCF     $c,$3   		; 0E90, 318c
+	MOVFW   $7d     		; 0E91, 087d
+	MOVWF   $7f     		; 0E92, 00ff
+	MOVFW   $7c     		; 0E93, 087c
+	MOVWF   $a      		; 0E94, 008a
+	MOVFW   $7b     		; 0E95, 087b
+	MOVWF   $4      		; 0E96, 0084
+	SWAPF   $7a,$0  		; 0E97, 0e7a
+	MOVWF   $3      		; 0E98, 0083
+	SWAPF   $7e,$1  		; 0E99, 0efe
+	SWAPF   $7e,$0  		; 0E9A, 0e7e
+	RETI            		; 0E9B, 0060
+	CLRF    $78     		; 0E9C, 01f8
+	CLRF    $79     		; 0E9D, 01f9
+	CLRF    $79     		; 0E9E, 01f9
+	MOVFW   $79     		; 0E9F, 0879
+	CALL    $728    		; 0EA0, 2728
+	BSF     $a,$3   		; 0EA1, 358a
+	MOVLW   $8      		; 0EA2, 1908
+	INCF    $79,$1  		; 0EA3, 0af9
+	SUBWF   $79,$0  		; 0EA4, 0279
+	BTFSS   $3,$0   		; 0EA5, 3c03
+	GOTO    $69F    		; 0EA6, 2e9f
+	CLRF    $79     		; 0EA7, 01f9
+	MOVLW   $6      		; 0EA8, 1906
+	MOVWF   $70     		; 0EA9, 00f0
+	BCF     $3,$5   		; 0EAA, 3283
+	BCF     $3,$6   		; 0EAB, 3303
+	MOVFW   $33     		; 0EAC, 0833
+	CALL    $71A    		; 0EAD, 271a
+	ADDLW   $dc     		; 0EAE, 1cdc
+	MOVWF   $73     		; 0EAF, 00f3
+	MOVLW   $87     		; 0EB0, 1987
+	BTFSC   $3,$0   		; 0EB1, 3803
+	ADDLW   $1      		; 0EB2, 1c01
+	MOVWF   $74     		; 0EB3, 00f4
+	BCF     $3,$0   		; 0EB4, 3003
+	RLF     $79,$0  		; 0EB5, 0d79
+	ADDWF   $73,$0  		; 0EB6, 0773
+	MOVWF   $4      		; 0EB7, 0084
+	MOVFW   $74     		; 0EB8, 0874
+	BTFSC   $3,$0   		; 0EB9, 3803
+	INCF    $74,$0  		; 0EBA, 0a74
+	MOVWF   $7f     		; 0EBB, 00ff
+	BCF     $a,$3   		; 0EBC, 318a
+	CALL    $700    		; 0EBD, 2700
+	BSF     $a,$3   		; 0EBE, 358a
+	IORLW   $0      		; 0EBF, 1a00
+	BTFSC   $3,$2   		; 0EC0, 3903
+	GOTO    $714    		; 0EC1, 2f14
+	MOVLW   $6      		; 0EC2, 1906
+	MOVWF   $70     		; 0EC3, 00f0
+	MOVFW   $33     		; 0EC4, 0833
+	CALL    $71A    		; 0EC5, 271a
+	ADDLW   $dc     		; 0EC6, 1cdc
+	MOVWF   $73     		; 0EC7, 00f3
+	MOVLW   $87     		; 0EC8, 1987
+	BTFSC   $3,$0   		; 0EC9, 3803
+	ADDLW   $1      		; 0ECA, 1c01
+	MOVWF   $74     		; 0ECB, 00f4
+	BCF     $3,$0   		; 0ECC, 3003
+	RLF     $79,$0  		; 0ECD, 0d79
+	ADDWF   $73,$0  		; 0ECE, 0773
+	MOVWF   $4      		; 0ECF, 0084
+	MOVFW   $74     		; 0ED0, 0874
+	BTFSC   $3,$0   		; 0ED1, 3803
+	INCF    $74,$0  		; 0ED2, 0a74
+	MOVWF   $7f     		; 0ED3, 00ff
+	BCF     $a,$3   		; 0ED4, 318a
+	CALL    $700    		; 0ED5, 2700
+	BSF     $a,$3   		; 0ED6, 358a
+	ADDLW   $ff     		; 0ED7, 1cff
+	MOVWF   $77     		; 0ED8, 00f7
+	MOVLW   $6      		; 0ED9, 1906
+	MOVWF   $70     		; 0EDA, 00f0
+	MOVFW   $33     		; 0EDB, 0833
+	CALL    $71A    		; 0EDC, 271a
+	ADDLW   $dc     		; 0EDD, 1cdc
+	MOVWF   $73     		; 0EDE, 00f3
+	MOVLW   $87     		; 0EDF, 1987
+	BTFSC   $3,$0   		; 0EE0, 3803
+	ADDLW   $1      		; 0EE1, 1c01
+	MOVWF   $74     		; 0EE2, 00f4
+	BCF     $3,$0   		; 0EE3, 3003
+	RLF     $79,$0  		; 0EE4, 0d79
+	ADDWF   $73,$0  		; 0EE5, 0773
+	MOVWF   $75     		; 0EE6, 00f5
+	MOVFW   $74     		; 0EE7, 0874
+	BTFSC   $3,$0   		; 0EE8, 3803
+	ADDLW   $1      		; 0EE9, 1c01
+	MOVWF   $76     		; 0EEA, 00f6
+	MOVLW   $1      		; 0EEB, 1901
+	ADDWF   $75,$0  		; 0EEC, 0775
+	MOVWF   $4      		; 0EED, 0084
+	MOVFW   $76     		; 0EEE, 0876
+	BTFSC   $3,$0   		; 0EEF, 3803
+	INCF    $76,$0  		; 0EF0, 0a76
+	MOVWF   $7f     		; 0EF1, 00ff
+	BCF     $a,$3   		; 0EF2, 318a
+	CALL    $700    		; 0EF3, 2700
+	BSF     $a,$3   		; 0EF4, 358a
+	ADDLW   $ff     		; 0EF5, 1cff
+	MOVWF   $78     		; 0EF6, 00f8
+	MOVFW   $77     		; 0EF7, 0877
+	MOVWF   $73     		; 0EF8, 00f3
+	MOVLW   $a9     		; 0EF9, 19a9
+	BCF     $3,$0   		; 0EFA, 3003
+	RLF     $73,$1  		; 0EFB, 0df3
+	BCF     $3,$0   		; 0EFC, 3003
+	RLF     $73,$1  		; 0EFD, 0df3
+	BCF     $3,$0   		; 0EFE, 3003
+	RLF     $73,$1  		; 0EFF, 0df3
+	ADDWF   $73,$0  		; 0F00, 0773
+	MOVWF   $74     		; 0F01, 00f4
+	MOVFW   $78     		; 0F02, 0878
+	ADDWF   $74,$0  		; 0F03, 0774
+	MOVWF   $75     		; 0F04, 00f5
+	MOVWF   $4      		; 0F05, 0084
+	BCF     $3,$7   		; 0F06, 3383
+	TSTF    $0      		; 0F07, 0880
+	BTFSC   $3,$2   		; 0F08, 3903
+	GOTO    $70F    		; 0F09, 2f0f
+	CLRF    $70     		; 0F0A, 01f0
+	INCF    $70,$1  		; 0F0B, 0af0
+	MOVFW   $78     		; 0F0C, 0878
+	CALL    $77F    		; 0F0D, 277f
+	BSF     $a,$3   		; 0F0E, 358a
+	MOVLW   $3      		; 0F0F, 1903
+	INCF    $79,$1  		; 0F10, 0af9
+	SUBWF   $79,$0  		; 0F11, 0279
+	BTFSS   $3,$0   		; 0F12, 3c03
+	GOTO    $6A8    		; 0F13, 2ea8
+	INCF    $33,$1  		; 0F14, 0ab3
+	MOVFW   $33     		; 0F15, 0833
+	XORLW   $12     		; 0F16, 1d12
+	BTFSC   $3,$2   		; 0F17, 3903
+	CLRF    $33     		; 0F18, 01b3
+	RET             		; 0F19, 0040
+	MOVWF   $71     		; 0F1A, 00f1
+	CLRF    $72     		; 0F1B, 01f2
+	MOVFW   $70     		; 0F1C, 0870
+	BTFSC   $71,$0  		; 0F1D, 3871
+	ADDWF   $72,$1  		; 0F1E, 07f2
+	BCF     $3,$0   		; 0F1F, 3003
+	RLF     $70,$1  		; 0F20, 0df0
+	BCF     $3,$0   		; 0F21, 3003
+	RRF     $71,$1  		; 0F22, 0cf1
+	TSTF    $71     		; 0F23, 08f1
+	BTFSS   $3,$2   		; 0F24, 3d03
+	GOTO    $71C    		; 0F25, 2f1c
+	MOVFW   $72     		; 0F26, 0872
+	RET             		; 0F27, 0040
+	MOVWF   $70     		; 0F28, 00f0
+	GOTO    $772    		; 0F29, 2f72
+	BCF     $3,$5   		; 0F2A, 3283
+	BCF     $3,$6   		; 0F2B, 3303
+	BSF     $6,$3   		; 0F2C, 3586
+	BSF     $3,$5   		; 0F2D, 3683
+	MOVFW   $d      		; 0F2E, 080d
+	ANDLW   $f      		; 0F2F, 1b0f
+	IORLW   $10     		; 0F30, 1a10
+	MOVWF   $d      		; 0F31, 008d
+	RET             		; 0F32, 0040
+	BCF     $3,$5   		; 0F33, 3283
+	BCF     $3,$6   		; 0F34, 3303
+	BSF     $7,$0   		; 0F35, 3407
+	BSF     $3,$5   		; 0F36, 3683
+	MOVFW   $10     		; 0F37, 0810
+	ANDLW   $f0     		; 0F38, 1bf0
+	IORLW   $1      		; 0F39, 1a01
+	MOVWF   $10     		; 0F3A, 0090
+	RET             		; 0F3B, 0040
+	BCF     $3,$5   		; 0F3C, 3283
+	BCF     $3,$6   		; 0F3D, 3303
+	BSF     $7,$1   		; 0F3E, 3487
+	BSF     $3,$5   		; 0F3F, 3683
+	MOVFW   $10     		; 0F40, 0810
+	ANDLW   $f      		; 0F41, 1b0f
+	IORLW   $10     		; 0F42, 1a10
+	MOVWF   $10     		; 0F43, 0090
+	RET             		; 0F44, 0040
+	BCF     $3,$5   		; 0F45, 3283
+	BCF     $3,$6   		; 0F46, 3303
+	BSF     $6,$4   		; 0F47, 3606
+	BSF     $3,$5   		; 0F48, 3683
+	MOVFW   $e      		; 0F49, 080e
+	ANDLW   $f0     		; 0F4A, 1bf0
+	IORLW   $1      		; 0F4B, 1a01
+	MOVWF   $e      		; 0F4C, 008e
+	RET             		; 0F4D, 0040
+	BCF     $3,$5   		; 0F4E, 3283
+	BCF     $3,$6   		; 0F4F, 3303
+	BSF     $6,$5   		; 0F50, 3686
+	BSF     $3,$5   		; 0F51, 3683
+	MOVFW   $e      		; 0F52, 080e
+	ANDLW   $f      		; 0F53, 1b0f
+	IORLW   $10     		; 0F54, 1a10
+	MOVWF   $e      		; 0F55, 008e
+	RET             		; 0F56, 0040
+	BCF     $3,$5   		; 0F57, 3283
+	BCF     $3,$6   		; 0F58, 3303
+	BSF     $6,$6   		; 0F59, 3706
+	BSF     $3,$5   		; 0F5A, 3683
+	MOVFW   $f      		; 0F5B, 080f
+	ANDLW   $f0     		; 0F5C, 1bf0
+	IORLW   $1      		; 0F5D, 1a01
+	MOVWF   $f      		; 0F5E, 008f
+	RET             		; 0F5F, 0040
+	BCF     $3,$5   		; 0F60, 3283
+	BCF     $3,$6   		; 0F61, 3303
+	BSF     $6,$7   		; 0F62, 3786
+	BSF     $3,$5   		; 0F63, 3683
+	MOVFW   $f      		; 0F64, 080f
+	ANDLW   $f      		; 0F65, 1b0f
+	IORLW   $10     		; 0F66, 1a10
+	MOVWF   $f      		; 0F67, 008f
+	RET             		; 0F68, 0040
+	BCF     $3,$5   		; 0F69, 3283
+	BCF     $3,$6   		; 0F6A, 3303
+	BSF     $6,$0   		; 0F6B, 3406
+	BSF     $3,$5   		; 0F6C, 3683
+	MOVFW   $c      		; 0F6D, 080c
+	ANDLW   $f0     		; 0F6E, 1bf0
+	IORLW   $1      		; 0F6F, 1a01
+	MOVWF   $c      		; 0F70, 008c
+	RET             		; 0F71, 0040
+	MOVFW   $70     		; 0F72, 0870
+	MOVWF   $4      		; 0F73, 0084
+	MOVLW   $8      		; 0F74, 1908
+	SUBWF   $4,$0   		; 0F75, 0204
+	BTFSC   $3,$0   		; 0F76, 3803
+	RET             		; 0F77, 0040
+	MOVLW   $8      		; 0F78, 1908
+	MOVWF   $a      		; 0F79, 008a
+	BCF     $3,$0   		; 0F7A, 3003
+	RLF     $4,$0   		; 0F7B, 0d04
+	ADDLW   $a1     		; 0F7C, 1ca1
+	MOVWF   $2      		; 0F7D, 0082
+	RET             		; 0F7E, 0040
+	MOVWF   $71     		; 0F7F, 00f1
+	GOTO    $7F1    		; 0F80, 2ff1
+	BSF     $3,$5   		; 0F81, 3683
+	MOVFW   $d      		; 0F82, 080d
+	ANDLW   $f      		; 0F83, 1b0f
+	IORLW   $60     		; 0F84, 1a60
+	MOVWF   $d      		; 0F85, 008d
+	MOVFW   $70     		; 0F86, 0870
+	BTFSC   $3,$2   		; 0F87, 3903
+	GOTO    $78C    		; 0F88, 2f8c
+	BCF     $3,$5   		; 0F89, 3283
+	BSF     $6,$3   		; 0F8A, 3586
+	RET             		; 0F8B, 0040
+	BCF     $3,$5   		; 0F8C, 3283
+	BCF     $6,$3   		; 0F8D, 3186
+	RET             		; 0F8E, 0040
+	BSF     $3,$5   		; 0F8F, 3683
+	MOVFW   $10     		; 0F90, 0810
+	ANDLW   $f0     		; 0F91, 1bf0
+	IORLW   $6      		; 0F92, 1a06
+	MOVWF   $10     		; 0F93, 0090
+	MOVFW   $70     		; 0F94, 0870
+	BTFSC   $3,$2   		; 0F95, 3903
+	GOTO    $79A    		; 0F96, 2f9a
+	BCF     $3,$5   		; 0F97, 3283
+	BSF     $7,$0   		; 0F98, 3407
+	RET             		; 0F99, 0040
+	BCF     $3,$5   		; 0F9A, 3283
+	BCF     $7,$0   		; 0F9B, 3007
+	RET             		; 0F9C, 0040
+	BSF     $3,$5   		; 0F9D, 3683
+	MOVFW   $10     		; 0F9E, 0810
+	ANDLW   $f      		; 0F9F, 1b0f
+	IORLW   $60     		; 0FA0, 1a60
+	MOVWF   $10     		; 0FA1, 0090
+	MOVFW   $70     		; 0FA2, 0870
+	BTFSC   $3,$2   		; 0FA3, 3903
+	GOTO    $7A8    		; 0FA4, 2fa8
+	BCF     $3,$5   		; 0FA5, 3283
+	BSF     $7,$1   		; 0FA6, 3487
+	RET             		; 0FA7, 0040
+	BCF     $3,$5   		; 0FA8, 3283
+	BCF     $7,$1   		; 0FA9, 3087
+	RET             		; 0FAA, 0040
+	BSF     $3,$5   		; 0FAB, 3683
+	MOVFW   $e      		; 0FAC, 080e
+	ANDLW   $f0     		; 0FAD, 1bf0
+	IORLW   $6      		; 0FAE, 1a06
+	MOVWF   $e      		; 0FAF, 008e
+	MOVFW   $70     		; 0FB0, 0870
+	BTFSC   $3,$2   		; 0FB1, 3903
+	GOTO    $7B6    		; 0FB2, 2fb6
+	BCF     $3,$5   		; 0FB3, 3283
+	BSF     $6,$4   		; 0FB4, 3606
+	RET             		; 0FB5, 0040
+	BCF     $3,$5   		; 0FB6, 3283
+	BCF     $6,$4   		; 0FB7, 3206
+	RET             		; 0FB8, 0040
+	BSF     $3,$5   		; 0FB9, 3683
+	MOVFW   $e      		; 0FBA, 080e
+	ANDLW   $f      		; 0FBB, 1b0f
+	IORLW   $60     		; 0FBC, 1a60
+	MOVWF   $e      		; 0FBD, 008e
+	MOVFW   $70     		; 0FBE, 0870
+	BTFSC   $3,$2   		; 0FBF, 3903
+	GOTO    $7C4    		; 0FC0, 2fc4
+	BCF     $3,$5   		; 0FC1, 3283
+	BSF     $6,$5   		; 0FC2, 3686
+	RET             		; 0FC3, 0040
+	BCF     $3,$5   		; 0FC4, 3283
+	BCF     $6,$5   		; 0FC5, 3286
+	RET             		; 0FC6, 0040
+	BSF     $3,$5   		; 0FC7, 3683
+	MOVFW   $f      		; 0FC8, 080f
+	ANDLW   $f0     		; 0FC9, 1bf0
+	IORLW   $6      		; 0FCA, 1a06
+	MOVWF   $f      		; 0FCB, 008f
+	MOVFW   $70     		; 0FCC, 0870
+	BTFSC   $3,$2   		; 0FCD, 3903
+	GOTO    $7D2    		; 0FCE, 2fd2
+	BCF     $3,$5   		; 0FCF, 3283
+	BSF     $6,$6   		; 0FD0, 3706
+	RET             		; 0FD1, 0040
+	BCF     $3,$5   		; 0FD2, 3283
+	BCF     $6,$6   		; 0FD3, 3306
+	RET             		; 0FD4, 0040
+	BSF     $3,$5   		; 0FD5, 3683
+	MOVFW   $f      		; 0FD6, 080f
+	ANDLW   $f      		; 0FD7, 1b0f
+	IORLW   $60     		; 0FD8, 1a60
+	MOVWF   $f      		; 0FD9, 008f
+	MOVFW   $70     		; 0FDA, 0870
+	BTFSC   $3,$2   		; 0FDB, 3903
+	GOTO    $7E0    		; 0FDC, 2fe0
+	BCF     $3,$5   		; 0FDD, 3283
+	BSF     $6,$7   		; 0FDE, 3786
+	RET             		; 0FDF, 0040
+	BCF     $3,$5   		; 0FE0, 3283
+	BCF     $6,$7   		; 0FE1, 3386
+	RET             		; 0FE2, 0040
+	BSF     $3,$5   		; 0FE3, 3683
+	MOVFW   $c      		; 0FE4, 080c
+	ANDLW   $f0     		; 0FE5, 1bf0
+	IORLW   $6      		; 0FE6, 1a06
+	MOVWF   $c      		; 0FE7, 008c
+	MOVFW   $70     		; 0FE8, 0870
+	BTFSC   $3,$2   		; 0FE9, 3903
+	GOTO    $7EE    		; 0FEA, 2fee
+	BCF     $3,$5   		; 0FEB, 3283
+	BSF     $6,$0   		; 0FEC, 3406
+	RET             		; 0FED, 0040
+	BCF     $3,$5   		; 0FEE, 3283
+	BCF     $6,$0   		; 0FEF, 3006
+	RET             		; 0FF0, 0040
+	MOVFW   $71     		; 0FF1, 0871
+	MOVWF   $4      		; 0FF2, 0084
+	MOVLW   $8      		; 0FF3, 1908
+	SUBWF   $4,$0   		; 0FF4, 0204
+	BTFSC   $3,$0   		; 0FF5, 3803
+	RET             		; 0FF6, 0040
+	MOVLW   $8      		; 0FF7, 1908
+	MOVWF   $a      		; 0FF8, 008a
+	BCF     $3,$0   		; 0FF9, 3003
+	RLF     $4,$0   		; 0FFA, 0d04
+	ADDLW   $91     		; 0FFB, 1c91
+	MOVWF   $2      		; 0FFC, 0082
+	RET             		; 0FFD, 0040
+	RETLW   $0      		; 0FFE, 1800
+	RETLW   $0      		; 0FFF, 1800

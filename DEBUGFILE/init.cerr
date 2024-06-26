@@ -1,0 +1,23 @@
+D:\资料\P2\P2code_0429\code\tyw_page.c(9):(col=): Warning (1090): variable "_pageTime" is not used
+D:\资料\P2\P2code_0429\code\tyw_led.c(7):(col=): Warning (1090): variable "_oilShowLv" is not used
+D:\资料\P2\P2code_0429\code\tyw_page.c(11):(col=): Warning (1090): variable "_pageID" is not used
+D:\资料\P2\P2code_0429\code\tyw_page.c(12):(col=): Warning (1090): variable "_pageIndex" is not used
+D:\资料\P2\P2code_0429\code\tyw_led.c(6):(col=): Warning (1090): variable "_powerShowLv" is not used
+D:\资料\P2\P2code_0429\code\main.c(52):(col=): Warning (1393): possible hardware stack overflow detected, estimated stack depth: 9
+
+Memory Summary:
+    Program space        used   DFEh (  3582) of  1000h words   ( 87.5%)
+    Data space           used    B4h (   180) of   150h bytes   ( 53.6%)
+    EEPROM space         used     0h (     0) of    80h bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+
+Compilation stage times:
+Preprocessor               0.32
+Parser                     0.31
+Code generator             4.29
+Assembler                  0.23
+Linker                     0.07
+Output file conversion     0.10
+Cross reference            0.04
+TOTAL                      5.36 secs

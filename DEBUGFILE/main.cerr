@@ -1,0 +1,6 @@
+D:\×ÊÁÏ\P2\P2code_0429\code\init.c(110):(col=28): Error (192): undefined identifier "PIN_H_MLode_PP"
+×Žpro: Invalid argument
+Compilation stage times:
+Preprocessor     0.29
+Parser           0.34
+TOTAL            0.65 secs
